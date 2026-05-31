@@ -1,0 +1,142 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Base */
+  --background: #ffffff;
+  --foreground: #1a2b4a;
+
+  /* Surfaces */
+  --card: #ffffff;
+  --card-foreground: #1a2b4a;
+  --popover: #ffffff;
+  --popover-foreground: #1a2b4a;
+
+  /* Brand navy (primary) */
+  --primary: #1a2b4a;
+  --primary-foreground: #ffffff;
+
+  /* Cream / neutral secondary */
+  --secondary: #f5f2ec;
+  --secondary-foreground: #1a2b4a;
+
+  --muted: #f2f4f7;
+  --muted-foreground: #5b6677;
+
+  /* Teal accent */
+  --accent: #0f6e56;
+  --accent-foreground: #ffffff;
+
+  --destructive: #b3261e;
+  --destructive-foreground: #ffffff;
+
+  --border: #e3e6ec;
+  --input: #e3e6ec;
+  --ring: #0f6e56;
+
+  --radius: 0.75rem;
+
+  /* Evidence grade colors */
+  --grade-high: #167a4a;
+  --grade-high-bg: #e7f4ec;
+  --grade-moderate: #1d5aa8;
+  --grade-moderate-bg: #e8eff9;
+  --grade-low: #9a6b08;
+  --grade-low-bg: #fbf2dd;
+  --grade-verylow: #5b6677;
+  --grade-verylow-bg: #eef0f3;
+
+  /* Warning (experimental / neutrality) amber */
+  --warn: #9a6b08;
+  --warn-bg: #fdf6e7;
+  --warn-border: #ecd9a6;
+
+  --chart-1: #1a2b4a;
+  --chart-2: #0f6e56;
+  --chart-3: #1d5aa8;
+  --chart-4: #9a6b08;
+  --chart-5: #5b6677;
+
+  --sidebar: #f5f2ec;
+  --sidebar-foreground: #1a2b4a;
+  --sidebar-primary: #1a2b4a;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #0f6e56;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e3e6ec;
+  --sidebar-ring: #0f6e56;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-lora), ui-serif, Georgia, serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-grade-high: var(--grade-high);
+  --color-grade-high-bg: var(--grade-high-bg);
+  --color-grade-moderate: var(--grade-moderate);
+  --color-grade-moderate-bg: var(--grade-moderate-bg);
+  --color-grade-low: var(--grade-low);
+  --color-grade-low-bg: var(--grade-low-bg);
+  --color-grade-verylow: var(--grade-verylow);
+  --color-grade-verylow-bg: var(--grade-verylow-bg);
+  --color-warn: var(--warn);
+  --color-warn-bg: var(--warn-bg);
+  --color-warn-border: var(--warn-border);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif;
+    text-wrap: balance;
+  }
+}
