@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
-import { Activity, Microscope, Droplet, ScanLine, HeartPulse, Info } from 'lucide-react'
+import { Activity, Microscope, Droplet, ScanLine, HeartPulse, Info, FlaskConical, Stethoscope } from 'lucide-react'
+import { PMIDLink } from '@/components/pmid-link'
 
 export const metadata: Metadata = {
   title: 'Monitorowanie i czujność po leczeniu',
@@ -148,11 +149,26 @@ export default function MonitorowaniePage() {
               <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" /><span><strong>Oporność na chemioterapię</strong> — CSC bywają mniej wrażliwe na klasyczne cytostatyki i mogą przetrwać leczenie, które zniszczyło masę guza. Bywa, że chemioterapia redukuje guz, ale względnie wzbogaca pulę opornych CSC.</span></li>
               <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" /><span><strong>Nawroty</strong> — przetrwałe CSC wiąże się z późnymi wznowami, czasem po latach pozornego zdrowia.</span></li>
             </ul>
+            <p className="mt-4 text-sm leading-relaxed text-foreground/80">
+              Mechanizmy, które za tym stoją, są coraz lepiej opisane. CSC potrafią przejść tzw.
+              przejście nabłonkowo-mezenchymalne (EMT), które ułatwia im wniknięcie do naczyń i przeżycie
+              w krwiobiegu. Ich oporność na chemioterapię wiąże się m.in. z nadekspresją błonowych
+              transporterów ABC (wypompowujących leki z komórki), aktywnością szlaków Wnt/β-katenina i
+              Notch oraz sprawniejszą naprawą DNA. Część CSC może też wejść w stan uśpienia
+              (quiescence) — przestają się dzielić, przez co są niewidoczne dla terapii działających na
+              komórki dzielące się, a po miesiącach lub latach mogą się reaktywować.
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-foreground/80">
+              CSC rozpoznaje się po markerach takich jak CD44+/CD24−, ALDH1, CD133 czy EpCAM — przy czym
+              zestaw markerów różni się między nowotworami i nie jest w pełni ujednolicony. To jedna z
+              biologicznych trudności całego pola.
+            </p>
             <p className="mt-3 text-sm leading-relaxed text-foreground/80">
               Dlatego dla części badaczy bardziej informacyjna od jednorazowej liczby CTC bywa
               <strong> dynamika w czasie</strong> — czy poziom komórek (zwłaszcza frakcji CSC) rośnie, czy
-              spada w kolejnych pomiarach. Trend bywa cenniejszy niż pojedynczy wynik. To jednak nadal
-              obszar badań, a nie ustalony standard postępowania.
+              spada w kolejnych pomiarach. Trend bywa cenniejszy niż pojedynczy wynik (analogicznie do
+              śledzenia PSA w czasie w raku prostaty). To jednak nadal obszar badań, a nie ustalony
+              standard postępowania.
             </p>
           </div>
 
@@ -194,6 +210,101 @@ export default function MonitorowaniePage() {
             </ul>
           </div>
 
+          {/* Tabela porównawcza */}
+          <div className="mt-5 overflow-x-auto rounded-xl border border-border">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-primary text-left text-primary-foreground">
+                  <th className="px-3 py-3 font-medium">Cecha</th>
+                  <th className="px-3 py-3 font-medium">CellSearch</th>
+                  <th className="px-3 py-3 font-medium">maintrac</th>
+                  <th className="px-3 py-3 font-medium">stemtrac</th>
+                  <th className="px-3 py-3 font-medium">ctDNA</th>
+                </tr>
+              </thead>
+              <tbody className="align-top">
+                <tr className="border-t border-border">
+                  <td className="px-3 py-2 font-medium text-foreground">Co mierzy</td>
+                  <td className="px-3 py-2 text-foreground/80">Liczbę CTC (EpCAM+)</td>
+                  <td className="px-3 py-2 text-foreground/80">Liczbę żywych komórek krążących</td>
+                  <td className="px-3 py-2 text-foreground/80">Liczbę sfer CSC zdolnych do podziału</td>
+                  <td className="px-3 py-2 text-foreground/80">Fragmenty DNA nowotworu</td>
+                </tr>
+                <tr className="border-t border-border even:bg-secondary/30">
+                  <td className="px-3 py-2 font-medium text-foreground">Na jakie pytanie odpowiada</td>
+                  <td className="px-3 py-2 text-foreground/80">Ile komórek krąży?</td>
+                  <td className="px-3 py-2 text-foreground/80">Jak zmienia się ich liczba w czasie?</td>
+                  <td className="px-3 py-2 text-foreground/80">Które komórki są zdolne do przerzutów?</td>
+                  <td className="px-3 py-2 text-foreground/80">Jakie mutacje są obecne?</td>
+                </tr>
+                <tr className="border-t border-border">
+                  <td className="px-3 py-2 font-medium text-foreground">Status</td>
+                  <td className="px-3 py-2 text-foreground/80">Aprobata FDA, CE</td>
+                  <td className="px-3 py-2 text-foreground/80">Komercyjna; węższa walidacja</td>
+                  <td className="px-3 py-2 text-foreground/80">Komercyjna; ograniczona walidacja</td>
+                  <td className="px-3 py-2 text-foreground/80">W części wskazań już zwalidowana</td>
+                </tr>
+                <tr className="border-t border-border even:bg-secondary/30">
+                  <td className="px-3 py-2 font-medium text-foreground">Kluczowy sygnał</td>
+                  <td className="px-3 py-2 text-foreground/80">Liczba (np. ≥5 w stadium IV)</td>
+                  <td className="px-3 py-2 text-foreground/80">Trend (wzrost/spadek)</td>
+                  <td className="px-3 py-2 text-foreground/80">Liczba sfer + reakcja na leki</td>
+                  <td className="px-3 py-2 text-foreground/80">Pojawienie się / zanik mutacji</td>
+                </tr>
+                <tr className="border-t border-border">
+                  <td className="px-3 py-2 font-medium text-foreground">Czas oczekiwania</td>
+                  <td className="px-3 py-2 text-foreground/80">~2 dni</td>
+                  <td className="px-3 py-2 text-foreground/80">~1–2 dni</td>
+                  <td className="px-3 py-2 text-foreground/80">2–3 tygodnie (hodowla)</td>
+                  <td className="px-3 py-2 text-foreground/80">dni</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2 text-xs text-muted-foreground">
+            To narzędzia uzupełniające, nie konkurencyjne. Różnią się tym, co mierzą i jak mocno są
+            zwalidowane.
+          </p>
+
+          {/* Stemtrac */}
+          <div className="mt-5 rounded-xl border border-border bg-card p-5">
+            <h3 className="flex items-center gap-2 font-serif text-base font-semibold text-primary">
+              <FlaskConical className="h-4 w-4 text-accent" aria-hidden="true" />
+              stemtrac — próba oceny aktywnej frakcji CSC
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-foreground/80">
+              stemtrac to rozszerzenie maintrac, które zadaje pytanie: czy we krwi są komórki zdolne do
+              aktywnego podziału i tworzenia przerzutów? Komórki izolowane z próbki krwi hoduje się przez
+              2–3 tygodnie; te o cechach macierzystych tworzą kuliste skupiska (sfery, tzw. mammosphere
+              assay), a wynik podaje się jako liczbę sfer na mililitr. U osób zdrowych takie sfery zwykle
+              nie wyrastają.
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-foreground/80">
+              Koncepcyjnie jest to atrakcyjne, bo celuje w „najgroźniejszą” subpopulację. Trzeba jednak
+              powiedzieć wprost: <strong>przełożenie wyniku na decyzje kliniczne u konkretnego pacjenta
+              jest słabiej udokumentowane</strong> niż dla CellSearch. Opisywane progi (np. powyżej ok.
+              300 sfer/ml jako sygnał do pogłębionej diagnostyki obrazowej) nie są progami zatwierdzonymi
+              przez agencje regulacyjne. To narzędzie z obszaru badań i indywidualnej oceny, nie standard.
+            </p>
+          </div>
+
+          {/* Co mówią opublikowane badania maintrac */}
+          <div className="mt-5 rounded-xl border border-border bg-card p-5">
+            <h3 className="font-serif text-base font-semibold text-primary">Co mówią opublikowane badania</h3>
+            <p className="mt-2 text-sm leading-relaxed text-foreground/80">
+              W recenzowanych czasopismach ukazały się prace z użyciem maintrac, m.in.:
+            </p>
+            <ul className="mt-3 space-y-2 text-sm leading-relaxed text-foreground/80">
+              <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" /><span>Rak piersi wczesny (n=165, obserwacja mediana ~9 lat): wzrost liczby krążących komórek nabłonkowych w trakcie radioterapii uzupełniającej był związany z istotnie gorszym przeżyciem wolnym od choroby (p=0,004; Curr Oncol 2023) <PMIDLink pmid="36661670" />.</span></li>
+              <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" /><span>Rak jelita grubego (n=22): metoda pozwoliła wykryć i charakteryzować krążące komórki niezależnie od stadium choroby — badanie proof-of-principle (Mol Clin Oncol 2021) <PMIDLink pmid="34462657" />.</span></li>
+            </ul>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Wartość metody leży w seryjnym pomiarze dynamiki — automatyzację metody wspierał projekt UE
+              (Horizon 2020). Ograniczenie: większość danych pochodzi z jednego ośrodka (Bayreuth), co
+              zmniejsza niezależną walidację, a metoda nie ma aprobaty FDA jak CellSearch.
+            </p>
+          </div>
+
           <div className="mt-5 rounded-xl border border-warn-border bg-warn-bg p-4 text-sm leading-relaxed text-foreground/80">
             <span className="flex items-center gap-2 font-semibold text-warn">
               <Info className="h-4 w-4" aria-hidden="true" /> Uczciwie o monitorowaniu CTC
@@ -203,6 +314,39 @@ export default function MonitorowaniePage() {
               badań kontrolnych ani decyzji onkologa. Metody komercyjne różnią się jakością i walidacją —
               warto wybierać te o udokumentowanej wiarygodności i interpretować wyniki razem z lekarzem, a
               nie samodzielnie. Sam dodatni wynik nie jest podstawą do paniki ani do zmiany leczenia.
+            </p>
+          </div>
+        </section>
+
+        {/* Kiedy zapytać o biopsję płynną */}
+        <section className="mt-12">
+          <h2 className="flex items-center gap-2 font-serif text-2xl font-semibold text-primary">
+            <Stethoscope className="h-5 w-5 text-accent" aria-hidden="true" />
+            Kiedy warto zapytać onkologa o biopsję płynną
+          </h2>
+          <p className="mt-3 leading-relaxed text-foreground/80">
+            To nie są wskazania „dla każdego” ani podstawa do samodzielnych decyzji. To sytuacje, w
+            których rozmowa z onkologiem o monitorowaniu komórkowym (CTC/CSC) lub genetycznym (ctDNA)
+            może mieć sens:
+          </p>
+          <ul className="mt-4 space-y-2.5 text-sm leading-relaxed text-foreground/80">
+            <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />Gdy standardowe markery są mało informacyjne (np. rak potrójnie ujemny bez dobrego markera serologicznego).</li>
+            <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />Gdy zależy Ci na wczesnym sygnale o reaktywacji choroby — dynamika komórek krążących bywa wcześniejsza niż obraz w TK (obszar badań).</li>
+            <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />Przy decyzji o intensywności leczenia w zaawansowanym raku piersi — badanie STIC CTC pokazało, że oparcie decyzji chemioterapia vs hormonoterapia na liczbie CTC (CellSearch) dało lepsze wyniki niż sam osąd kliniczny.</li>
+            <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />Jako uzupełniająca ocena frakcji CSC przy planowaniu terapii celowanych lub udziału w badaniach.</li>
+          </ul>
+
+          <div className="mt-5 rounded-xl border border-border bg-card p-5 text-sm leading-relaxed text-foreground/80">
+            <h3 className="font-serif text-base font-semibold text-primary">Powiązanie z metodami celującymi w CSC</h3>
+            <p className="mt-2">
+              Komórki macierzyste nowotworu są dokładnie tym celem, na który ukierunkowane są niektóre
+              badane substancje opisane w tym serwisie — przede wszystkim{' '}
+              <Link href="/metody/salinomycyna" className="text-accent hover:underline">salinomycyna</Link>, a także{' '}
+              <Link href="/metody/niskie-dawki-naltreksonu" className="text-accent hover:underline">LDN</Link>.
+              Teoretycznie monitorowanie frakcji CSC mogłoby służyć do oceny, czy taka interwencja
+              zmniejsza pulę tych komórek. Trzeba jednak powiedzieć wprost: to nadal obszar badań, a nie
+              praktyka kliniczna — żadna z tych substancji nie ma dowodów skuteczności u ludzi, a
+              monitorowanie CSC nie jest zwalidowanym narzędziem do oceny terapii.
             </p>
           </div>
         </section>
