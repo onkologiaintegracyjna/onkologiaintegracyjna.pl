@@ -100,9 +100,14 @@ export default async function MethodPage({
 
           {/* Profil dowodowy */}
           <div className="mt-8 rounded-2xl border border-border bg-card p-6 shadow-sm">
-            <p className="font-mono text-xs uppercase tracking-widest text-accent">
-              Profil dowodowy
-            </p>
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <p className="font-mono text-xs uppercase tracking-widest text-accent">
+                Profil dowodowy
+              </p>
+              <Link href="/jak-czytac-dowody" className="text-xs text-muted-foreground underline-offset-2 hover:text-accent hover:underline">
+                Co znaczą te oceny?
+              </Link>
+            </div>
             <dl className="mt-4 grid gap-5 sm:grid-cols-2">
               <div className="sm:col-span-2">
                 <dt className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
@@ -215,7 +220,16 @@ export default async function MethodPage({
           </ul>
         </section>
 
-        <DisclaimerBox className="mt-12" />
+        <p className="mt-12 border-t border-border pt-6 text-xs leading-relaxed text-muted-foreground">
+          Ocena oparta na NCI PDQ Levels of Evidence for Integrative Therapies
+          (cancer.gov) oraz wytycznych SIO-ASCO (ascopubs.org), z zachowaniem skali
+          GRADE.{' '}
+          <Link href="/jak-czytac-dowody" className="text-accent hover:underline">
+            Jak czytać dowody?
+          </Link>
+        </p>
+
+        <DisclaimerBox className="mt-8" />
       </article>
     </>
   )

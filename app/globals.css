@@ -53,6 +53,17 @@
   --warn-bg: #fdf6e7;
   --warn-border: #ecd9a6;
 
+  /* Evidence type (skala oparta na NCI PDQ — litery A/B/C/P) */
+  --etype-a: #167a4a;
+  --etype-a-bg: #e7f4ec;
+  --etype-b: #1d5aa8;
+  --etype-b-bg: #e8eff9;
+  --etype-c: #9a6b08;
+  --etype-c-bg: #fbf2dd;
+  --etype-p: #6b4ea8;
+  --etype-p-bg: #efeafa;
+  --etype-p-border: #d8cdf0;
+
   --chart-1: #1a2b4a;
   --chart-2: #0f6e56;
   --chart-3: #1d5aa8;
@@ -105,6 +116,16 @@
   --color-warn: var(--warn);
   --color-warn-bg: var(--warn-bg);
   --color-warn-border: var(--warn-border);
+
+  --color-etype-a: var(--etype-a);
+  --color-etype-a-bg: var(--etype-a-bg);
+  --color-etype-b: var(--etype-b);
+  --color-etype-b-bg: var(--etype-b-bg);
+  --color-etype-c: var(--etype-c);
+  --color-etype-c-bg: var(--etype-c-bg);
+  --color-etype-p: var(--etype-p);
+  --color-etype-p-bg: var(--etype-p-bg);
+  --color-etype-p-border: var(--etype-p-border);
 
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);

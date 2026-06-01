@@ -18,6 +18,14 @@ export default function MetodyPage() {
       />
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <MethodsExplorer />
+        <p className="mt-10 border-t border-border pt-6 text-xs leading-relaxed text-muted-foreground">
+          Ocena oparta na uznanych systemach: NCI PDQ Levels of Evidence for
+          Integrative, Alternative, and Complementary Therapies (cancer.gov) oraz
+          wytycznych SIO-ASCO (ascopubs.org), z zachowaniem skali GRADE.{' '}
+          <a href="/jak-czytac-dowody" className="text-accent hover:underline">
+            Jak czytać dowody?
+          </a>
+        </p>
       </section>
     </>
   )
