@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ChevronRight, Phone, Microscope, FlaskConical, ShieldAlert, BookText } from 'lucide-react'
+import { ChevronRight, Phone, Microscope, FlaskConical, ShieldAlert, BookText, Info, ClipboardList, Lightbulb, Globe } from 'lucide-react'
 import { getMethod, getAllMethodSlugs } from '@/lib/methods'
 import { gradeLabels, evidenceTypeLabels, clinicalStatusLabels } from '@/lib/labels'
 import {
@@ -14,6 +14,8 @@ import { PMIDLink } from '@/components/pmid-link'
 import { PatientClinicianToggle } from '@/components/patient-clinician-toggle'
 import { DisclaimerBox } from '@/components/disclaimer-box'
 import { ExperimentalWarning } from '@/components/experimental-warning'
+import { RedoxFlag } from '@/components/redox-flag'
+import { Syringe, Pill } from 'lucide-react'
 
 export function generateStaticParams() {
   return getAllMethodSlugs().map((slug) => ({ slug }))
@@ -164,6 +166,16 @@ export default async function MethodPage({
           </div>
         )}
 
+        {method.whatIsIt && (
+          <section className="mb-12">
+            <h2 className="flex items-center gap-2 font-serif text-2xl font-semibold text-primary">
+              <Info className="h-5 w-5 text-accent" aria-hidden="true" />
+              Co to jest
+            </h2>
+            <p className="mt-3 leading-relaxed text-foreground/80">{method.whatIsIt}</p>
+          </section>
+        )}
+
         <section>
           <h2 className="flex items-center gap-2 font-serif text-2xl font-semibold text-primary">
             <Microscope className="h-5 w-5 text-accent" aria-hidden="true" />
@@ -171,6 +183,58 @@ export default async function MethodPage({
           </h2>
           <p className="mt-3 leading-relaxed text-foreground/80">{method.howItWorks}</p>
         </section>
+
+        {method.mythBuster && (
+          <section className="mt-8 rounded-xl border border-grade-moderate/30 bg-grade-moderate-bg/50 p-6">
+            <h2 className="flex items-center gap-2 font-serif text-lg font-semibold text-primary">
+              <Lightbulb className="h-5 w-5 text-grade-moderate" aria-hidden="true" />
+              {method.mythBuster.title}
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-foreground/80">{method.mythBuster.body}</p>
+          </section>
+        )}
+
+        {method.redoxClass && (
+          <section className="mt-8">
+            <RedoxFlag redox={method.redoxClass} />
+          </section>
+        )}
+
+        {method.administrationRoute && (
+          <section className="mt-12">
+            <h2 className="flex items-center gap-2 font-serif text-2xl font-semibold text-primary">
+              <Syringe className="h-5 w-5 text-accent" aria-hidden="true" />
+              Droga podania ma znaczenie
+            </h2>
+            <p className="mt-3 leading-relaxed text-foreground/80">
+              {method.administrationRoute.summary}
+            </p>
+            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+              {method.administrationRoute.oral && (
+                <div className="rounded-xl border border-border bg-card p-5">
+                  <h3 className="flex items-center gap-2 font-serif text-base font-semibold text-primary">
+                    <Pill className="h-4 w-4 text-accent" aria-hidden="true" />
+                    Doustnie
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-foreground/80">
+                    {method.administrationRoute.oral}
+                  </p>
+                </div>
+              )}
+              {method.administrationRoute.iv && (
+                <div className="rounded-xl border border-border bg-card p-5">
+                  <h3 className="flex items-center gap-2 font-serif text-base font-semibold text-primary">
+                    <Syringe className="h-4 w-4 text-accent" aria-hidden="true" />
+                    Dożylnie (wlew)
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-foreground/80">
+                    {method.administrationRoute.iv}
+                  </p>
+                </div>
+              )}
+            </div>
+          </section>
+        )}
 
         <section className="mt-12">
           <h2 className="flex items-center gap-2 font-serif text-2xl font-semibold text-primary">
@@ -180,13 +244,71 @@ export default async function MethodPage({
           <p className="mt-3 leading-relaxed text-foreground/80">{method.research}</p>
         </section>
 
+        {method.indications && method.indications.length > 0 && (
+          <section className="mt-12">
+            <h2 className="flex items-center gap-2 font-serif text-2xl font-semibold text-primary">
+              <ClipboardList className="h-5 w-5 text-accent" aria-hidden="true" />
+              Badane wskazania
+            </h2>
+            <ul className="mt-4 space-y-2">
+              {method.indications.map((it) => (
+                <li key={it} className="flex gap-2 text-sm leading-relaxed text-foreground/80">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                  {it}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-xs text-muted-foreground">
+              Wskazania badane w publikacjach — nie są to zalecenia stosowania. Decyzję podejmuje lekarz prowadzący.
+            </p>
+          </section>
+        )}
+
         <section className="mt-12 rounded-xl border border-border bg-secondary/40 p-6">
           <h2 className="flex items-center gap-2 font-serif text-xl font-semibold text-primary">
             <ShieldAlert className="h-5 w-5 text-accent" aria-hidden="true" />
             Bezpieczeństwo i przeciwwskazania
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-foreground/80">{method.safety}</p>
+          {method.contraindications && (
+            <p className="mt-4 border-t border-border pt-4 text-sm leading-relaxed text-foreground/80">
+              <strong className="font-semibold text-primary">Przeciwwskazania i interakcje: </strong>
+              {method.contraindications}
+            </p>
+          )}
         </section>
+
+        {method.regulatory && method.regulatory.length > 0 && (
+          <section className="mt-12">
+            <h2 className="flex items-center gap-2 font-serif text-2xl font-semibold text-primary">
+              <Globe className="h-5 w-5 text-accent" aria-hidden="true" />
+              Status regulacyjny
+            </h2>
+            <div className="mt-4 overflow-x-auto rounded-xl border border-border">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr className="bg-secondary text-left">
+                    <th className="px-4 py-2 font-medium text-primary">Kraj</th>
+                    <th className="px-4 py-2 font-medium text-primary">Status</th>
+                    <th className="px-4 py-2 font-medium text-primary">Uwagi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {method.regulatory.map((r, i) => (
+                    <tr key={i} className="border-t border-border align-top">
+                      <td className="px-4 py-2 font-medium text-foreground">{r.country}</td>
+                      <td className="px-4 py-2 text-foreground/80">{r.status}</td>
+                      <td className="px-4 py-2 text-muted-foreground">{r.note ?? '—'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-3 text-xs text-muted-foreground">
+              Status regulacyjny zmienia się — informacje orientacyjne, do weryfikacji w aktualnych źródłach.
+            </p>
+          </section>
+        )}
 
         <section className="mt-12 rounded-xl border border-accent/30 bg-accent/5 p-6">
           <h2 className="flex items-center gap-2 font-serif text-xl font-semibold text-primary">

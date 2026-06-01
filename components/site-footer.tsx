@@ -9,6 +9,7 @@ const columns = [
       { href: '/co-pomaga', label: 'Co pomaga przy leczeniu' },
       { href: '/w-trakcie-leczenia', label: 'W trakcie leczenia' },
       { href: '/nowotwory', label: 'Według nowotworu' },
+      { href: '/monitorowanie', label: 'Monitorowanie po leczeniu' },
       { href: '/styl-zycia', label: 'Styl życia' },
     ],
   },
@@ -17,6 +18,7 @@ const columns = [
     links: [
       { href: '/metody', label: 'Metody i substancje' },
       { href: '/szlaki', label: 'Mechanizmy i szlaki' },
+      { href: '/ebm', label: 'EBM i finansowanie' },
       { href: '/jak-czytac-dowody', label: 'Jak czytać dowody' },
       { href: '/zrodla', label: 'Źródła i bibliografia' },
     ],

@@ -71,3 +71,18 @@ export const evidenceLetterLabels: Record<'A' | 'B' | 'C' | 'P', string> = {
   C: 'C — małe badania, rejestry lub serie przypadków',
   P: 'P — dane przedkliniczne lub mechanistyczne (brak danych klinicznych)',
 }
+
+export const redoxLabels: Record<'pro-oxidant' | 'antioxidant' | 'context-dependent', string> = {
+  'pro-oxidant': 'prooksydacyjna',
+  antioxidant: 'antyoksydacyjna',
+  'context-dependent': 'zależna od kontekstu',
+}
+
+export const redoxDescriptions: Record<'pro-oxidant' | 'antioxidant' | 'context-dependent', string> = {
+  'pro-oxidant':
+    'Działa przez zwiększanie stresu oksydacyjnego (reaktywne formy tlenu) — tym mechanizmem część badań tłumaczy efekt przeciwnowotworowy.',
+  antioxidant:
+    'Działa przez zmniejszanie stresu oksydacyjnego (neutralizowanie reaktywnych form tlenu) — chroni komórki przed utlenianiem.',
+  'context-dependent':
+    'Działa różnie zależnie od stężenia i kontekstu — w jednych warunkach antyoksydacyjnie, w innych prooksydacyjnie.',
+}

@@ -10,6 +10,18 @@ export const methods: Method[] = [
   // ===== Substancje farmakologiczne uzupełniające =====
   {
     slug: 'wlewy-dozylne-witaminy-c',
+    indications: [
+      'leczenie wspomagające w wybranych nowotworach (badania kliniczne)',
+      'redukcja zmęczenia onkologicznego',
+      'jakość życia podczas chemioterapii',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'off-label', note: 'Brak rejestracji jako lek onkologiczny; stosowane off-label na podstawie art. 5 ust. 1 dyr. 2001/83/WE' },
+      { country: 'Niemcy', status: 'off-label', note: 'Stosowane przez Heilpraktikerów i lekarzy CAM' },
+      { country: 'USA', status: 'off-label', note: 'Stosowane w klinikach integracyjnych' },
+      { country: 'Szwajcaria', status: 'off-label', note: 'BAG potwierdza refundację 5 metod CAM (akupunktura, antropozofia, farmakoterapia TCM, homeopatia, fitoterapia) wykonywanych przez kwalifikowanych lekarzy — IVC nie figuruje jako odrębnie refundowana metoda. Status per świadczenie do weryfikacji w danej kasie.' },
+    ],
+    redoxClass: 'pro-oxidant',
     name: 'Wlewy dożylne witaminy C (IVC)',
     category: 'substance',
     shortDescription:
@@ -37,10 +49,42 @@ export const methods: Method[] = [
       { pmid: '35929990', title: 'VITALITY — RCT fazy III, przerzutowy rak jelita grubego', year: 2022, note: 'brak przewagi w pierwszej linii; sygnał w podgrupie RAS-mutant' },
       { pmid: '26541605', title: 'Yun et al. — mechanizm selektywnej toksyczności (KRAS/BRAF)', year: 2015, note: 'dane przedkliniczne' },
     ],
+    administrationRoute: {
+      summary:
+        'Droga podania zmienia tu sam mechanizm działania. To nie jest „ta sama witamina C w innej formie".',
+      oral:
+        'Doustnie organizm ściśle reguluje wchłanianie — stężenie we krwi pozostaje niskie, a witamina C działa jako antyoksydant (chroni komórki przed utlenianiem). Tą drogą nie da się osiągnąć stężeń badanych w onkologii.',
+      iv:
+        'Dożylnie, z pominięciem regulacji jelitowej, można osiągnąć bardzo wysokie stężenia, przy których witamina C działa odwrotnie — jako prooksydant generujący nadtlenek wodoru, selektywnie toksyczny dla części komórek nowotworowych (w modelach przedklinicznych). To te wysokie, dożylne stężenia są przedmiotem badań klinicznych.',
+    },
+    whatIsIt:
+      'Wlewy dożylnej witaminy C (IVC) to podawanie kwasu askorbinowego bezpośrednio do żyły w stężeniach wielokrotnie wyższych, niż można osiągnąć doustnie. Doustnie organizm utrzymuje stężenie w osoczu na poziomie rzędu 0,2 mmol/l (mechanizm nasycenia transporterów), podczas gdy wlew dożylny pozwala osiągnąć kilkadziesiąt mmol/l — stąd zupełnie inne działanie. To nie jest „duża dawka tabletek".',
+    contraindications:
+      'Bezwzględne: niedobór G6PD (ryzyko hemolizy — wymagane badanie przed pierwszym wlewem), zaawansowana niewydolność nerek, hemochromatoza. Interakcje: opisano osłabienie działania bortezomibu (nie łączyć). Dla większości klasycznych cytostatyków (platyny, taksany, antracykliny, fluoropirymidyny) nie wykazano istotnej klinicznie interferencji.',
+    mythBuster: {
+      title: 'Częsty błąd: „witamina C nie działa w raku"',
+      body:
+        'Wypowiedzi o nieskuteczności witaminy C w onkologii często powołują się na klasyczne badania Mayo Clinic (1979, 1985). Te badania dotyczyły jednak witaminy C DOUSTNEJ, która osiąga niskie stężenia we krwi. Dożylnie osiąga się stężenia rzędu 100 razy wyższe, przy których mechanizm działania jest odwrotny (prooksydacyjny). To dwie różne farmakologicznie metody mimo tej samej cząsteczki — porównywanie ich to błąd zamiany formy/dawki. Warto sprawdzać, czy dana krytyka mówi o formie doustnej, czy dożylnej.',
+    },
   },
   {
     slug: 'jemiola',
+    indications: [
+      'poprawa jakości życia podczas chemioterapii',
+      'redukcja zmęczenia onkologicznego',
+      'wybrane nowotwory lite (RCT)',
+    ],
+    regulatory: [
+      { country: 'Szwajcaria', status: 'refundowane', note: 'Refundowane od 2017 jako jedna z 5 metod CAM (antropozofia)' },
+      { country: 'Niemcy', status: 'dopuszczone', note: 'Obligatoryjnie pokrywane przez GKV w paliatywnej onkologii' },
+      { country: 'Austria', status: 'dopuszczone', note: 'Refundacja w ramach Begleitende Krebsbehandlungen' },
+      { country: 'Polska', status: 'off-label', note: 'Brak refundacji; dostępne w aptekach na receptę' },
+    ],
     name: 'Jemioła / Viscum album (Iscador, Helixor, Abnoba viscum)',
+    whatIsIt:
+      'Preparaty z jemioły (Viscum album) podaje się zwykle podskórnie jako leczenie wspomagające, głównie dla poprawy jakości życia. W części krajów (np. Niemcy) są standardowym elementem opieki wspomagającej, zwłaszcza paliatywnej.',
+    contraindications:
+      'Możliwe reakcje miejscowe w miejscu wstrzyknięcia oraz reakcje ogólne (gorączka). Ostrożność przy chorobach autoimmunologicznych i w trakcie immunoterapii — wymaga nadzoru lekarza.',
     category: 'substance',
     shortDescription:
       'Preparaty z Viscum album badane jako leczenie wspomagające — głównie poprawa jakości życia.',
@@ -69,7 +113,25 @@ export const methods: Method[] = [
   },
   {
     slug: 'kurkumina',
+    indications: [
+      'leczenie wspomagające w chemioterapii (badania)',
+      'redukcja stanu zapalnego',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'OTC', note: 'Suplement diety; brak rejestracji jako lek onkologiczny' },
+      { country: 'USA', status: 'OTC', note: 'Dietary supplement (FDA GRAS)' },
+    ],
+    redoxClass: 'context-dependent',
     name: 'Kurkumina',
+    whatIsIt:
+      'Kurkumina to żółty polifenol z kłącza kurkumy. Ma bardzo niską biodostępność doustną — surowa kurkumina słabo się wchłania, dlatego w badaniach używa się form standaryzowanych (np. liposomalnych). To wpływa na przełożenie wyników z probówki na praktykę kliniczną.',
+    contraindications:
+      'Możliwe interakcje z lekami metabolizowanymi przez wątrobę (CYP3A4) oraz z lekami przeciwkrzepliwymi. Ostrożność okołozabiegowo (wpływ na krzepnięcie).',
+    mythBuster: {
+      title: 'Uwaga na przepaść między probówką a pacjentem',
+      body:
+        'Kurkumina ma imponujące działanie w badaniach in vitro, co bywa przedstawiane jako dowód skuteczności u ludzi. Problem w tym, że doustnie osiąga we krwi bardzo niskie stężenia — znacznie poniżej tych z probówki. Dlatego mocne wyniki przedkliniczne nie przekładają się wprost na efekt kliniczny, a dowody u ludzi pozostają ograniczone.',
+    },
     category: 'substance',
     shortDescription:
       'Polifenol z kurkumy badany jako składnik wspomagający; dane głównie z badań wczesnofazowych.',
@@ -97,7 +159,21 @@ export const methods: Method[] = [
   },
   {
     slug: 'melatonina',
+    indications: [
+      'redukcja toksyczności chemioterapii',
+      'poprawa snu u pacjentów onkologicznych',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'OTC', note: 'Suplement (do 5 mg) i Rx (powyżej)' },
+      { country: 'USA', status: 'OTC', note: 'Dietary supplement' },
+      { country: 'Niemcy', status: 'dopuszczone', note: 'Lek na receptę dla wybranych wskazań snu' },
+    ],
+    redoxClass: 'antioxidant',
     name: 'Melatonina',
+    whatIsIt:
+      'Melatonina to hormon regulujący rytm dobowy, wydzielany przez szyszynkę. W onkologii bada się ją zarówno w zaburzeniach snu, jak i jako adiuwant zmniejszający toksyczność leczenia. Dane są starsze i wymagają odświeżenia.',
+    contraindications:
+      'Może nasilać senność; interakcje z lekami immunosupresyjnymi i przeciwkrzepliwymi. Ostrożność przy prowadzeniu pojazdów po wieczornej dawce.',
     category: 'substance',
     shortDescription:
       'Hormon szyszynki badany jako adiuwant onkologiczny i w zaburzeniach snu u pacjentów.',
@@ -125,7 +201,20 @@ export const methods: Method[] = [
   },
   {
     slug: 'witamina-d',
+    indications: [
+      'leczenie deficytu witD u pacjentów onkologicznych',
+      'wspomaganie zdrowia kości',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'OTC', note: 'Suplement i Rx; refundacja niektórych wskazań' },
+      { country: 'USA', status: 'OTC', note: 'Dietary supplement' },
+    ],
+    redoxClass: 'context-dependent',
     name: 'Witamina D',
+    whatIsIt:
+      'Witamina D to hormon steroidowy wytwarzany w skórze pod wpływem słońca i dostarczany z dietą. Niedobór jest częsty u pacjentów onkologicznych. W onkologii bada się jej rolę nie jako leczenie nowotworu, lecz jako element wsparcia — zdrowie kości, odporność, możliwy wpływ na rokowanie.',
+    contraindications:
+      'Ryzyko hiperkalcemii przy nadmiernej suplementacji — wymaga kontroli stężenia 25(OH)D i wapnia. Ostrożność przy niektórych chorobach nerek i sarkoidozie.',
     category: 'substance',
     shortDescription:
       'Suplementacja cholekalcyferolu — sygnał wpływu na śmiertelność z powodu raka i zdrowie kości.',
@@ -153,7 +242,19 @@ export const methods: Method[] = [
   },
   {
     slug: 'omega-3',
+    indications: [
+      'kacheksja onkologiczna',
+      'wspomaganie tolerancji chemioterapii',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'OTC', note: 'Suplement i lek (Omacor/Lovaza Rx)' },
+    ],
+    redoxClass: 'context-dependent',
     name: 'Kwasy omega-3 (EPA/DHA)',
+    whatIsIt:
+      'Kwasy omega-3 (EPA i DHA) to wielonienasycone kwasy tłuszczowe obecne m.in. w tłustych rybach. W onkologii bada się je głównie w kontekście niedożywienia i kacheksji oraz tolerancji leczenia, a nie jako leczenie przeciwnowotworowe.',
+    contraindications:
+      'Działanie przeciwzakrzepowe — istotne przy lekach przeciwkrzepliwych i okołooperacyjnie (zwykle zaleca się przerwę przed zabiegiem). Ostrożność przy zaburzeniach krzepnięcia.',
     category: 'substance',
     shortDescription:
       'Kwasy tłuszczowe omega-3 badane głównie w kontekście kacheksji onkologicznej i tolerancji leczenia.',
@@ -180,6 +281,12 @@ export const methods: Method[] = [
   },
   {
     slug: 'glutamina',
+    indications: [
+      'zapobieganie mucositis (selektywne wskazania)',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'OTC', note: 'Suplement; forma jelitowa w żywieniu medycznym' },
+    ],
     name: 'Glutamina',
     category: 'substance',
     shortDescription:
@@ -208,6 +315,14 @@ export const methods: Method[] = [
   },
   {
     slug: 'n-acetylocysteina',
+    indications: [
+      'leczenie zatrucia paracetamolem',
+      'eksperymentalnie: ochrona toksyczności chemio',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'dopuszczone', note: 'Rejestracja jako mukolityk i odtrutka paracetamolu (NIE onko)' },
+    ],
+    redoxClass: 'antioxidant',
     name: 'N-acetylocysteina (NAC)',
     category: 'experimental',
     experimental: true,
@@ -237,7 +352,23 @@ export const methods: Method[] = [
   // ===== Konwencjonalne technologie / procedury (nie CAM) =====
   {
     slug: 'hipertermia-rht',
+    indications: [
+      'mięsaki tkanek miękkich',
+      'rak szyjki macicy (z radioterapią)',
+      'nowotwory pęcherza',
+      'wybrane mCRC',
+    ],
+    regulatory: [
+      { country: 'Niemcy', status: 'refundowane', note: 'GKV pokrywa wybrane wskazania (DEGRO guidelines)' },
+      { country: 'Holandia', status: 'refundowane', note: 'Refundowane w wybranych ośrodkach' },
+      { country: 'Szwajcaria', status: 'refundowane', note: 'Refundacja dla wskazań ESMO/DEGRO' },
+      { country: 'Polska', status: 'off-label', note: 'Brak refundacji NFZ; ośrodki prywatne' },
+    ],
     name: 'Hipertermia lokoregionalna (RHT)',
+    whatIsIt:
+      'Hipertermia lokoregionalna (RHT) to kontrolowane podgrzanie obszaru guza (zwykle do ok. 40–43°C), stosowane łącznie z radio- lub chemioterapią. To zarejestrowana technologia medyczna z wytycznymi (DEGRO/ESMO) — należy ją odróżnić od hipertermii ogólnoustrojowej, która ma znacznie słabsze podstawy.',
+    contraindications:
+      'Wykonywana wyłącznie w wyspecjalizowanych ośrodkach. Przeciwwskazania zależą od lokalizacji (np. metalowe implanty w polu grzania) i są oceniane indywidualnie.',
     category: 'physical',
     shortDescription:
       'Lokoregionalna hipertermia stosowana łącznie z radio-/chemioterapią — metoda z wytycznymi, nie pseudomedycyna.',
@@ -265,7 +396,21 @@ export const methods: Method[] = [
   },
   {
     slug: 'tlenoterapia-hiperbaryczna',
+    indications: [
+      'popromienna nekroza tkanek miękkich i kości',
+      'martwica popromienna pęcherza',
+      'rany niegojące się onko',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'refundowane', note: 'NFZ refunduje 14 wskazań UHMS' },
+      { country: 'USA', status: 'dopuszczone', note: 'Medicare/Medicaid pokrywają wskazania UHMS' },
+      { country: 'Niemcy', status: 'refundowane', note: 'GKV dla wybranych wskazań' },
+    ],
     name: 'Tlenoterapia hiperbaryczna (HBOT)',
+    whatIsIt:
+      'Tlenoterapia hiperbaryczna (HBOT) to oddychanie 100% tlenem w komorze pod zwiększonym ciśnieniem. To zarejestrowana procedura medyczna z określonymi wskazaniami — w onkologii głównie leczenie powikłań popromiennych, nie sam nowotwór. Nie mylić z tlenoterapią dożylną.',
+    contraindications:
+      'Przeciwwskazania m.in. nieleczona odma opłucnowa, niektóre choroby płuc i ucha. Procedura prowadzona wyłącznie w ośrodku hiperbarycznym.',
     category: 'physical',
     shortDescription:
       'Tlen pod podwyższonym ciśnieniem — zarejestrowana procedura medyczna, refundowana w wybranych wskazaniach.',
@@ -293,7 +438,24 @@ export const methods: Method[] = [
   },
   {
     slug: 'terapia-fotodynamiczna',
+    indications: [
+      'rak przełyku',
+      'NDRP (wczesny endobronchialny)',
+      'rak podstawnokomórkowy skóry',
+      'keratoza słoneczna',
+      'przełyk Barretta z dysplazją',
+      'chłoniak skórno-T-komórkowy',
+    ],
+    regulatory: [
+      { country: 'USA', status: 'dopuszczone', note: 'FDA approved (Photofrin) dla 6 wskazań onkologicznych' },
+      { country: 'UE', status: 'dopuszczone', note: 'EMA approved; częściowa refundacja' },
+      { country: 'Polska', status: 'refundowane', note: 'NFZ refunduje dla wybranych wskazań onkologicznych' },
+    ],
     name: 'Terapia fotodynamiczna (PDT)',
+    whatIsIt:
+      'Terapia fotodynamiczna (PDT) polega na podaniu substancji światłoczułej, która gromadzi się w tkance, a następnie naświetleniu jej światłem o odpowiedniej długości. To zarejestrowana procedura onkologiczna dla wybranych nowotworów (m.in. przełyk, skóra).',
+    contraindications:
+      'Po zabiegu utrzymuje się nadwrażliwość skóry na światło przez kilka tygodni — wymaga ochrony przed słońcem. Przeciwwskazana przy porfirii i nadwrażliwości na fotosensybilizator.',
     category: 'physical',
     shortDescription:
       'Aktywacja światłem fotosensybilizatora — procedura zarejestrowana przez FDA/EMA w wybranych nowotworach.',
@@ -321,7 +483,22 @@ export const methods: Method[] = [
   },
   {
     slug: 'ttfields',
+    indications: [
+      'glejak wielopostaciowy (GBM)',
+      'złośliwy międzybłoniak opłucnej',
+      'przerzutowy NDRP (Optune Lua 2024)',
+    ],
+    regulatory: [
+      { country: 'USA', status: 'dopuszczone', note: 'FDA approved 2011/2015/2019/2024' },
+      { country: 'UE', status: 'dopuszczone', note: 'CE mark (NIE EMA — urządzenie medyczne)' },
+      { country: 'Niemcy', status: 'refundowane', note: 'GKV refunduje dla GBM' },
+      { country: 'Polska', status: 'eksperymentalne', note: 'Brak refundacji NFZ; dostępne komercyjnie' },
+    ],
     name: 'TTFields (Optune) — pola elektryczne o przemiennej częstotliwości',
+    whatIsIt:
+      'TTFields (Optune) to urządzenie wytwarzające pola elektryczne o przemiennej częstotliwości, noszone na skórze głowy. To zarejestrowana metoda onkologiczna z badaniami III fazy — nie jest to CAM ani potoczne leczenie laptopem, jak bywa mylnie przedstawiane.',
+    contraindications:
+      'Wymaga noszenia urządzenia przez większość doby. Najczęstsze działania niepożądane to podrażnienia skóry pod elektrodami. Przeciwwskazane przy wszczepionych urządzeniach elektronicznych w obszarze stosowania.',
     category: 'physical',
     shortDescription:
       'Pola elektryczne zaburzające podział komórek — urządzenie zarejestrowane przez FDA i z oznaczeniem CE.',
@@ -350,7 +527,22 @@ export const methods: Method[] = [
   // ===== Medycyna stylu życia (guideline-supported) =====
   {
     slug: 'aktywnosc-fizyczna',
+    indications: [
+      'zmęczenie onkologiczne (rekomendacja 1)',
+      'poprawa jakości życia',
+      'redukcja nawrotu raka piersi/jelita',
+      'tolerancja chemioterapii',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'dopuszczone', note: 'Programy rehabilitacji onkologicznej NFZ' },
+      { country: 'USA', status: 'dopuszczone', note: 'ASCO/SIO guideline 2024' },
+      { country: 'UE', status: 'dopuszczone', note: 'ESMO guidelines' },
+    ],
     name: 'Aktywność fizyczna w onkologii',
+    whatIsIt:
+      'Aktywność fizyczna w onkologii to dostosowany, regularny wysiłek (aerobowy i oporowy). To metoda o najmocniejszych dowodach wśród wszystkich interwencji wspomagających — rekomendowana w wytycznych jako pierwszy wybór m.in. przy zmęczeniu onkologicznym.',
+    contraindications:
+      'Program wymaga indywidualizacji przy przerzutach kostnych (ryzyko złamań), znacznej niedokrwistości, małopłytkowości i kardiotoksyczności leczenia. Warto skorzystać z rehabilitacji onkologicznej.',
     category: 'lifestyle',
     shortDescription:
       'Regularny, dostosowany wysiłek fizyczny — najmocniejsza baza dowodowa wśród metod wspomagających.',
@@ -379,6 +571,14 @@ export const methods: Method[] = [
   },
   {
     slug: 'dieta-srodziemnomorska',
+    indications: [
+      'prewencja pierwotna raka piersi (PREDIMED)',
+      'redukcja śmiertelności sercowo-naczyniowej',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'dopuszczone', note: 'Rekomendacje IŻŻ' },
+      { country: 'UE', status: 'dopuszczone', note: 'EFSA, ESMO recognizes' },
+    ],
     name: 'Dieta śródziemnomorska',
     category: 'lifestyle',
     shortDescription:
@@ -407,7 +607,24 @@ export const methods: Method[] = [
   },
   {
     slug: 'akupunktura',
+    indications: [
+      'ból onkologiczny (rekomendacja ASCO/SIO 2022)',
+      'AIMSS',
+      'CINV',
+      'uderzenia gorąca',
+    ],
+    regulatory: [
+      { country: 'Niemcy', status: 'refundowane', note: 'GKV refunduje akupunkturę dla chronic back/knee pain' },
+      { country: 'Szwajcaria', status: 'refundowane', note: 'Refundacja jako 1 z 5 metod CAM (od 2017)' },
+      { country: 'USA', status: 'dopuszczone', note: 'ASCO/SIO 2022 guideline; Medicare dla wybranych wskazań' },
+      { country: 'Wielka Brytania', status: 'dopuszczone', note: 'NICE NG193, NG144' },
+      { country: 'Polska', status: 'off-label', note: 'Brak refundacji; dostępne komercyjnie' },
+    ],
     name: 'Akupunktura w onkologii',
+    whatIsIt:
+      'Akupunktura to nakłuwanie określonych punktów ciała cienkimi igłami. W onkologii nie jest leczeniem nowotworu, lecz metodą wspomagającą w wybranych objawach — ma najsilniejsze dowody i rekomendacje w bólu nowotworowym oraz bólu stawów po inhibitorach aromatazy.',
+    contraindications:
+      'Ostrożność przy małopłytkowości i neutropenii (ryzyko krwawienia i zakażenia) oraz przy obrzęku limfatycznym kończyny (nie nakłuwać zajętej kończyny). Wymaga wykwalifikowanego terapeuty.',
     category: 'supportive-care',
     shortDescription:
       'Metoda rekomendowana w wytycznych ASCO-SIO dla bólu nowotworowego i wybranych objawów.',
@@ -435,6 +652,15 @@ export const methods: Method[] = [
   },
   {
     slug: 'mbsr-mbcr',
+    indications: [
+      'lęk i depresja u pacjentów onkologicznych (rekomendacja ASCO/SIO 2023)',
+      'redukcja zmęczenia',
+      'poprawa QoL',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'dopuszczone', note: 'Stosowane w ramach psychoonkologii' },
+      { country: 'USA', status: 'dopuszczone', note: 'ASCO/SIO 2023 guideline' },
+    ],
     name: 'Uważność (MBSR / MBCR)',
     category: 'mind-body',
     shortDescription:
@@ -464,6 +690,14 @@ export const methods: Method[] = [
   // ===== Modulacja immunologiczna i obszar eksperymentalny =====
   {
     slug: 'lentinan-psk',
+    indications: [
+      'adjuwant chemio raka żołądka (Japonia)',
+      'paliatywne wsparcie immunologiczne',
+    ],
+    regulatory: [
+      { country: 'Japonia', status: 'refundowane', note: 'PSK/Krestin — refundowany dla raka żołądka (od 1985)' },
+      { country: 'Polska', status: 'OTC', note: 'Suplement diety; brak rejestracji onko' },
+    ],
     name: 'Lentinan / PSK — grzyby lecznicze',
     category: 'substance',
     shortDescription:
@@ -491,7 +725,20 @@ export const methods: Method[] = [
   },
   {
     slug: 'artesunat',
+    indications: [
+      'eksperymentalne off-label w onkologii (badania I/II)',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'dopuszczone', note: 'Zarejestrowany dla malarii; off-label onko możliwy' },
+      { country: 'UE', status: 'dopuszczone', note: 'EMA approved; off-label onko na zasadach art. 5' },
+      { country: 'USA', status: 'dopuszczone', note: 'FDA approved dla ciężkiej malarii (2020)' },
+    ],
+    redoxClass: 'pro-oxidant',
     name: 'Artesunat (off-label w onkologii)',
+    whatIsIt:
+      'Artesunat to pochodna artemizyniny, leku przeciwmalarycznego zarejestrowanego u ludzi. W onkologii badany jest eksperymentalnie (off-label), głównie pod kątem mechanizmu zależnego od żelaza (ferroptoza). Stosowanie onkologiczne nie jest rutynowe i pozostaje przedmiotem badań.',
+    contraindications:
+      'Ostrożność przy zaburzeniach gospodarki żelazem i niedokrwistości; możliwy wpływ na enzymy wątrobowe. Stosowanie wyłącznie pod nadzorem, najlepiej w ramach badania klinicznego.',
     category: 'substance',
     experimental: true,
     shortDescription:
@@ -517,9 +764,24 @@ export const methods: Method[] = [
       { pmid: '26137537', title: 'Krishna 2014 — faza I, rak jelita grubego', year: 2014 },
       { pmid: '28254675', title: 'Efferth 2017 — przegląd mechanizmu', year: 2017 },
     ],
+    administrationRoute: {
+      summary:
+        'Artesunat bada się zarówno doustnie, jak i dożylnie; droga podania wpływa na osiągane stężenia.',
+      oral:
+        'Doustnie biodostępność jest ograniczona i zmienna, a stężenia we krwi niższe.',
+      iv:
+        'Dożylnie osiąga się wyższe stężenia szczytowe — to forma badana pod kątem działania prooksydacyjnego (indukcja ferroptozy zależnej od żelaza) w badaniach wczesnofazowych.',
+    },
   },
   {
     slug: 'niskie-dawki-naltreksonu',
+    indications: [
+      'badania eksperymentalne (brak rekomendacji klinicznej)',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'rejestracja-jako-inne-wskazanie', note: 'Naltrekson zarejestrowany jako leczenie uzależnień' },
+      { country: 'USA', status: 'off-label', note: 'Recepta off-label — wybrane kliniki' },
+    ],
     name: 'Niskie dawki naltreksonu (LDN)',
     category: 'experimental',
     experimental: true,
@@ -548,7 +810,27 @@ export const methods: Method[] = [
   },
   {
     slug: 'salinomycyna',
+    indications: [
+      'NIE leczenie standardowe ani off-label rutynowy',
+      'wyłącznie ścieżka badania klinicznego (URPL + Komisja Bioetyczna)',
+      'wskazania badane: rak jajnika, piersi, jelita grubego, prostaty, trzustki, żołądka, glejak (in vitro, xenograft, pilotażowe kliniczne)',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'eksperymentalne', note: 'Brak rejestracji jako produkt leczniczy dla ludzi. Możliwe ścieżki stosowania klinicznego: badanie kliniczne (URPL + Komisja Bioetyczna), compassionate use (art. 83 rozp. 726/2004), named patient program, indywidualne sprowadzenie z zagranicy (art. 4 ust. 7–9 Prawa farmaceutycznego).' },
+      { country: 'UE', status: 'eksperymentalne', note: 'Brak rejestracji EMA dla ludzi. Możliwa compassionate use (art. 83 rozp. 726/2004)' },
+      { country: 'USA', status: 'eksperymentalne', note: 'Brak rejestracji FDA dla ludzi. Tylko IND lub badania kliniczne' },
+    ],
+    redoxClass: 'pro-oxidant',
     name: 'Salinomycyna',
+    whatIsIt:
+      'Salinomycyna to związek o działaniu jonoforowym, badany w modelach przedklinicznych pod kątem komórek macierzystych nowotworu. Nie jest zarejestrowana jako lek dla ludzi i nie ma ustalonego, bezpiecznego sposobu podawania u pacjentów.',
+    contraindications:
+      'Brak ustalonego profilu bezpieczeństwa u ludzi. Opisywano potencjalną toksyczność neurologiczną i ogólnoustrojową. Nie stosować poza kontrolowanymi badaniami klinicznymi.',
+    mythBuster: {
+      title: '„Skuteczniejsza niż chemia" — czego nie mówi ten nagłówek',
+      body:
+        'Salinomycynę bywa się reklamuje jako wielokrotnie skuteczniejszą od klasycznych leków. Takie porównania pochodzą z badań na liniach komórkowych (in vitro), gdzie warunki są dalekie od organizmu człowieka. Brakuje badań klinicznych potwierdzających skuteczność i bezpieczeństwo u pacjentów — dlatego to obszar eksperymentalny, a nie terapia.',
+    },
     category: 'experimental',
     experimental: true,
     shortDescription:
@@ -565,7 +847,7 @@ export const methods: Method[] = [
     howItWorks:
       'W modelach przedklinicznych opisywano wpływ na komórki macierzyste nowotworu i indukcję ferroptozy; znaczenie kliniczne nieznane.',
     research:
-      'Gupta 2009 (Cell, PMID 19682730): silne działanie wobec komórek macierzystych raka piersi w modelu in vitro. Naujokat & Steinhart 2012 (PMID 23251084): przegląd jako związek celujący w komórki macierzyste. Dane są niemal wyłącznie przedkliniczne — nie ma dowodów na stosowanie u ludzi.',
+      'Gupta 2009 (Cell, PMID 19682730): silne działanie wobec komórek macierzystych raka piersi w modelu in vitro (w tym modelu skuteczniejsze niż klasyczny cytostatyk — wyłącznie przedklinicznie). Naujokat & Steinhart 2012 (PMID 23251084): przegląd jako związek celujący w komórki macierzyste. Polski wkład: zespół prof. Adama Huczyńskiego z Uniwersytetu im. Adama Mickiewicza w Poznaniu od lat bada syntezę i pochodne salinomycyny o potencjale przeciwnowotworowym (Antoszczak & Huczyński, PMID 25553435). Mimo to dane pozostają niemal wyłącznie przedkliniczne — nie ma dowodów na skuteczność u ludzi.',
     safety:
       'Obszar eksperymentalny. Nie stosować jako leczenie przeciwnowotworowe. Możliwa toksyczność neurologiczna i ogólnoustrojowa; brak rejestracji dla ludzi.',
     talkToDoctor:
@@ -573,11 +855,33 @@ export const methods: Method[] = [
     references: [
       { pmid: '19682730', title: 'Gupta 2009 (Cell) — komórki macierzyste, in vitro', year: 2009 },
       { pmid: '23251084', title: 'Naujokat & Steinhart 2012 — przegląd', year: 2012 },
+      { pmid: '25553435', title: 'Antoszczak & Huczyński 2015 (UAM Poznań) — pochodne salinomycyny', year: 2015, note: 'polski wkład; synteza i aktywność przeciwnowotworowa (przedkliniczne)' },
     ],
+    administrationRoute: {
+      summary:
+        'Wszelkie dane o salinomycynie pochodzą z modeli przedklinicznych — droga podania u ludzi nie jest ustalona ani zwalidowana.',
+      iv:
+        'W publikacjach mechanistycznych opisywano podanie dożylne w modelach zwierzęcych; u ludzi salinomycyna nie ma ustalonego, bezpiecznego sposobu podania i nie jest zarejestrowana.',
+    },
   },
   {
     slug: 'boswellia-serrata',
+    indications: [
+      'obrzęk mózgu po radioterapii (najsilniejsze dowody)',
+      'stany zapalne w onkologii',
+      'wsparcie przy GBM i przerzutach mózgowych',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'OTC', note: 'Suplement diety; ekstrakty standaryzowane na AKBA dostępne w aptekach' },
+      { country: 'Niemcy', status: 'dopuszczone', note: 'Heilpraktiker; standaryzowane ekstrakty boswellii stosowane klinicznie; bez refundacji GKV' },
+      { country: 'Szwajcaria', status: 'refundowane', note: 'W zakresie fitoterapii (1 z 5 refundowanych metod CAM)' },
+      { country: 'USA', status: 'OTC', note: 'Dietary supplement; trial NCT03149081 (phase I, MUSC)' },
+    ],
     name: 'Boswellia serrata (kadzidłowiec indyjski)',
+    whatIsIt:
+      'Boswellia (kadzidłowiec indyjski) to żywica o działaniu przeciwzapalnym, której aktywne składniki (kwasy bosweliowe, m.in. AKBA) przenikają do mózgu. W onkologii najlepiej udokumentowane jest jej zastosowanie w zmniejszaniu obrzęku mózgu po radioterapii.',
+    contraindications:
+      'Ostrożność przy zaburzeniach krzepnięcia i lekach przeciwkrzepliwych. Jakość preparatu krytyczna — liczy się ekstrakt standaryzowany na AKBA, a nie zwykły proszek ziołowy.',
     category: 'substance',
     shortDescription:
       'Standaryzowany ekstrakt (AKBA) badany m.in. w obrzęku mózgu po radioterapii.',
@@ -605,6 +909,18 @@ export const methods: Method[] = [
   },
   {
     slug: 'cordyceps',
+    indications: [
+      'adjuwant chemio/RT w raku płuca (najlepiej udokumentowane)',
+      'zmęczenie onkologiczne (CRF)',
+      'immunostymulacja podczas leczenia mielotoksycznego',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'OTC', note: 'Suplement diety; CS-4 (hodowla C. militaris) dostępna w aptekach' },
+      { country: 'Niemcy', status: 'dopuszczone', note: 'Heilpraktiker; bez refundacji GKV' },
+      { country: 'Szwajcaria', status: 'refundowane', note: 'Potencjalnie w ramach fitoterapii/TCM' },
+      { country: 'Japonia', status: 'OTC', note: 'Tradycja TCM (Dongchongxiacao); brak rejestracji onko' },
+      { country: 'USA', status: 'OTC', note: 'Dietary supplement; CS-4 standaryzowany komercyjnie' },
+    ],
     name: 'Cordyceps (sinensis / militaris)',
     category: 'substance',
     experimental: true,
@@ -633,7 +949,23 @@ export const methods: Method[] = [
   },
   {
     slug: 'reishi',
+    indications: [
+      'adjuwant immunostymulacyjny w skojarzeniu z chemio/RT',
+      'poprawa QoL podczas leczenia onkologicznego',
+      'wsparcie funkcji immunologicznej (CD3/CD4/CD8)',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'OTC', note: 'Suplement diety; dostępne w aptekach (Reishi Aktiv, MycoMedica, ShroomMe)' },
+      { country: 'Niemcy', status: 'dopuszczone', note: 'Heilpraktiker; TCM Heilpflanzen; bez refundacji GKV' },
+      { country: 'Szwajcaria', status: 'refundowane', note: 'W ramach refundowanego TCM/fitoterapii' },
+      { country: 'Japonia', status: 'OTC', note: 'Tradycja Lingzhi/Reishi; bez rejestracji onko (vs PSK/Krestin)' },
+      { country: 'USA', status: 'OTC', note: 'Dietary supplement; FDA nie zatwierdziło dla leczenia raka' },
+    ],
     name: 'Reishi / Ganoderma lucidum',
+    whatIsIt:
+      'Reishi (Ganoderma lucidum) to grzyb leczniczy o wielowiekowej tradycji w medycynie Azji. W onkologii bada się go jako wsparcie immunologiczne w skojarzeniu z chemio- lub radioterapią, nie jako samodzielne leczenie.',
+    contraindications:
+      'Ostrożność po przeszczepieniu narządów (immunostymulacja), przy lekach przeciwkrzepliwych (opisy interakcji z warfaryną) oraz w hormonozależnym raku piersi. Jakość ekstraktu ma znaczenie.',
     category: 'substance',
     experimental: true,
     shortDescription:
@@ -661,6 +993,17 @@ export const methods: Method[] = [
   },
   {
     slug: 'maitake',
+    indications: [
+      'immunostymulacja podczas mielotoksycznej chemio',
+      'wsparcie aktywności NK',
+      'badania fazy I/II w raku piersi',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'OTC', note: 'Suplement diety; dostępne w aptekach i sklepach z suplementami' },
+      { country: 'Japonia', status: 'OTC', note: 'G. frondosa nie refundowana (vs PSK/Krestin z T. versicolor)' },
+      { country: 'USA', status: 'OTC', note: 'Dietary supplement; faza badań klinicznych (NIH NCI)' },
+      { country: 'Niemcy', status: 'dopuszczone', note: 'Heilpraktiker; jak Reishi — potencjalnie w TCM/fitoterapii' },
+    ],
     name: 'Maitake D-fraction (Grifola frondosa)',
     category: 'substance',
     experimental: true,
@@ -689,6 +1032,18 @@ export const methods: Method[] = [
   },
   {
     slug: 'wilcacora',
+    indications: [
+      'redukcja neutropenii po chemio (jedyne RCT)',
+      'immunostymulacja podczas leczenia',
+      'odbudowa parametrów immunologicznych po cyklach chemio',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'OTC', note: 'Suplement diety; Vilcacora, Koci Pazur (Nefdespa, Primaforce, Swanson)' },
+      { country: 'Niemcy', status: 'dopuszczone', note: 'Heilpraktiker; bez refundacji GKV' },
+      { country: 'Szwajcaria', status: 'refundowane', note: 'Fitoterapia — potencjalnie refundowana indywidualnie' },
+      { country: 'Austria', status: 'dopuszczone', note: 'ÖÄK Diplom w fitoterapii' },
+      { country: 'USA', status: 'OTC', note: 'Dietary supplement; brak FDA approval dla onko' },
+    ],
     name: 'Wilcacora / Uncaria tomentosa (Koci Pazur)',
     category: 'substance',
     experimental: true,
@@ -716,7 +1071,147 @@ export const methods: Method[] = [
     ],
   },
   {
+    slug: 'resweratrol',
+    name: 'Resweratrol',
+    category: 'substance',
+    experimental: true,
+    redoxClass: 'context-dependent',
+    shortDescription:
+      'Polifenol badany w onkologii; jego działanie zależy od stężenia i drogi podania (antyoksydacyjne w niskich, prooksydacyjne w wysokich).',
+    evidenceProfile: {
+      effectSignal:
+        'Sygnał głównie z modeli przedklinicznych (apoptoza, modulacja SIRT1/NF-κB); dane kliniczne ograniczone, brak twardych punktów końcowych.',
+      grade: 'very-low',
+      evidenceType: 'preclinical',
+      clinicalStatus: 'experimental',
+      evidenceGap:
+        'Bardzo niska biodostępność doustna; forma dożylna niemal wyłącznie przedkliniczna; brak RCT z twardymi punktami końcowymi.',
+    },
+    howItWorks:
+      'Opisywano modulację szlaków SIRT1, NF-κB i mTOR oraz wpływ na apoptozę w modelach przedklinicznych. Efekt jest zależny od stężenia — w niskich działa antyoksydacyjnie, w wysokich może działać prooksydacyjnie. Znaczenie kliniczne nieustalone.',
+    research:
+      'Większość danych pochodzi z badań in vitro i modeli zwierzęcych. Doustny resweratrol ma bardzo niską biodostępność, co ogranicza przełożenie wyników przedklinicznych na praktykę. Brak wiarygodnych RCT potwierdzających skuteczność onkologiczną.',
+    safety:
+      'Obszar eksperymentalny. Możliwy wpływ na krzepnięcie i interakcje z lekami metabolizowanymi przez wątrobę. Nie stosować jako leczenie przeciwnowotworowe bez nadzoru.',
+    talkToDoctor:
+      'Traktuj jako obszar badań. Poinformuj onkologa, jeśli rozważasz suplementację — możliwe interakcje, zwłaszcza okołozabiegowo.',
+    references: [
+      { title: 'Przeglądy badań przedklinicznych nad resweratrolem w onkologii', year: 2021, note: 'dane głównie in vitro / modele zwierzęce; niska biodostępność doustna' },
+    ],
+    administrationRoute: {
+      summary:
+        'Działanie resweratrolu zależy od osiąganego stężenia, a to od drogi podania.',
+      oral:
+        'Doustnie biodostępność jest bardzo niska — trudno osiągnąć stężenia z badań przedklinicznych; w niskich stężeniach przeważa działanie antyoksydacyjne.',
+      iv:
+        'Formę dożylną badano niemal wyłącznie przedklinicznie; w wysokich stężeniach opisywano działanie prooksydacyjne. Brak dojrzałych danych klinicznych.',
+    },
+  },
+  {
+    slug: 'iwermektyna',
+    name: 'Iwermektyna (off-label, eksperymentalnie)',
+    category: 'experimental',
+    experimental: true,
+    redoxClass: 'context-dependent',
+    indications: [
+      'wyłącznie badania przedkliniczne i wczesnofazowe — brak zarejestrowanego wskazania onkologicznego',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'dopuszczone (inne wskazanie)', note: 'Zarejestrowana jako lek przeciwpasożytniczy; zastosowanie onkologiczne wyłącznie eksperymentalne / off-label' },
+      { country: 'USA', status: 'dopuszczone (inne wskazanie)', note: 'FDA — wskazania przeciwpasożytnicze; brak wskazania onkologicznego' },
+    ],
+    shortDescription:
+      'Lek przeciwpasożytniczy badany w onkologii wyłącznie przedklinicznie. Brak dowodów klinicznych skuteczności u ludzi w nowotworach.',
+    whatIsIt:
+      'Iwermektyna to szeroko stosowany, tani lek przeciwpasożytniczy, zarejestrowany u ludzi i zwierząt. Należy do tzw. leków repozycjonowanych (drug repurposing) — czyli leków o znanym profilu bezpieczeństwa, sprawdzanych pod kątem nowych zastosowań, w tym onkologicznych. W onkologii pozostaje jednak na etapie badań laboratoryjnych.',
+    evidenceProfile: {
+      effectSignal:
+        'W modelach komórkowych i zwierzęcych opisywano wpływ na szlaki związane z komórkami macierzystymi nowotworu (m.in. WNT, STAT3, PAK1). To sygnały przedkliniczne, nie dowody kliniczne.',
+      grade: 'very-low',
+      evidenceType: 'preclinical',
+      clinicalStatus: 'experimental',
+      evidenceGap:
+        'Brak badań klinicznych potwierdzających skuteczność przeciwnowotworową u ludzi. Stężenia działające w probówce mogą być trudne lub niebezpieczne do osiągnięcia w organizmie.',
+    },
+    howItWorks:
+      'W badaniach laboratoryjnych opisywano wpływ iwermektyny na kilka szlaków istotnych dla przeżycia komórek nowotworowych. Mechanizmy te są obiecujące teoretycznie, ale ich znaczenie u pacjentów nie zostało wykazane.',
+    research:
+      'Dostępne dane pochodzą niemal wyłącznie z badań in vitro i na zwierzętach. To klasyczny przykład leku repozycjonowanego, którego potencjał onkologiczny jest badany, ale nie potwierdzony klinicznie. Brak wiarygodnych badań klinicznych skuteczności w nowotworach u ludzi.',
+    safety:
+      'Obszar eksperymentalny. W zarejestrowanych wskazaniach przeciwpasożytniczych profil bezpieczeństwa jest dobrze poznany, ale stosowanie onkologiczne (zwykle w wyższych dawkach badanych przedklinicznie) niesie ryzyko i nie ma ustalonego bezpieczeństwa.',
+    contraindications:
+      'Brak ustalonego profilu bezpieczeństwa dla zastosowań onkologicznych. Możliwe interakcje lekowe i działania neurologiczne przy wysokich dawkach. Stosowanie wyłącznie pod nadzorem, najlepiej w ramach badań.',
+    talkToDoctor:
+      'Traktuj jako obszar badań, nie terapię. Jeśli rozważasz udział w badaniu klinicznym lub stosowanie off-label, omów to z onkologiem — samodzielne stosowanie jest ryzykowne.',
+    references: [
+      { title: 'Przeglądy repozycjonowania iwermektyny w onkologii (dane przedkliniczne)', year: 2021, note: 'dane in vitro / modele zwierzęce; brak RCT w onkologii' },
+    ],
+    mythBuster: {
+      title: 'Lek repozycjonowany to nie to samo co lek o udowodnionym działaniu w raku',
+      body:
+        'Iwermektyna bywa przedstawiana jako „przełomowy lek na raka" na podstawie badań laboratoryjnych. Repozycjonowanie leków to realny, wartościowy kierunek badań — ale „działa w probówce" to nie to samo co „działa u pacjenta". Bez badań klinicznych nie wiadomo, czy efekt występuje u ludzi, w jakich dawkach i przy jakim ryzyku.',
+    },
+  },
+  {
+    slug: 'fenbendazol',
+    name: 'Fenbendazol (off-label, eksperymentalnie)',
+    category: 'experimental',
+    experimental: true,
+    redoxClass: 'context-dependent',
+    indications: [
+      'wyłącznie badania przedkliniczne — brak danych klinicznych w onkologii u ludzi',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'weterynaryjne', note: 'Lek przeciwpasożytniczy weterynaryjny; brak rejestracji dla ludzi w jakimkolwiek wskazaniu' },
+      { country: 'USA', status: 'weterynaryjne', note: 'Brak rejestracji dla ludzi; zastosowanie onkologiczne wyłącznie eksperymentalne' },
+    ],
+    shortDescription:
+      'Weterynaryjny lek przeciwpasożytniczy, popularny w mediach jako „lek na raka". Dane wyłącznie przedkliniczne, brak rejestracji dla ludzi.',
+    whatIsIt:
+      'Fenbendazol to lek przeciwpasożytniczy stosowany u zwierząt, należący do benzimidazoli (podobnie jak mebendazol stosowany u ludzi). Zyskał rozgłos w internecie jako rzekomy „lek na raka" po nagłośnionych historiach pojedynczych osób. Nie jest zarejestrowany do stosowania u ludzi w żadnym wskazaniu.',
+    evidenceProfile: {
+      effectSignal:
+        'W badaniach komórkowych opisywano wpływ na mikrotubule (podobnie jak niektóre cytostatyki) oraz na metabolizm glukozy komórek nowotworowych. To dane przedkliniczne.',
+      grade: 'very-low',
+      evidenceType: 'preclinical',
+      clinicalStatus: 'experimental',
+      evidenceGap:
+        'Brak badań klinicznych u ludzi w onkologii. Dowody opierają się na modelach laboratoryjnych i pojedynczych opisach przypadków, które nie pozwalają wnioskować o skuteczności.',
+    },
+    howItWorks:
+      'W modelach laboratoryjnych opisywano destabilizację mikrotubul (struktur potrzebnych do podziału komórki) oraz wpływ na metabolizm glukozy. Mechanizmy są interesujące naukowo, ale nie wykazano ich znaczenia klinicznego u ludzi.',
+    research:
+      'Dane ograniczają się do badań in vitro, modeli zwierzęcych i pojedynczych opisów przypadków nagłośnionych medialnie. Opisy przypadków nie są dowodem skuteczności — nie pozwalają oddzielić efektu leku od jednoczesnego leczenia konwencjonalnego czy naturalnego przebiegu choroby.',
+    safety:
+      'Obszar eksperymentalny, lek niezarejestrowany dla ludzi. Brak danych o bezpieczeństwie długotrwałego stosowania u ludzi; sygnały o możliwym obciążeniu wątroby. Nie stosować jako leczenie przeciwnowotworowe.',
+    contraindications:
+      'Brak rejestracji i ustalonego bezpieczeństwa u ludzi. Możliwe obciążenie wątroby; nieznane interakcje z leczeniem onkologicznym. Stosowanie poza badaniami klinicznymi jest odradzane.',
+    talkToDoctor:
+      'Jeśli rozważasz fenbendazol pod wpływem historii z internetu, koniecznie omów to z onkologiem. Opisy pojedynczych przypadków nie są dowodem, a lek nie jest przeznaczony dla ludzi.',
+    references: [
+      { title: 'Dane przedkliniczne i opisy przypadków dotyczące fenbendazolu w onkologii', year: 2021, note: 'in vitro / modele zwierzęce / case reports; brak badań klinicznych' },
+    ],
+    mythBuster: {
+      title: 'Opis przypadku z internetu to nie dowód skuteczności',
+      body:
+        'Popularność fenbendazolu opiera się na nagłośnionych historiach pojedynczych osób. To zrozumiałe, że takie historie robią wrażenie — ale z naukowego punktu widzenia opis przypadku stoi nisko w hierarchii dowodów. Nie pozwala oddzielić działania leku od równoległej chemioterapii, immunoterapii czy naturalnego przebiegu choroby. Dlatego potrzebne są badania kliniczne, których dla fenbendazolu w onkologii brak.',
+    },
+  },
+  {
     slug: 'inhalacje-wodorowe',
+    indications: [
+      'redukcja toksyczności radioterapii (zapalenie jelit, mucositis, ototoksyczność)',
+      'zmęczenie onkologiczne podczas chemio/immunoterapii',
+      'ochrona narządów (nerki, wątroba, serce) podczas chemio',
+    ],
+    regulatory: [
+      { country: 'Japonia', status: 'dopuszczone', note: 'Advanced Medical Care B (Klasa 2B) od XII 2016 — MHLW zatwierdziła; jRCTs031180352. Najwyższy status regulacyjny na świecie' },
+      { country: 'Polska', status: 'OTC', note: 'Urządzenia wyrobami medycznymi klasy I/IIa (CE); brak rejestracji H₂ jako leku; brak refundacji NFZ' },
+      { country: 'Niemcy', status: 'dopuszczone', note: 'Heilpraktikerzy; bez refundacji GKV; status suplementu/wyrobu' },
+      { country: 'USA', status: 'eksperymentalne', note: 'FDA: urządzenia bez approval jako lek; aktywne badania NCT03818347, NCT04175301, NCT05728112' },
+      { country: 'UE', status: 'OTC', note: 'Brak rejestracji EMA; wyroby medyczne z CE' },
+    ],
+    redoxClass: 'antioxidant',
     name: 'Inhalacje wodorowe (H₂)',
     category: 'physical',
     experimental: true,

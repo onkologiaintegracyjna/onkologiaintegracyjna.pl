@@ -42,6 +42,17 @@ export interface EvidenceProfile {
   evidenceGap: string
 }
 
+export interface RegulatoryStatus {
+  country: string
+  status: string
+  note?: string
+}
+
+export interface MythBuster {
+  title: string
+  body: string
+}
+
 export interface Method {
   slug: string
   name: string
@@ -54,4 +65,22 @@ export interface Method {
   talkToDoctor: string
   references: Reference[]
   experimental?: boolean
+  /** Różnica mechanistyczna zależna od drogi podania (np. doustnie vs dożylnie). Opcjonalne. */
+  administrationRoute?: {
+    summary: string
+    oral?: string
+    iv?: string
+  }
+  /** Klasa redoks: czy substancja działa pro- czy antyoksydacyjnie (kontekst łączenia metod). */
+  redoxClass?: 'pro-oxidant' | 'antioxidant' | 'context-dependent'
+  /** Czym jest metoda — przystępne wprowadzenie. */
+  whatIsIt?: string
+  /** Wskazania kliniczne badane w EBM. */
+  indications?: string[]
+  /** Przeciwwskazania i istotne interakcje. */
+  contraindications?: string
+  /** Status regulacyjny w wybranych krajach. */
+  regulatory?: RegulatoryStatus[]
+  /** Obalenie częstego mitu / błędu argumentacyjnego. */
+  mythBuster?: MythBuster
 }
