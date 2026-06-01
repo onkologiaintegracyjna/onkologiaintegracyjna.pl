@@ -3,6 +3,7 @@ import { PageHeader } from '@/components/page-header'
 import { NeutralityBanner } from '@/components/neutrality-banner'
 import { DisclaimerBox } from '@/components/disclaimer-box'
 import { pathways, pathwayEvidenceLabels } from '@/lib/pathways'
+import { PathwayMatrix } from '@/components/pathway-matrix'
 
 export const metadata: Metadata = {
   title: 'Mechanizmy i szlaki',
@@ -69,6 +70,30 @@ export default function SzlakiPage() {
             </section>
           ))}
         </div>
+
+        <section className="mt-14">
+          <h2 className="font-serif text-2xl font-semibold text-primary">
+            Mapa: substancja a badane szlaki
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-foreground/80">
+            Poniższa tabela pokazuje, na które szlaki dana substancja oddziałuje
+            w badaniach (od głównego mechanizmu po pomocniczy). To przegląd kierunków
+            badań, nie schemat stosowania — bez dawek i bez sugestii łączenia.
+          </p>
+          <div className="mt-5">
+            <PathwayMatrix />
+          </div>
+          <div className="mt-5 rounded-xl border border-warn-border bg-warn-bg p-4 text-sm leading-relaxed text-foreground/80">
+            <strong className="font-semibold text-warn">Prooksydacyjne kontra antyoksydacyjne — uwaga.</strong>{' '}
+            Kolorowa kropka przy nazwie oznacza charakterystykę redoks. Substancje
+            prooksydacyjne (zwiększają stres oksydacyjny) i antyoksydacyjne
+            (zmniejszają go) działają przeciwstawnie. Przyjmowane w tym samym czasie
+            mogą wzajemnie znosić swoje działanie — silny antyoksydant potrafi osłabić
+            metodę prooksydacyjną (i odwrotnie), podobnie jak chemio- i radioterapię,
+            które też działają prooksydacyjnie. Dlatego o doborze i rozłożeniu w czasie
+            decyduje lekarz prowadzący, a nie samodzielne łączenie.
+          </div>
+        </section>
 
         <div className="mt-10 rounded-xl border border-border bg-secondary/50 p-6 text-sm leading-relaxed text-foreground/80">
           <p>
