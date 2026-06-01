@@ -66,7 +66,7 @@ const symptoms = [
   {
     href: '/co-pomaga/zaburzenia-poznawcze',
     title: 'Zaburzenia poznawcze',
-    description: 'Tzw. „chemo-brain" — trudności z koncentracją i pamięcią.',
+    description: 'Tzw. „chemo-brain” — trudności z koncentracją i pamięcią.',
     icon: Brain,
     available: true,
   },

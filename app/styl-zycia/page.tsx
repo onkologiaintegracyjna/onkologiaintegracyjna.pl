@@ -22,7 +22,7 @@ const topics = [
     icon: Salad,
     title: 'Dieta i odżywianie',
     grade: 'Dobre dowody (prewencja, zdrowie ogólne)',
-    body: 'Wzorzec śródziemnomorski ma najlepsze dane w prewencji pierwotnej i ochronie sercowo-naczyniowej. W trakcie leczenia priorytetem jest zapobieganie niedożywieniu i wsparcie dietetyka — nie restrykcyjne „diety antynowotworowe".',
+    body: 'Wzorzec śródziemnomorski ma najlepsze dane w prewencji pierwotnej i ochronie sercowo-naczyniowej. W trakcie leczenia priorytetem jest zapobieganie niedożywieniu i wsparcie dietetyka — nie restrykcyjne „diety antynowotworowe”.',
     href: '/metody/dieta-srodziemnomorska',
   },
   {

@@ -40,13 +40,13 @@ export default function JakCzytacPage() {
       <PageHeader
         eyebrow="Metodologia"
         title="Jak czytać dowody"
-        description="Każda metoda na stronie ma profil dowodowy. Poniżej wyjaśniamy, co oznaczają używane oznaczenia — i dlaczego „niska pewność" nie zawsze znaczy „nie działa"."
+        description="Każda metoda na stronie ma profil dowodowy. Poniżej wyjaśniamy, co oznaczają używane oznaczenia — i dlaczego niska pewność nie zawsze znaczy nie działa."
       />
       <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
         <section>
           <h2 className="font-serif text-2xl font-semibold text-primary">Pewność dowodów (GRADE)</h2>
           <p className="mt-3 leading-relaxed text-foreground/80">
-            GRADE to międzynarodowy system oceny pewności dowodów. Mówi, na ile możemy ufać oszacowaniu efektu — nie samej „sile działania".
+            GRADE to międzynarodowy system oceny pewności dowodów. Mówi, na ile możemy ufać oszacowaniu efektu — nie samej „sile działania”.
           </p>
           <div className="mt-6 space-y-3">
             {grades.map(({ g, desc }) => (
@@ -84,7 +84,7 @@ export default function JakCzytacPage() {
 
         <section className="mt-12 rounded-xl border border-accent/30 bg-accent/5 p-6">
           <h2 className="font-serif text-xl font-semibold text-primary">
-            Dlaczego niska pewność nie zawsze znaczy „nie działa"
+            Dlaczego niska pewność nie zawsze znaczy „nie działa”
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-foreground/80">
             Pewność dowodów zależy od jakości i liczby badań, a te zależą od finansowania. Duże badania III fazy kosztują dziesiątki–setki milionów i zwykle finansuje je przemysł, który inwestuje tam, gdzie jest patent. Substancje nieopatentowane (witaminy, zioła, leki generyczne) rzadko mają sponsora dla takich badań — dlatego ich dowody bywają słabsze, co nie jest tożsame z brakiem działania. Działa to też w drugą stronę: brak dużych badań to także brak potwierdzenia bezpieczeństwa i skuteczności. Dlatego oceniamy każdą metodę jawnie, podając czego brakuje.

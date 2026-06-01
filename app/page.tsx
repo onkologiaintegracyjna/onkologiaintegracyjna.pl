@@ -173,7 +173,7 @@ export default function HomePage() {
                 'Nie jest alternatywą dla leczenia onkologicznego.',
                 'Nie zaleca terapii ani dawek konkretnym pacjentom.',
                 'Nie jest serwisem sprzedażowym ani doradczym.',
-                'Nie obiecuje wyleczenia ani „przełomów".',
+                'Nie obiecuje wyleczenia ani „przełomów”.',
               ].map((t) => (
                 <li key={t} className="flex gap-2">
                   <X

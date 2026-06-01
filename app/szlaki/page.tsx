@@ -73,11 +73,11 @@ export default function SzlakiPage() {
         <div className="mt-10 rounded-xl border border-border bg-secondary/50 p-6 text-sm leading-relaxed text-foreground/80">
           <p>
             Powyższe zestawienie pokazuje kierunki badań, a nie gotowe terapie.
-            „Badana substancja" nie oznacza skuteczności potwierdzonej klinicznie.
+            „Badana substancja” nie oznacza skuteczności potwierdzonej klinicznie.
             Wiele z wymienionych substancji ma działanie zależne od kontekstu i może
             wchodzić w interakcje z chemio- lub radioterapią — w tym potencjalnie
             osłabiać ich działanie. Pełny profil dowodowy każdej substancji znajdziesz
-            w sekcji „Metody i substancje".
+            w sekcji „Metody i substancje”.
           </p>
         </div>
 

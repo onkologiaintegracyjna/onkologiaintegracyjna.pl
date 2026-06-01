@@ -106,7 +106,7 @@ export default function CinvPage() {
           </h2>
           <ul className="mt-4 space-y-3">
             {[
-              'Rezygnacji z zaleconej profilaktyki przeciwwymiotnej na rzecz „naturalnych" metod.',
+              'Rezygnacji z zaleconej profilaktyki przeciwwymiotnej na rzecz „naturalnych” metod.',
               'Suplementów ziołowych bez konsultacji — możliwe interakcje z chemioterapią.',
               'Opóźniania kontaktu z zespołem leczącym przy nasilonych objawach.',
             ].map((t) => (

@@ -23,7 +23,7 @@ const guides = [
   },
   {
     href: '/w-trakcie-leczenia/wzmacnianie-chemioterapii',
-    title: 'Czy można „wzmacniać" chemioterapię?',
+    title: 'Czy można „wzmacniać” chemioterapię?',
     description: 'Co mówią dane o łączeniu metod z leczeniem systemowym.',
   },
   {

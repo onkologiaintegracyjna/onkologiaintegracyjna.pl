@@ -63,7 +63,7 @@ export default function OStroniePage() {
             {[
               'Opis wiedzy, nie zalecenie terapii dla konkretnego pacjenta.',
               'Zawsze obok leczenia konwencjonalnego, nigdy zamiast.',
-              'Bez obietnic wyleczenia i języka „cudów".',
+              'Bez obietnic wyleczenia i języka „cudów”.',
               'Obszar eksperymentalny wyraźnie oznaczony.',
               'Disclaimer medyczny na każdej stronie.',
             ].map((t) => (
