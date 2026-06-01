@@ -76,8 +76,8 @@ export const methods: Method[] = [
     ],
     regulatory: [
       { country: 'Szwajcaria', status: 'zależny', note: 'W ramach medycyny antropozoficznej funkcjonuje w systemie CAM — status do weryfikacji per preparat, wskazanie, lekarz i ubezpieczyciel' },
-      { country: 'Niemcy', status: 'dopuszczone', note: 'Obligatoryjnie pokrywane przez GKV w paliatywnej onkologii' },
-      { country: 'Austria', status: 'dopuszczone', note: 'Refundacja w ramach Begleitende Krebsbehandlungen' },
+      { country: 'Niemcy', status: 'zależny', note: 'W części wskazań, zwłaszcza paliatywnych, funkcjonuje w opiece wspomagającej; pokrycie zależy od preparatu, wskazania, lekarza i płatnika' },
+      { country: 'Austria', status: 'zależny', note: 'Do weryfikacji per preparat, wskazanie i płatnik' },
       { country: 'Polska', status: 'off-label', note: 'Brak refundacji; dostępne w aptekach na receptę' },
     ],
     name: 'Jemioła / Viscum album (Iscador, Helixor, Abnoba viscum)',
@@ -447,8 +447,8 @@ export const methods: Method[] = [
       'chłoniak skórno-T-komórkowy',
     ],
     regulatory: [
-      { country: 'USA', status: 'dopuszczone', note: 'FDA approved (Photofrin) dla 6 wskazań onkologicznych' },
-      { country: 'UE', status: 'dopuszczone', note: 'EMA approved; częściowa refundacja' },
+      { country: 'USA', status: 'dopuszczone', note: 'FDA — porfimer sodu (Photofrin) w określonych wskazaniach (m.in. rak przełyku, endobronchialny NDRP, dysplazja w przełyku Barretta)' },
+      { country: 'UE', status: 'zależny', note: 'Status zależny od konkretnego produktu/procedury i kraju — nie ogólne „EMA approved”' },
       { country: 'Polska', status: 'refundowane', note: 'NFZ refunduje dla wybranych wskazań onkologicznych' },
     ],
     name: 'Terapia fotodynamiczna (PDT)',
@@ -458,7 +458,7 @@ export const methods: Method[] = [
       'Po zabiegu utrzymuje się nadwrażliwość skóry na światło przez kilka tygodni — wymaga ochrony przed słońcem. Przeciwwskazana przy porfirii i nadwrażliwości na fotosensybilizator.',
     category: 'physical',
     shortDescription:
-      'Aktywacja światłem fotosensybilizatora — w części wskazań zatwierdzona przez FDA; status w UE zależy od konkretnego produktu i procedury.',
+      'Aktywacja światłem fotosensybilizatora. Status zależy od konkretnego fotosensybilizatora, produktu, wskazania i kraju — dla porfimeru sodu (Photofrin) FDA wskazuje określone zastosowania (m.in. rak przełyku, endobronchialny NDRP, dysplazja dużego stopnia w przełyku Barretta). W UE i Polsce status należy weryfikować osobno dla danego produktu i procedury.',
     evidenceProfile: {
       effectSignal:
         'Zatwierdzona dla kilku wskazań onkologicznych; RCT III wykazał redukcję progresji w przełyku Barretta z dysplazją.',
@@ -629,7 +629,7 @@ export const methods: Method[] = [
       'Ostrożność przy małopłytkowości i neutropenii (ryzyko krwawienia i zakażenia) oraz przy obrzęku limfatycznym kończyny (nie nakłuwać zajętej kończyny). Wymaga wykwalifikowanego terapeuty.',
     category: 'supportive-care',
     shortDescription:
-      'Metoda rekomendowana w wytycznych ASCO-SIO dla bólu nowotworowego i wybranych objawów.',
+      'Metoda z najmocniejszą rekomendacją ASCO-SIO 2022 w bólu stawów po inhibitorach aromatazy (AIMSS); w innych rodzajach bólu — do rozważenia.',
     evidenceProfile: {
       effectSignal:
         'Wytyczne ASCO-SIO 2022 rekomendują akupunkturę w bólu nowotworowym i bólu stawów po inhibitorach aromatazy (AIMSS); RCT III potwierdza redukcję bólu stawów.',
@@ -706,7 +706,7 @@ export const methods: Method[] = [
       'Polisacharydy z grzybów; PSK jest w Japonii refundowanym adiuwantem chemioterapii raka żołądka.',
     evidenceProfile: {
       effectSignal:
-        'Metaanaliza: PSK jako adiuwant chemioterapii raka żołądka — sygnał poprawy przeżycia. Status „wytycznych” dotyczy wyłącznie Japonii; w UE i USA brak standardowej rejestracji onkologicznej.',
+        'Metaanaliza: PSK jako adiuwant chemioterapii raka żołądka — sygnał poprawy przeżycia. Status dotyczy wyłącznie Japonii i konkretnych preparatów farmaceutycznych PSK/Krestin; w UE i USA brak standardowej rejestracji onkologicznej. Nie należy utożsamiać farmaceutycznego PSK z suplementami grzybowymi dostępnymi komercyjnie w UE.',
       grade: 'low',
       evidenceType: 'meta-analysis',
       clinicalStatus: 'supportive-care',
@@ -831,7 +831,7 @@ export const methods: Method[] = [
     mythBuster: {
       title: 'Jak czytać nagłówki o salinomycynie — bez hype i bez lekceważenia',
       body:
-        'Dwa skróty myślowe są tu mylące. Pierwszy to hype: hasło „skuteczniejsza niż chemia” pochodzi z badań na liniach komórkowych, gdzie warunki są dalekie od organizmu człowieka — to nie jest dowód skuteczności u pacjentów. Drugi, równie błędny, to lekceważenie: „bardzo niska pewność dowodów” nie znaczy, że salinomycyna nie działa. Ma ona jeden z najmocniejszych i najlepiej powtarzanych sygnałów przedklinicznych wśród związków celujących w komórki macierzyste nowotworu, a brak badań u ludzi wynika głównie z bariery rejestracyjnej i braku finansowania, nie z negatywnych wyników. Uczciwa konkluzja: to poważny, obiecujący kandydat w fazie badań — który dopiero musi zostać sprawdzony klinicznie.',
+        'Dwa skróty myślowe są tu mylące. Pierwszy to hype: hasło „skuteczniejsza niż chemia” pochodzi z badań na liniach komórkowych, gdzie warunki są dalekie od organizmu człowieka — to nie jest dowód skuteczności u pacjentów. Drugi, równie błędny, to lekceważenie: „bardzo niska pewność dowodów” opisuje stan zbadania, a nie wyrok „nie działa”. Salinomycyna ma powtarzalny sygnał przedkliniczny dotyczący komórek macierzystych nowotworu, a brak badań u ludzi może wynikać z barier regulacyjnych, finansowych i bezpieczeństwa. Uczciwa konkluzja: to aktywnie badany obszar — bez danych klinicznych u ludzi nie można jednak ocenić realnej skuteczności ani bezpieczeństwa.',
     },
     category: 'experimental',
     experimental: true,
@@ -839,17 +839,17 @@ export const methods: Method[] = [
       'Związek badany przedklinicznie pod kątem komórek macierzystych nowotworu — bez rejestracji dla ludzi.',
     evidenceProfile: {
       effectSignal:
-        'Bardzo silny i powtarzalny sygnał w modelach przedklinicznych (linie komórkowe i modele zwierzęce) — salinomycyna należy do najlepiej udokumentowanych przedklinicznie związków celujących w komórki macierzyste nowotworu. Brak natomiast badań klinicznych u ludzi.',
+        'Powtarzalny sygnał w modelach przedklinicznych (linie komórkowe i modele zwierzęce) dotyczący komórek macierzystych nowotworu. To nie jest dowód skuteczności klinicznej — brak badań u ludzi oznacza, że realnej skuteczności, dawki, drogi podania i bezpieczeństwa u pacjentów nie da się jeszcze ocenić.',
       grade: 'very-low',
       evidenceType: 'preclinical',
       clinicalStatus: 'experimental',
       evidenceGap:
-        'Brak badań klinicznych II/III u ludzi — wynika to przede wszystkim z braku rejestracji dla ludzi (związek o pochodzeniu weterynaryjnym, nieopatentowalny jako nowy lek) i braku sponsora gotowego sfinansować kosztowne badania, a nie z negatywnych wyników. Konieczna ostrożność: nieustalona u ludzi droga podania i ryzyko toksyczności.',
+        'Brak badań klinicznych II/III u ludzi. Przyczyny mogą obejmować bariery regulacyjne (związek o pochodzeniu weterynaryjnym, nieopatentowalny jako nowy lek), finansowe (brak sponsora kosztownych badań) oraz względy bezpieczeństwa — bez badań u ludzi nie można jednak rozstrzygać o skuteczności klinicznej. Konieczna ostrożność: nieustalona u ludzi droga podania i ryzyko toksyczności.',
     },
     howItWorks:
       'W modelach przedklinicznych opisywano wpływ na komórki macierzyste nowotworu i indukcję ferroptozy; znaczenie kliniczne nieznane.',
     research:
-      'Gupta 2009 (Cell, PMID 19682730): silne działanie wobec komórek macierzystych raka piersi w modelu in vitro (w tym modelu skuteczniejsze niż klasyczny cytostatyk — wyłącznie przedklinicznie). Naujokat & Steinhart 2012 (PMID 23251084): przegląd jako związek celujący w komórki macierzyste. Badania trwają i się rozwijają — zespół prof. Adama Huczyńskiego z Uniwersytetu im. Adama Mickiewicza w Poznaniu od lat projektuje pochodne salinomycyny o silniejszym i bardziej selektywnym działaniu; w pracy z 2025 r. pochodne tiomocznikowe były 2–10× skuteczniejsze od macierzystej salinomycyny wobec przerzutowych komórek raka jelita grubego (PMID 39390831). To obiecujący, aktywnie rozwijany kierunek. Zastrzeżenie pozostaje jednak twarde: wszystkie dane są przedkliniczne — brak badań klinicznych u ludzi, więc skuteczności i bezpieczeństwa u pacjentów nie można jeszcze uznać za wykazane.',
+      'Gupta 2009 (Cell, PMID 19682730): silne działanie wobec komórek macierzystych raka piersi w modelu in vitro (w tym modelu skuteczniejsze niż klasyczny cytostatyk — wyłącznie przedklinicznie). Naujokat & Steinhart 2012 (PMID 23251084): przegląd jako związek celujący w komórki macierzyste. Badania trwają i się rozwijają — zespół prof. Adama Huczyńskiego z Uniwersytetu im. Adama Mickiewicza w Poznaniu od lat projektuje pochodne salinomycyny o silniejszym i bardziej selektywnym działaniu; w pracy z 2025 r. pochodne tiomocznikowe wykazały 2–10× wyższą aktywność in vitro od macierzystej salinomycyny wobec modeli przerzutowego raka jelita grubego (PMID 39390831). To obiecujący, aktywnie rozwijany kierunek. Zastrzeżenie pozostaje jednak twarde: wszystkie dane są przedkliniczne — brak badań klinicznych u ludzi, więc skuteczności i bezpieczeństwa u pacjentów nie można jeszcze uznać za wykazane.',
     safety:
       'Obszar eksperymentalny. Nie stosować jako leczenie przeciwnowotworowe. Możliwa toksyczność neurologiczna i ogólnoustrojowa; brak rejestracji dla ludzi.',
     talkToDoctor:
@@ -858,7 +858,7 @@ export const methods: Method[] = [
       { pmid: '19682730', title: 'Gupta 2009 (Cell) — komórki macierzyste, in vitro', year: 2009 },
       { pmid: '23251084', title: 'Naujokat & Steinhart 2012 — przegląd', year: 2012 },
       { pmid: '25553435', title: 'Antoszczak & Huczyński 2015 (UAM Poznań) — pochodne salinomycyny', year: 2015, note: 'polski wkład; synteza i aktywność przeciwnowotworowa (przedkliniczne)' },
-      { pmid: '39390831', title: 'Antoszczak, Huczyński i wsp. 2025 (UAM Poznań) — pochodne tiomocznikowe salinomycyny', year: 2025, note: '2–10× skuteczniejsze od salinomycyny wobec przerzutowego raka jelita grubego (przedkliniczne)' },
+      { pmid: '39390831', title: 'Antoszczak, Huczyński i wsp. 2025 (UAM Poznań) — pochodne tiomocznikowe salinomycyny', year: 2025, note: '2–10× wyższa aktywność in vitro wobec modeli przerzutowego raka jelita grubego (dane przedkliniczne)' },
     ],
     administrationRoute: {
       summary:
@@ -1148,6 +1148,7 @@ export const methods: Method[] = [
       'Traktuj jako obszar badań, nie terapię. Jeśli rozważasz udział w badaniu klinicznym lub stosowanie off-label, omów to z onkologiem — samodzielne stosowanie jest ryzykowne.',
     references: [
       { title: 'Przeglądy repozycjonowania iwermektyny w onkologii (dane przedkliniczne)', year: 2021, note: 'dane in vitro / modele zwierzęce; brak RCT w onkologii' },
+      { guideline: 'ASCO', title: 'ASCO Clinical Notice — przeciw stosowaniu iwermektyny jako leczenia raka poza badaniami klinicznymi', year: 2026 },
     ],
     mythBuster: {
       title: 'Lek repozycjonowany to nie to samo co lek o udowodnionym działaniu w raku',
@@ -1193,6 +1194,7 @@ export const methods: Method[] = [
       'Jeśli rozważasz fenbendazol pod wpływem historii z internetu, koniecznie omów to z onkologiem. Opisy pojedynczych przypadków nie są dowodem, a lek nie jest przeznaczony dla ludzi.',
     references: [
       { title: 'Dane przedkliniczne i opisy przypadków dotyczące fenbendazolu w onkologii', year: 2021, note: 'in vitro / modele zwierzęce / case reports; brak badań klinicznych' },
+      { guideline: 'ASCO', title: 'ASCO Clinical Notice — przeciw stosowaniu fenbendazolu jako leczenia raka poza badaniami klinicznymi', year: 2026 },
     ],
     mythBuster: {
       title: 'Opis przypadku z internetu to nie dowód skuteczności',
@@ -1212,14 +1214,14 @@ export const methods: Method[] = [
       'zaburzenia snu i lęk (dane ograniczone)',
     ],
     regulatory: [
-      { country: 'Polska', status: 'na receptę', note: 'Medyczna marihuana (susz, surowiec farmaceutyczny) dostępna na receptę; produkty CBD bez THC — jako suplementy/kosmetyki' },
+      { country: 'Polska', status: 'na receptę', note: 'Medyczna marihuana (susz, surowiec farmaceutyczny) na receptę. Status produktów CBD zależy od składu, zawartości THC i kwalifikacji produktu — nie należy utożsamiać rynkowego produktu CBD z lekiem onkologicznym' },
       { country: 'USA', status: 'zależny', note: 'Status różny między stanami; dronabinol/nabilon (syntetyczne) zarejestrowane w wybranych wskazaniach' },
       { country: 'UE', status: 'zależny', note: 'Status różni się między krajami; medyczna marihuana dopuszczona w części państw' },
     ],
     shortDescription:
       'CBD i THC z konopi, badane głównie w opiece wspomagającej (nudności, ból, apetyt). Nie jako leczenie przeciwnowotworowe.',
     whatIsIt:
-      'Kannabinoidy to związki z konopi. Dwa najważniejsze to THC (działa psychoaktywnie, na receptę jako medyczna marihuana) i CBD (niepsychoaktywne, w Polsce dostępne jako suplement/kosmetyk bez THC). To nie to samo: różnią się działaniem, statusem prawnym i profilem dowodów. W onkologii bada się je jako wsparcie objawowe, nie jako leczenie nowotworu.',
+      'Kannabinoidy to związki z konopi. Dwa najważniejsze to THC (działa psychoaktywnie, na receptę jako medyczna marihuana) i CBD (niepsychoaktywne; na rynku występuje w produktach o różnym statusie — kosmetykach, suplementach — zależnym od składu i zawartości THC). To nie to samo: różnią się działaniem, statusem prawnym i profilem dowodów. W onkologii bada się je jako wsparcie objawowe, nie jako leczenie nowotworu.',
     evidenceProfile: {
       effectSignal:
         'Wytyczne ASCO 2024 wskazują, że kannabinoidy mogą poprawiać oporne na leczenie nudności i wymioty po chemioterapii, gdy dodaje się je do standardowych leków przeciwwymiotnych. Dla bólu, apetytu i lęku dane są słabsze i niespójne.',
@@ -1232,9 +1234,9 @@ export const methods: Method[] = [
     howItWorks:
       'Kannabinoidy działają na układ endokannabinoidowy (receptory CB1/CB2), wpływając m.in. na odczuwanie nudności, bólu i apetyt. Mechanizm przeciwobjawowy jest dobrze umocowany; opisywane w laboratorium działanie przeciwnowotworowe nie zostało wykazane klinicznie.',
     research:
-      'Wytyczne ASCO 2024 (PMID 38478773, JCO): kannabinoidy mogą poprawiać oporne CINV jako dodatek do standardowej profilaktyki przeciwwymiotnej; dla pozostałych objawów pewność jest niska. ASCO wyraźnie odradza stosowanie kannabinoidów jako leczenia przeciwnowotworowego poza badaniami klinicznymi. Syntetyczne kannabinoidy (dronabinol, nabilon) są w części krajów zarejestrowane w nudnościach po chemioterapii.',
+      'Wytyczne ASCO 2024 (PMID 38478773, JCO): u dorosłych z opornymi nudnościami i wymiotami po chemioterapii — mimo standardowej profilaktyki — można rozważyć dodanie dronabinolu, nabilonu lub jakościowo kontrolowanego doustnego ekstraktu 1:1 THC:CBD. Nie dotyczy to samodzielnego stosowania dowolnych olejków CBD ani marihuany. Dla pozostałych objawów pewność dowodów jest niska. ASCO wyraźnie odradza stosowanie kannabinoidów jako leczenia przeciwnowotworowego poza badaniami klinicznymi, a także — poza badaniem — doustnego CBD w dawce 300 mg/dobę lub wyższej (brak udowodnionej skuteczności, ryzyko odwracalnych zaburzeń enzymów wątrobowych).',
     safety:
-      'Obok, nie zamiast leczenia. THC działa psychoaktywnie (senność, zawroty, wpływ na prowadzenie pojazdów); możliwe interakcje z lekami metabolizowanymi w wątrobie. Ostrożność u osób z chorobami psychicznymi i sercowo-naczyniowymi.',
+      'Obok, nie zamiast leczenia. THC działa psychoaktywnie (senność, zawroty, wpływ na prowadzenie pojazdów); możliwe interakcje z lekami metabolizowanymi w wątrobie. Ostrożność u osób z chorobami psychicznymi i sercowo-naczyniowymi. Przy immunoterapii inhibitorami punktów kontrolnych wpływ kannabinoidów na skuteczność i bezpieczeństwo nie jest jednoznacznie ustalony (możliwe działanie immunomodulujące) — wymaga to szczególnej konsultacji z onkologiem.',
     contraindications:
       'Ostrożność przy zaburzeniach psychicznych (THC), chorobach serca, w ciąży i laktacji. Możliwe interakcje lekowe (CYP). Medyczna marihuana wyłącznie na receptę i pod nadzorem lekarza.',
     talkToDoctor:
@@ -1373,7 +1375,7 @@ export const methods: Method[] = [
       'ochrona narządów (nerki, wątroba, serce) podczas chemio',
     ],
     regulatory: [
-      { country: 'Japonia', status: 'dopuszczone', note: 'Advanced Medical Care B (Klasa 2B) od XII 2016 — MHLW zatwierdziła; jRCTs031180352. Najwyższy status regulacyjny na świecie' },
+      { country: 'Japonia', status: 'dopuszczone', note: 'Status Advanced Medical Care B (Klasa 2B) od XII 2016 (MHLW; jRCTs031180352) — dla określonego programu/zastosowania; szczegóły do weryfikacji w MHLW/jRCT' },
       { country: 'Polska', status: 'OTC', note: 'Urządzenia wyrobami medycznymi klasy I/IIa (CE); brak rejestracji H₂ jako leku; brak refundacji NFZ' },
       { country: 'Niemcy', status: 'dopuszczone', note: 'Heilpraktikerzy; bez refundacji GKV; status suplementu/wyrobu' },
       { country: 'USA', status: 'eksperymentalne', note: 'FDA: urządzenia bez approval jako lek; aktywne badania NCT03818347, NCT04175301, NCT05728112' },
