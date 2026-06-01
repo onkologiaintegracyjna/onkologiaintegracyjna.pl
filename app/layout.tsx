@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://onkologiaintegracyjna.pl'),
   title: {
     default: 'Onkologia Integracyjna — wiedza oparta na dowodach',
-    template: '%s — Onkologia Integracyjna',
+    template: 'Onkologia Integracyjna — %s',
   },
   description:
     'Rzetelne, oparte na dowodach (EBM) źródło o metodach wspomagających leczenie onkologiczne — z jawną oceną pewności dowodów. Dla pacjentów i lekarzy.',
@@ -34,7 +34,6 @@ export const metadata: Metadata = {
     'GRADE',
     'ASCO-SIO',
   ],
-  generator: 'v0.app',
   openGraph: {
     type: 'website',
     locale: 'pl_PL',
