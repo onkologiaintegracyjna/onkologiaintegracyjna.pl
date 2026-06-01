@@ -137,6 +137,47 @@ export default function MonitorowaniePage() {
           </p>
 
           <div className="mt-5 rounded-xl border border-border bg-card p-5">
+            <h3 className="font-serif text-base font-semibold text-primary">Dlaczego CSC mogą być ważniejsze niż sama liczba CTC</h3>
+            <p className="mt-2 text-sm leading-relaxed text-foreground/80">
+              Nie wszystkie krążące komórki są równie groźne. Większość CTC ginie w krwiobiegu lub nie jest
+              zdolna do utworzenia przerzutu. Kluczowa wydaje się mniejszościowa subpopulacja o cechach
+              macierzystych — komórki macierzyste nowotworu (CSC). To właśnie im przypisuje się trzy
+              najważniejsze role:
+            </p>
+            <ul className="mt-3 space-y-2 text-sm leading-relaxed text-foreground/80">
+              <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" /><span><strong>Przerzutowość</strong> — to CSC mają zdolność „zasiedlania” odległych tkanek i inicjowania nowych ognisk choroby.</span></li>
+              <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" /><span><strong>Oporność na chemioterapię</strong> — CSC bywają mniej wrażliwe na klasyczne cytostatyki i mogą przetrwać leczenie, które zniszczyło masę guza. Bywa, że chemioterapia redukuje guz, ale względnie wzbogaca pulę opornych CSC.</span></li>
+              <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" /><span><strong>Nawroty</strong> — przetrwałe CSC wiąże się z późnymi wznowami, czasem po latach pozornego zdrowia.</span></li>
+            </ul>
+            <p className="mt-3 text-sm leading-relaxed text-foreground/80">
+              Dlatego dla części badaczy bardziej informacyjna od jednorazowej liczby CTC bywa
+              <strong> dynamika w czasie</strong> — czy poziom komórek (zwłaszcza frakcji CSC) rośnie, czy
+              spada w kolejnych pomiarach. Trend bywa cenniejszy niż pojedynczy wynik. To jednak nadal
+              obszar badań, a nie ustalony standard postępowania.
+            </p>
+          </div>
+
+          <div className="mt-5 rounded-xl border border-border bg-card p-5">
+            <h3 className="font-serif text-base font-semibold text-primary">Co czyni maintrac interesującym — i gdzie są granice dowodów</h3>
+            <p className="mt-2 text-sm leading-relaxed text-foreground/80">
+              Zainteresowanie metodą maintrac wynika z dwóch cech, których nie oferują typowe testy CTC:
+            </p>
+            <ul className="mt-3 space-y-2 text-sm leading-relaxed text-foreground/80">
+              <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-warn" aria-hidden="true" /><span><strong>Próba monitorowania frakcji CSC i jej dynamiki</strong> — metoda jest pozycjonowana jako narzędzie do śledzenia zmian w czasie, w tym subpopulacji o cechach macierzystych. Wiele standardowych testów koncentruje się na zliczaniu CTC, a nie na charakterystyce CSC.</span></li>
+              <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-warn" aria-hidden="true" /><span><strong>Test chemiowrażliwości</strong> — oferowana jest ocena, jak izolowane komórki reagują na poszczególne leki, jako próba przewidzenia szansy odpowiedzi na leczenie i indywidualizacji terapii.</span></li>
+            </ul>
+            <p className="mt-3 text-sm leading-relaxed text-foreground/80">
+              To koncepcyjnie atrakcyjne kierunki. Trzeba jednak uczciwie powiedzieć, gdzie kończą się
+              dowody: testy chemiowrażliwości oznaczane z krwi <strong>nie są obecnie zwalidowanym,
+              rekomendowanym w wytycznych narzędziem</strong> do wyboru chemioterapii — wynik z probówki
+              nie zawsze przekłada się na odpowiedź w organizmie. Podobnie monitorowanie CSC tą metodą ma
+              węższą walidację niż zliczanie CTC testem CellSearch. Dlatego maintrac warto traktować jako
+              <strong> uzupełniające źródło informacji do rozmowy z onkologiem</strong>, a nie jako
+              samodzielną podstawę decyzji o leczeniu.
+            </p>
+          </div>
+
+          <div className="mt-5 rounded-xl border border-border bg-card p-5">
             <h3 className="font-serif text-base font-semibold text-primary">Metody wykrywania CTC — różny poziom walidacji</h3>
             <ul className="mt-3 space-y-3 text-sm leading-relaxed text-foreground/80">
               <li className="flex gap-2">
