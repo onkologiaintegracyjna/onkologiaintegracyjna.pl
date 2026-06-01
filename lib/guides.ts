@@ -15,9 +15,9 @@ export interface Guide {
 }
 
 /**
- * Poradniki „w trakcie leczenia". Ton informujący, nie nakłaniający.
+ * Poradniki „w trakcie leczenia”. Ton informujący, nie nakłaniający.
  * Bez dawek i schematów. Każdy kończy się rozmową z onkologiem.
- * (Poradnik „przed chemioterapią" ma osobną stronę.)
+ * (Poradnik „przed chemioterapią” ma osobną stronę.)
  */
 export const guides: Guide[] = [
   {
@@ -51,7 +51,7 @@ export const guides: Guide[] = [
       {
         heading: 'Czego unikać',
         body:
-          'Unikaj zastępowania leczenia metodami „naturalnymi", odstawiania zaleconych leków bez konsultacji oraz rozpoczynania suplementacji „na wszelki wypadek" bez wiedzy onkologa.',
+          'Unikaj zastępowania leczenia metodami „naturalnymi”, odstawiania zaleconych leków bez konsultacji oraz rozpoczynania suplementacji „na wszelki wypadek” bez wiedzy onkologa.',
       },
     ],
     doctorQuestions: [
@@ -64,8 +64,8 @@ export const guides: Guide[] = [
   },
   {
     slug: 'wzmacnianie-chemioterapii',
-    title: 'Czy można „wzmacniać" chemioterapię?',
-    metaTitle: 'Czy można „wzmacniać" chemioterapię? Co mówią dane',
+    title: 'Czy można „wzmacniać” chemioterapię?',
+    metaTitle: 'Czy można „wzmacniać” chemioterapię? Co mówią dane',
     intro:
       'To częste pytanie pacjentów. Uczciwa odpowiedź brzmi: niektóre połączenia są badane, ale jest to obszar badań klinicznych, a nie rutynowa praktyka. Żadnej z tych metod nie należy stosować samodzielnie.',
     sections: [
@@ -80,9 +80,9 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: 'Dlaczego „wzmacnianie" bywa dwukierunkowe',
+        heading: 'Dlaczego „wzmacnianie” bywa dwukierunkowe',
         body:
-          'To samo, co teoretycznie miałoby wzmacniać, może też przeszkadzać. Antyoksydanty mogą w niektórych sytuacjach osłabiać prooksydacyjne działanie chemio-/radioterapii. Interakcje metaboliczne mogą zmieniać stężenie leku we krwi — w obie strony. Dlatego „naturalne" nie znaczy „neutralne".',
+          'To samo, co teoretycznie miałoby wzmacniać, może też przeszkadzać. Antyoksydanty mogą w niektórych sytuacjach osłabiać prooksydacyjne działanie chemio-/radioterapii. Interakcje metaboliczne mogą zmieniać stężenie leku we krwi — w obie strony. Dlatego „naturalne” nie znaczy „neutralne”.',
       },
       {
         heading: 'Bezpieczna zasada',
@@ -137,7 +137,7 @@ export const guides: Guide[] = [
       {
         heading: 'Mikrobiom a odpowiedź na leczenie',
         body:
-          'Badania wskazują, że skład mikrobiomu jelitowego może wpływać na odpowiedź na immunoterapię anty-PD-1. To obiecujący, ale wciąż badany obszar. Zdrowy, zróżnicowany sposób odżywiania jest rozsądnym, bezpiecznym wyborem; agresywnej „modyfikacji mikrobiomu" suplementami nie należy podejmować samodzielnie.',
+          'Badania wskazują, że skład mikrobiomu jelitowego może wpływać na odpowiedź na immunoterapię anty-PD-1. To obiecujący, ale wciąż badany obszar. Zdrowy, zróżnicowany sposób odżywiania jest rozsądnym, bezpiecznym wyborem; agresywnej „modyfikacji mikrobiomu” suplementami nie należy podejmować samodzielnie.',
       },
       {
         heading: 'Ostrożność z immunostymulantami',
@@ -205,7 +205,7 @@ export const guides: Guide[] = [
       {
         heading: 'Objawy przewlekłe',
         body:
-          'Część objawów (zmęczenie, neuropatia, zaburzenia poznawcze, obrzęk limfatyczny) może utrzymywać się po leczeniu. Wiele z nich można łagodzić metodami opisanymi w sekcji „Co pomaga".',
+          'Część objawów (zmęczenie, neuropatia, zaburzenia poznawcze, obrzęk limfatyczny) może utrzymywać się po leczeniu. Wiele z nich można łagodzić metodami opisanymi w sekcji „Co pomaga”.',
       },
       {
         heading: 'Kontrole i czujność',

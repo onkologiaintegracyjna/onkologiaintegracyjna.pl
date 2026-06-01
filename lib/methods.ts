@@ -395,7 +395,7 @@ export const methods: Method[] = [
     howItWorks:
       'Bogata w warzywa, oliwę, ryby i pełne ziarna; korzystnie wpływa na profil zapalny, metaboliczny i sercowo-naczyniowy.',
     research:
-      'RCT III PREDIMED/Toledo 2015 (PMID 26365989, n=4282): prewencja pierwotna raka piersi — HR 0,32 dla diety z oliwą extra virgin. Reanaliza Estruch 2018 (PMID 29897866): redukcja zdarzeń sercowo-naczyniowych. To nie jest „dieta lecznicza" w aktywnej onkologii.',
+      'RCT III PREDIMED/Toledo 2015 (PMID 26365989, n=4282): prewencja pierwotna raka piersi — HR 0,32 dla diety z oliwą extra virgin. Reanaliza Estruch 2018 (PMID 29897866): redukcja zdarzeń sercowo-naczyniowych. To nie jest „dieta lecznicza” w aktywnej onkologii.',
     safety:
       'Obok leczenia konwencjonalnego. Bezpieczny, ogólnie zdrowy wzorzec żywieniowy; w trakcie leczenia warto skonsultować z dietetykiem.',
     talkToDoctor:
@@ -729,7 +729,7 @@ export const methods: Method[] = [
       evidenceType: 'rct',
       clinicalStatus: 'supportive-care',
       evidenceGap:
-        'Brak RCT III; status urządzeń różni się między krajami; jakość sprzętu (wyrób medyczny vs „wellness").',
+        'Brak RCT III; status urządzeń różni się między krajami; jakość sprzętu (wyrób medyczny vs „wellness”).',
     },
     howItWorks:
       'Cząsteczkowy wodór wybiórczo neutralizuje najbardziej toksyczne reaktywne formy tlenu, zachowując te o funkcji sygnalizacyjnej.',

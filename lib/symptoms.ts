@@ -54,7 +54,7 @@ export const symptoms: Symptom[] = [
     ],
     avoid: [
       'Całkowitego unikania ruchu — bezczynność zwykle nasila zmęczenie.',
-      'Suplementów „na energię" bez konsultacji — możliwe interakcje z leczeniem.',
+      'Suplementów „na energię” bez konsultacji — możliwe interakcje z leczeniem.',
       'Ignorowania odwracalnych przyczyn (niedokrwistość, niedoczynność tarczycy, depresja).',
     ],
     whenDoctor:
@@ -87,7 +87,7 @@ export const symptoms: Symptom[] = [
     avoid: [
       'Wysokich dawek witamin (np. B6) bez kontroli — nadmiar może sam wywołać neuropatię.',
       'Bagatelizowania objawów — wczesne zgłoszenie pozwala dostosować leczenie onkologiczne.',
-      'Suplementów antyoksydacyjnych „chroniących nerwy" — dane są niespójne, a timing względem chemii bywa istotny.',
+      'Suplementów antyoksydacyjnych „chroniących nerwy” — dane są niespójne, a timing względem chemii bywa istotny.',
     ],
     whenDoctor:
       'Zgłoś szybko narastające drętwienie, osłabienie siły mięśni, trudności z chodzeniem lub zapinaniem guzików. Zespół leczący może zmodyfikować dawkę chemioterapii.',
@@ -123,7 +123,7 @@ export const symptoms: Symptom[] = [
       },
     ],
     avoid: [
-      'Rezygnacji z leków przeciwbólowych na rzecz wyłącznie metod „naturalnych".',
+      'Rezygnacji z leków przeciwbólowych na rzecz wyłącznie metod „naturalnych”.',
       'Samodzielnej modyfikacji dawek opioidów.',
       'Ziół o działaniu na krzepnięcie bez konsultacji (ryzyko interakcji).',
     ],
@@ -210,10 +210,10 @@ export const symptoms: Symptom[] = [
   },
   {
     slug: 'zaburzenia-poznawcze',
-    title: 'Zaburzenia poznawcze („chemo-brain")',
-    metaTitle: 'Zaburzenia poznawcze po leczeniu („chemo-brain")',
+    title: 'Zaburzenia poznawcze („chemo-brain”)',
+    metaTitle: 'Zaburzenia poznawcze po leczeniu („chemo-brain”)',
     intro:
-      'Część pacjentów zgłasza trudności z pamięcią, koncentracją i tempem myślenia w trakcie lub po leczeniu — potocznie „chemo-brain" (cancer-related cognitive impairment).',
+      'Część pacjentów zgłasza trudności z pamięcią, koncentracją i tempem myślenia w trakcie lub po leczeniu — potocznie „chemo-brain” (cancer-related cognitive impairment).',
     whatIsIt:
       'Przyczyny są wieloczynnikowe: leczenie, zmęczenie, zaburzenia snu, stres, leki. Objawy zwykle są łagodne do umiarkowanych i często się poprawiają. Pomocna jest ocena i rehabilitacja poznawcza.',
     evidence: [
@@ -237,7 +237,7 @@ export const symptoms: Symptom[] = [
       },
     ],
     avoid: [
-      'Suplementów „na pamięć" bez dowodów i bez konsultacji.',
+      'Suplementów „na pamięć” bez dowodów i bez konsultacji.',
       'Przeciążania i braku przerw — zmęczenie nasila objawy.',
       'Ignorowania zaburzeń snu i nastroju, które pogarszają funkcje poznawcze.',
     ],
@@ -313,7 +313,7 @@ export const symptoms: Symptom[] = [
       },
     ],
     avoid: [
-      'Restrykcyjnych „diet antynowotworowych" grożących niedożywieniem.',
+      'Restrykcyjnych „diet antynowotworowych” grożących niedożywieniem.',
       'Długich głodówek w trakcie aktywnego leczenia bez nadzoru.',
       'Suplementów wysokodawkowych bez konsultacji (interakcje, obciążenie).',
     ],
