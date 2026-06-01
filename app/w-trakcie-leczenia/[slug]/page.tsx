@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation'
 import { ChevronRight, Phone, Stethoscope } from 'lucide-react'
 import { PageHeader } from '@/components/page-header'
 import { PatientClinicianToggle } from '@/components/patient-clinician-toggle'
-import { DisclaimerBox } from '@/components/disclaimer-box'
 import { getGuide, getAllGuideSlugs } from '@/lib/guides'
 
 export function generateStaticParams() {
@@ -82,8 +81,6 @@ export default async function GuidePage({
             </PatientClinicianToggle>
           </section>
         )}
-
-        <DisclaimerBox className="mt-12" />
       </div>
     </>
   )

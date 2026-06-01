@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
-import { DisclaimerBox } from '@/components/disclaimer-box'
 import { Activity, Microscope, Droplet, ScanLine, HeartPulse, Info } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -227,8 +226,6 @@ export default function MonitorowaniePage() {
             <Link href="/styl-zycia" className="text-accent hover:underline">Styl życia w onkologii</Link>.
           </p>
         </section>
-
-        <DisclaimerBox className="mt-12" />
       </div>
     </>
   )

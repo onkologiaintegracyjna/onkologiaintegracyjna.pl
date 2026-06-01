@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Mail, ShieldCheck, Target, BookMarked } from 'lucide-react'
 import { PageHeader } from '@/components/page-header'
-import { DisclaimerBox } from '@/components/disclaimer-box'
 
 export const metadata: Metadata = {
   title: 'O stronie',
@@ -75,6 +74,22 @@ export default function OStroniePage() {
           </ul>
         </section>
 
+        <section className="mt-12">
+          <h2 className="flex items-center gap-2 font-serif text-2xl font-semibold text-primary">
+            <BookMarked className="h-5 w-5 text-accent" aria-hidden="true" />
+            Redakcja i proces
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-foreground/80">
+            Serwis prowadzi zespół redakcyjny Onkologia Integracyjna. Ma charakter wyłącznie
+            edukacyjny — nie prowadzimy działalności leczniczej ani sprzedażowej. Każda karta metody
+            powstaje w oparciu o źródła pierwotne (PubMed, Cochrane, wytyczne) i jest aktualizowana po
+            przeglądzie literatury. Treści nie zastępują indywidualnej porady lekarza.
+          </p>
+          <p className="mt-3 text-sm leading-relaxed text-foreground/80">
+            Data ostatniej aktualizacji bazy: czerwiec 2026.
+          </p>
+        </section>
+
         <section className="mt-12 rounded-xl border border-accent/30 bg-accent/5 p-6">
           <h2 className="flex items-center gap-2 font-serif text-xl font-semibold text-primary">
             <Mail className="h-5 w-5 text-accent" aria-hidden="true" />
@@ -86,9 +101,11 @@ export default function OStroniePage() {
               kontakt@onkologiaintegracyjna.pl
             </a>
           </p>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            Zobacz także:{' '}
+            <a href="/polityka-prywatnosci" className="text-accent hover:underline">Polityka prywatności</a>.
+          </p>
         </section>
-
-        <DisclaimerBox className="mt-12" />
       </div>
     </>
   )

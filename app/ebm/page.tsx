@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
-import { DisclaimerBox } from '@/components/disclaimer-box'
 import { Quote, Layers, Banknote, FileWarning, Scale } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -91,12 +90,12 @@ export default function EbmPage() {
             Dlaczego brak badań nie znaczy brak skuteczności
           </h2>
           <p className="mt-3 leading-relaxed text-foreground/80">
-            Wysoki poziom dowodów wymaga dużych badań III fazy. Takie badanie kosztuje dziesiątki do
-            setek milionów dolarów i niemal zawsze finansuje je sponsor liczący na zwrot — zwykle
-            producent leku objętego patentem. Tu pojawia się systemowy problem: substancje, których
-            nie da się opatentować — witaminy, zioła, naturalne metabolity, stare leki generyczne
-            badane w nowym wskazaniu (off-label) — rzadko znajdują sponsora gotowego sfinansować
-            badanie III fazy. Nie ma bowiem perspektywy zwrotu inwestycji.
+            Wysoki poziom dowodów wymaga dużych badań III fazy. Takie badania są kosztowne i zwykle
+            wymagają sponsora — publicznego, akademickiego lub komercyjnego. Dla substancji, których
+            nie da się opatentować — witamin, ziół, naturalnych metabolitów, starych leków
+            generycznych badanych w nowym wskazaniu (off-label) — uzyskanie takiego finansowania bywa
+            trudniejsze, bo brakuje perspektywy zwrotu inwestycji. Tworzy to lukę dowodową niezależną
+            od samego potencjału biologicznego metody.
           </p>
           <p className="mt-3 leading-relaxed text-foreground/80">
             Skutek: obiecująca substancja może na zawsze utknąć na „niskiej pewności dowodów” — nie
@@ -198,8 +197,6 @@ export default function EbmPage() {
             </Link>
           </p>
         </section>
-
-        <DisclaimerBox className="mt-12" />
       </div>
     </>
   )

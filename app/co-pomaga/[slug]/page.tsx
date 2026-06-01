@@ -5,7 +5,6 @@ import { ChevronRight, Phone, Ban, Stethoscope } from 'lucide-react'
 import { PageHeader } from '@/components/page-header'
 import { GradeBadge, EvidenceTypeBadge } from '@/components/badges'
 import { PatientClinicianToggle } from '@/components/patient-clinician-toggle'
-import { DisclaimerBox } from '@/components/disclaimer-box'
 import { getSymptom, getAllSymptomSlugs } from '@/lib/symptoms'
 
 export function generateStaticParams() {
@@ -96,8 +95,6 @@ export default async function SymptomPage({
             <p>{s.clinical}</p>
           </PatientClinicianToggle>
         </section>
-
-        <DisclaimerBox className="mt-12" />
       </div>
     </>
   )

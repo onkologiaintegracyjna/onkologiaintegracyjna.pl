@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { PageHeader } from '@/components/page-header'
 import { NeutralityBanner } from '@/components/neutrality-banner'
-import { DisclaimerBox } from '@/components/disclaimer-box'
 import { pathways, pathwayEvidenceLabels } from '@/lib/pathways'
 import { PathwayMatrix } from '@/components/pathway-matrix'
 
@@ -105,8 +104,6 @@ export default function SzlakiPage() {
             w sekcji „Metody i substancje”.
           </p>
         </div>
-
-        <DisclaimerBox className="mt-10" />
       </div>
     </>
   )

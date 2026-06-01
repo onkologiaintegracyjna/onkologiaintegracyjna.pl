@@ -12,7 +12,6 @@ import {
 } from '@/components/badges'
 import { PMIDLink } from '@/components/pmid-link'
 import { PatientClinicianToggle } from '@/components/patient-clinician-toggle'
-import { DisclaimerBox } from '@/components/disclaimer-box'
 import { ExperimentalWarning } from '@/components/experimental-warning'
 import { RedoxFlag } from '@/components/redox-flag'
 import { Syringe, Pill } from 'lucide-react'
@@ -350,8 +349,6 @@ export default async function MethodPage({
             Jak czytać dowody?
           </Link>
         </p>
-
-        <DisclaimerBox className="mt-8" />
       </article>
     </>
   )

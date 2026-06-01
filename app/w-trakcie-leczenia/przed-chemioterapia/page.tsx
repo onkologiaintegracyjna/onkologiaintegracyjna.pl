@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ChevronRight, MessageCircle } from 'lucide-react'
 import { PageHeader } from '@/components/page-header'
-import { DisclaimerBox } from '@/components/disclaimer-box'
 
 export const metadata: Metadata = {
   title: 'Przed chemioterapią — poradnik',
@@ -65,8 +64,6 @@ export default function PrzedChemioterapiaPage() {
             informacyjny i nie zastępuje konsultacji medycznej.
           </p>
         </section>
-
-        <DisclaimerBox className="mt-10" />
       </div>
     </>
   )

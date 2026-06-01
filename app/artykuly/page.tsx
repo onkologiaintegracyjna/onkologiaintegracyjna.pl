@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { FileText } from 'lucide-react'
 import { PageHeader } from '@/components/page-header'
-import { DisclaimerBox } from '@/components/disclaimer-box'
 
 export const metadata: Metadata = {
   title: 'Artykuły',
@@ -31,7 +30,6 @@ export default function ArtykulyPage() {
             <a href="/co-pomaga" className="text-accent hover:underline">Co pomaga przy leczeniu</a>.
           </p>
         </div>
-        <DisclaimerBox className="mt-10" />
       </div>
     </>
   )

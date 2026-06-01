@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { PageHeader } from '@/components/page-header'
-import { DisclaimerBox } from '@/components/disclaimer-box'
 import { glossary } from '@/lib/glossary'
 
 export const metadata: Metadata = {
@@ -27,7 +26,6 @@ export default function SlownikPage() {
             </div>
           ))}
         </dl>
-        <DisclaimerBox className="mt-12" />
       </div>
     </>
   )

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { PageHeader } from '@/components/page-header'
 import { PMIDLink } from '@/components/pmid-link'
-import { DisclaimerBox } from '@/components/disclaimer-box'
 import { methods } from '@/lib/methods'
 
 export const metadata: Metadata = {
@@ -52,7 +51,6 @@ export default function ZrodlaPage() {
             </section>
           ))}
         </div>
-        <DisclaimerBox className="mt-12" />
       </div>
     </>
   )

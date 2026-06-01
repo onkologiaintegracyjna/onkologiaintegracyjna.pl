@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { GradeBadge, EvidenceTypeBadge, ClinicalStatusBadge } from '@/components/badges'
-import { DisclaimerBox } from '@/components/disclaimer-box'
 import type { GradeLevel, EvidenceType, ClinicalStatus } from '@/lib/types'
 
 export const metadata: Metadata = {
@@ -154,8 +153,6 @@ export default function JakCzytacPage() {
             Przejdź do katalogu metod →
           </Link>
         </p>
-
-        <DisclaimerBox className="mt-12" />
       </div>
     </>
   )

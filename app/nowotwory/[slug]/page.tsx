@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ChevronRight, Stethoscope, Sparkles, ClipboardList } from 'lucide-react'
 import { PageHeader } from '@/components/page-header'
-import { DisclaimerBox } from '@/components/disclaimer-box'
 import { getCancer, getAllCancerSlugs } from '@/lib/cancers'
 
 export function generateStaticParams() {
@@ -80,8 +79,6 @@ export default async function CancerPage({
             <Link href="/co-pomaga" className="text-accent hover:underline">Co pomaga przy leczeniu</Link>.
           </p>
         </section>
-
-        <DisclaimerBox className="mt-12" />
       </div>
     </>
   )

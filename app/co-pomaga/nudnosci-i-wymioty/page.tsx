@@ -5,7 +5,6 @@ import { PageHeader } from '@/components/page-header'
 import { GradeBadge, EvidenceTypeBadge } from '@/components/badges'
 import { PMIDLink } from '@/components/pmid-link'
 import { PatientClinicianToggle } from '@/components/patient-clinician-toggle'
-import { DisclaimerBox } from '@/components/disclaimer-box'
 
 export const metadata: Metadata = {
   title: 'Nudności i wymioty po chemioterapii (CINV)',
@@ -164,8 +163,6 @@ export default function CinvPage() {
             </p>
           </PatientClinicianToggle>
         </section>
-
-        <DisclaimerBox className="mt-12" />
       </div>
     </>
   )
