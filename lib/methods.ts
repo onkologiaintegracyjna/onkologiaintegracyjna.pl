@@ -100,7 +100,7 @@ export const methods: Method[] = [
     howItWorks:
       'Wyciągi z jemioły zawierają lektyny i wiskotoksyny o działaniu immunomodulacyjnym; opisywano stymulację odporności wrodzonej w badaniach przedklinicznych i klinicznych.',
     research:
-      'Przegląd systematyczny Kienle & Kiene 2010 (PMID 20483874) i Cochrane (Loef & Walach 2020) sygnalizują korzyść w jakości życia bez twardych dowodów dla przeżycia całkowitego. RCT III Tröger 2013 (PMID 23890767) w zaawansowanym raku trzustki: OS 4,8 vs 2,7 mies. (p<0,001, n=220). W części systemów europejskich preparaty jemioły funkcjonują w ramach medycyny antropozoficznej lub opieki wspomagającej — status pokrycia zależy od kraju, preparatu, wskazania i płatnika.',
+      'Przegląd systematyczny Kienle & Kiene 2010 (PMID 20483874) i Cochrane (Loef & Walach 2020) sygnalizują korzyść w jakości życia bez twardych dowodów dla przeżycia całkowitego. RCT III Tröger 2013 (PMID 23890767) w zaawansowanym raku trzustki: OS 4,8 vs 2,7 mies. (p<0,001, n=220) — wynik istotny, ale metodologia tego badania była krytykowana, a nowsze, bardziej rygorystyczne próby (m.in. MISTRAL) nie potwierdziły dotąd jednoznacznej korzyści w przeżyciu. Dlatego utrzymujemy niską pewność dowodów i status opieki wspomagającej. W części systemów europejskich preparaty jemioły funkcjonują w ramach medycyny antropozoficznej lub opieki wspomagającej — status pokrycia zależy od kraju, preparatu, wskazania i płatnika.',
     safety:
       'Obok, nie zamiast leczenia standardowego. Stosowanie wymaga wykwalifikowanego lekarza; możliwe reakcje miejscowe i ogólne.',
     talkToDoctor:
@@ -374,7 +374,7 @@ export const methods: Method[] = [
       'Lokoregionalna hipertermia stosowana łącznie z radio-/chemioterapią — metoda z wytycznymi, nie pseudomedycyna.',
     evidenceProfile: {
       effectSignal:
-        'RCT III (mięsaki): 10-letni DFS 67% vs 50%; RCT III (rak szyjki): pełna odpowiedź 83% vs 57%, 3-letni OS 51% vs 27%.',
+        'RCT III (mięsaki, EORTC 62961–ESHO 95): 10-letnie OS 52,6% vs 42,7% (HR 0,73); RCT III (rak szyjki, Dutch Deep Hyperthermia Group): pełna odpowiedź 83% vs 57%, 3-letni OS 51% vs 27%.',
       grade: 'moderate',
       evidenceType: 'rct',
       clinicalStatus: 'guideline-supported',
@@ -384,14 +384,14 @@ export const methods: Method[] = [
     howItWorks:
       'Kontrolowane podgrzanie tkanki (ok. 40–43°C) zwiększa wrażliwość komórek na radio- i chemioterapię oraz poprawia ukrwienie i utlenowanie guza.',
     research:
-      'RCT III Issels 2018 (PMID 29450452, EORTC/ESHO, mięsaki): 10-letni DFS 67% vs 50% (p=0,017). RCT III van der Zee 2000 (PMID 10841125, rak szyjki): CR 83% vs 57%; OS 51% vs 27% w 3 lata. Uwzględniona w wytycznych DEGRO/ESMO dla wybranych wskazań. To lokoregionalna RHT — nie ogólnoustrojowa hipertermia (WBH).',
+      'RCT III Issels 2018 (PMID 29450452, EORTC 62961–ESHO 95, mięsaki tkanek miękkich wysokiego ryzyka): dodanie regionalnej hipertermii do chemioterapii zwiększyło 10-letnie przeżycie całkowite z 42,7% do 52,6% (HR 0,73; 95% CI 0,54–0,98). RCT III van der Zee 2000 (Lancet, Dutch Deep Hyperthermia Group, PMID 10791373, rak szyjki macicy): pełna odpowiedź 83% vs 57%; 3-letnie OS 51% vs 27%. Uwzględniona w wytycznych DEGRO/ESHO dla wybranych wskazań. To lokoregionalna RHT — nie ogólnoustrojowa hipertermia (WBH).',
     safety:
       'Obok, nie zamiast leczenia. Wykonywana w wyspecjalizowanych ośrodkach pod nadzorem; nie mylić z hipertermią ogólnoustrojową.',
     talkToDoctor:
       'Zapytaj, czy w Twoim wskazaniu istnieją dane na połączenie RHT z radio-/chemioterapią i gdzie jest dostępna.',
     references: [
-      { pmid: '29450452', title: 'Issels 2018 — RCT III, mięsaki tkanek miękkich', year: 2018, note: 'DFS 67% vs 50% (10 lat)' },
-      { pmid: '10841125', title: 'van der Zee 2000 — RCT III, rak szyjki macicy', year: 2000, note: 'OS 51% vs 27% (3 lata)' },
+      { pmid: '29450452', title: 'Issels 2018 — RCT III, mięsaki tkanek miękkich', year: 2018, note: '10-letnie OS 52,6% vs 42,7% (HR 0,73)' },
+      { pmid: '10791373', title: 'van der Zee 2000 (Lancet, Dutch Deep Hyperthermia Group) — RCT III', year: 2000, note: 'rak szyjki: CR 83% vs 57%; 3-letni OS 51% vs 27%' },
     ],
   },
   {
@@ -487,6 +487,7 @@ export const methods: Method[] = [
       'glejak wielopostaciowy (GBM)',
       'złośliwy międzybłoniak opłucnej',
       'przerzutowy NDRP (Optune Lua 2024)',
+      'miejscowo zaawansowany rak trzustki (Optune Pax, FDA luty 2026; PANOVA-3)',
     ],
     regulatory: [
       { country: 'USA', status: 'dopuszczone', note: 'FDA approved 2011/2015/2019/2024' },
@@ -514,7 +515,7 @@ export const methods: Method[] = [
     howItWorks:
       'Naprzemienne pola elektryczne o niskiej intensywności zaburzają tworzenie wrzeciona podziałowego w dzielących się komórkach nowotworowych.',
     research:
-      'RCT III Stupp 2017 (PMID 29260225, EF-14): w nowo rozpoznanym glejaku OS 20,9 vs 16,0 mies. (HR 0,63; p<0,001; n=695). RCT II STELLAR Ceresoli 2019 (PMID 31628016): międzybłoniak opłucnej, OS 18,2 mies. z TTFields + chemioterapia. FDA approved (2011–2024), EU CE mark.',
+      'RCT III Stupp 2017 (PMID 29260225, EF-14): w nowo rozpoznanym glejaku OS 20,9 vs 16,0 mies. (HR 0,63; p<0,001; n=695). Zakres wskazań rośnie: Optune Lua uzyskał rejestrację FDA i oznaczenie CE w przerzutowym niedrobnokomórkowym raku płuca (2024). RCT III PANOVA-3 (PMID 40448572, n=571, 2025) w miejscowo zaawansowanym raku trzustki wykazał wydłużenie OS 16,2 vs 14,2 mies. (HR 0,82; p=0,039) i przeżycia wolnego od bólu — na tej podstawie FDA dopuściła Optune Pax (luty 2026). To jedna z nielicznych metod fizykalnych z wieloma wskazaniami potwierdzonymi w dużych badaniach.',
     safety:
       'Obok leczenia konwencjonalnego. Najczęstsze działania niepożądane to podrażnienia skóry pod elektrodami.',
     talkToDoctor:
@@ -522,6 +523,7 @@ export const methods: Method[] = [
     references: [
       { pmid: '29260225', title: 'Stupp 2017 (EF-14) — RCT III, glejak', year: 2017, note: 'OS 20,9 vs 16,0 mies.; HR 0,63' },
       { pmid: '31628016', title: 'Ceresoli 2019 (STELLAR) — RCT II, międzybłoniak', year: 2019 },
+      { pmid: '40448572', title: 'PANOVA-3 — RCT III, miejscowo zaawansowany rak trzustki', year: 2025, note: 'OS 16,2 vs 14,2 mies. (HR 0,82; p=0,039); podstawa rejestracji Optune Pax 2026' },
     ],
   },
   // ===== Medycyna stylu życia (guideline-supported) =====
@@ -827,9 +829,9 @@ export const methods: Method[] = [
     contraindications:
       'Brak ustalonego profilu bezpieczeństwa u ludzi. Opisywano potencjalną toksyczność neurologiczną i ogólnoustrojową. Nie stosować poza kontrolowanymi badaniami klinicznymi.',
     mythBuster: {
-      title: '„Skuteczniejsza niż chemia" — czego nie mówi ten nagłówek',
+      title: 'Jak czytać nagłówki o salinomycynie — bez hype i bez lekceważenia',
       body:
-        'Salinomycynę bywa się reklamuje jako wielokrotnie skuteczniejszą od klasycznych leków. Takie porównania pochodzą z badań na liniach komórkowych (in vitro), gdzie warunki są dalekie od organizmu człowieka. Brakuje badań klinicznych potwierdzających skuteczność i bezpieczeństwo u pacjentów — dlatego to obszar eksperymentalny, a nie terapia.',
+        'Dwa skróty myślowe są tu mylące. Pierwszy to hype: hasło „skuteczniejsza niż chemia” pochodzi z badań na liniach komórkowych, gdzie warunki są dalekie od organizmu człowieka — to nie jest dowód skuteczności u pacjentów. Drugi, równie błędny, to lekceważenie: „bardzo niska pewność dowodów” nie znaczy, że salinomycyna nie działa. Ma ona jeden z najmocniejszych i najlepiej powtarzanych sygnałów przedklinicznych wśród związków celujących w komórki macierzyste nowotworu, a brak badań u ludzi wynika głównie z bariery rejestracyjnej i braku finansowania, nie z negatywnych wyników. Uczciwa konkluzja: to poważny, obiecujący kandydat w fazie badań — który dopiero musi zostać sprawdzony klinicznie.',
     },
     category: 'experimental',
     experimental: true,
@@ -837,17 +839,17 @@ export const methods: Method[] = [
       'Związek badany przedklinicznie pod kątem komórek macierzystych nowotworu — bez rejestracji dla ludzi.',
     evidenceProfile: {
       effectSignal:
-        'Sygnał wyłącznie w modelach przedklinicznych (linie komórkowe, modele zwierzęce); brak danych klinicznych skuteczności u ludzi.',
+        'Bardzo silny i powtarzalny sygnał w modelach przedklinicznych (linie komórkowe i modele zwierzęce) — salinomycyna należy do najlepiej udokumentowanych przedklinicznie związków celujących w komórki macierzyste nowotworu. Brak natomiast badań klinicznych u ludzi.',
       grade: 'very-low',
       evidenceType: 'preclinical',
       clinicalStatus: 'experimental',
       evidenceGap:
-        'Brak rejestracji dla ludzi i brak RCT klinicznych II/III; istotne ryzyko toksyczności.',
+        'Brak badań klinicznych II/III u ludzi — wynika to przede wszystkim z braku rejestracji dla ludzi (związek o pochodzeniu weterynaryjnym, nieopatentowalny jako nowy lek) i braku sponsora gotowego sfinansować kosztowne badania, a nie z negatywnych wyników. Konieczna ostrożność: nieustalona u ludzi droga podania i ryzyko toksyczności.',
     },
     howItWorks:
       'W modelach przedklinicznych opisywano wpływ na komórki macierzyste nowotworu i indukcję ferroptozy; znaczenie kliniczne nieznane.',
     research:
-      'Gupta 2009 (Cell, PMID 19682730): silne działanie wobec komórek macierzystych raka piersi w modelu in vitro (w tym modelu skuteczniejsze niż klasyczny cytostatyk — wyłącznie przedklinicznie). Naujokat & Steinhart 2012 (PMID 23251084): przegląd jako związek celujący w komórki macierzyste. Polski wkład: zespół prof. Adama Huczyńskiego z Uniwersytetu im. Adama Mickiewicza w Poznaniu od lat bada syntezę i pochodne salinomycyny o potencjale przeciwnowotworowym (Antoszczak & Huczyński, PMID 25553435). Mimo to dane pozostają niemal wyłącznie przedkliniczne — nie ma dowodów na skuteczność u ludzi.',
+      'Gupta 2009 (Cell, PMID 19682730): silne działanie wobec komórek macierzystych raka piersi w modelu in vitro (w tym modelu skuteczniejsze niż klasyczny cytostatyk — wyłącznie przedklinicznie). Naujokat & Steinhart 2012 (PMID 23251084): przegląd jako związek celujący w komórki macierzyste. Badania trwają i się rozwijają — zespół prof. Adama Huczyńskiego z Uniwersytetu im. Adama Mickiewicza w Poznaniu od lat projektuje pochodne salinomycyny o silniejszym i bardziej selektywnym działaniu; w pracy z 2025 r. pochodne tiomocznikowe były 2–10× skuteczniejsze od macierzystej salinomycyny wobec przerzutowych komórek raka jelita grubego (PMID 39390831). To obiecujący, aktywnie rozwijany kierunek. Zastrzeżenie pozostaje jednak twarde: wszystkie dane są przedkliniczne — brak badań klinicznych u ludzi, więc skuteczności i bezpieczeństwa u pacjentów nie można jeszcze uznać za wykazane.',
     safety:
       'Obszar eksperymentalny. Nie stosować jako leczenie przeciwnowotworowe. Możliwa toksyczność neurologiczna i ogólnoustrojowa; brak rejestracji dla ludzi.',
     talkToDoctor:
@@ -856,6 +858,7 @@ export const methods: Method[] = [
       { pmid: '19682730', title: 'Gupta 2009 (Cell) — komórki macierzyste, in vitro', year: 2009 },
       { pmid: '23251084', title: 'Naujokat & Steinhart 2012 — przegląd', year: 2012 },
       { pmid: '25553435', title: 'Antoszczak & Huczyński 2015 (UAM Poznań) — pochodne salinomycyny', year: 2015, note: 'polski wkład; synteza i aktywność przeciwnowotworowa (przedkliniczne)' },
+      { pmid: '39390831', title: 'Antoszczak, Huczyński i wsp. 2025 (UAM Poznań) — pochodne tiomocznikowe salinomycyny', year: 2025, note: '2–10× skuteczniejsze od salinomycyny wobec przerzutowego raka jelita grubego (przedkliniczne)' },
     ],
     administrationRoute: {
       summary:
@@ -897,13 +900,13 @@ export const methods: Method[] = [
     howItWorks:
       'Kwasy bosweliowe (m.in. AKBA) hamują 5-lipooksygenazę i szlak NF-κB, działając przeciwzapalnie; AKBA przenika barierę krew-mózg.',
     research:
-      'RCT II Kirste 2011 (DOI 10.1002/cncr.26101, n=44): 60% pacjentów ≥75% redukcji obrzęku mózgu po radioterapii vs 26% placebo (p=0,023). Przegląd Dejonckheere 2025 potwierdza sygnał i redukcję zapotrzebowania na deksametazon.',
+      'RCT II z podwójnie ślepą próbą Kirste 2011 (DOI 10.1002/cncr.25945, n=44): 60% pacjentów ≥75% redukcji obrzęku mózgu po radioterapii vs 26% placebo (p=0,023). Przegląd 2025 potwierdza sygnał i możliwość ograniczenia dawki deksametazonu, podkreślając jednak małą liczebność prób.',
     safety:
       'Obok, nie zamiast leczenia. Przeciwwskazania przy zaburzeniach krzepnięcia; jakość preparatu krytyczna (ekstrakt standaryzowany na AKBA).',
     talkToDoctor:
       'Zapytaj o zasadność przy obrzęku po radioterapii oraz o interakcje i wybór standaryzowanego ekstraktu.',
     references: [
-      { doi: '10.1002/cncr.26101', title: 'Kirste 2011 — RCT II, obrzęk mózgu po RT', year: 2011, note: 'n=44; p=0,023' },
+      { doi: '10.1002/cncr.25945', title: 'Kirste 2011 — RCT II (podwójnie ślepa próba), obrzęk mózgu po RT', year: 2011, note: 'n=44; 60% vs 26%; p=0,023' },
       { pmid: '38194131', title: 'Morikawa 2024 — faza Ia, rak piersi', year: 2024 },
     ],
   },
@@ -1136,11 +1139,11 @@ export const methods: Method[] = [
     howItWorks:
       'W badaniach laboratoryjnych opisywano wpływ iwermektyny na kilka szlaków istotnych dla przeżycia komórek nowotworowych. Mechanizmy te są obiecujące teoretycznie, ale ich znaczenie u pacjentów nie zostało wykazane.',
     research:
-      'Dostępne dane pochodzą niemal wyłącznie z badań in vitro i na zwierzętach. To klasyczny przykład leku repozycjonowanego, którego potencjał onkologiczny jest badany, ale nie potwierdzony klinicznie. Brak wiarygodnych badań klinicznych skuteczności w nowotworach u ludzi.',
+      'Dostępne dane pochodzą głównie z badań in vitro i na zwierzętach. To klasyczny przykład leku repozycjonowanego, którego potencjał onkologiczny jest badany, ale nie potwierdzony klinicznie. Pojawiają się pierwsze badania kliniczne wczesnej fazy (np. iwermektyna z immunoterapią w raku piersi), jednak do 2026 r. żadne nie dostarczyło danych pozwalających włączyć iwermektynę do standardu leczenia.',
     safety:
       'Obszar eksperymentalny. W zarejestrowanych wskazaniach przeciwpasożytniczych profil bezpieczeństwa jest dobrze poznany, ale stosowanie onkologiczne (zwykle w wyższych dawkach badanych przedklinicznie) niesie ryzyko i nie ma ustalonego bezpieczeństwa.',
     contraindications:
-      'Brak ustalonego profilu bezpieczeństwa dla zastosowań onkologicznych. Możliwe interakcje lekowe i działania neurologiczne przy wysokich dawkach. Stosowanie wyłącznie pod nadzorem, najlepiej w ramach badań.',
+      'Brak ustalonego profilu bezpieczeństwa dla zastosowań onkologicznych. Możliwe interakcje lekowe i działania neurologiczne przy wysokich dawkach. W 2026 r. ASCO wydało stanowisko (Clinical Notice) odradzające stosowanie iwermektyny jako leczenia raka lub dodatku do leczenia poza badaniami klinicznymi. Jednocześnie trwają wczesne badania kliniczne (m.in. faza I/II w raku potrójnie ujemnym piersi) — to różnica między „nie stosować samodzielnie zamiast leczenia” a „warto badać dalej”.',
     talkToDoctor:
       'Traktuj jako obszar badań, nie terapię. Jeśli rozważasz udział w badaniu klinicznym lub stosowanie off-label, omów to z onkologiem — samodzielne stosowanie jest ryzykowne.',
     references: [
@@ -1185,7 +1188,7 @@ export const methods: Method[] = [
     safety:
       'Obszar eksperymentalny, lek niezarejestrowany dla ludzi. Brak danych o bezpieczeństwie długotrwałego stosowania u ludzi; sygnały o możliwym obciążeniu wątroby. Nie stosować jako leczenie przeciwnowotworowe.',
     contraindications:
-      'Brak rejestracji i ustalonego bezpieczeństwa u ludzi. Możliwe obciążenie wątroby; nieznane interakcje z leczeniem onkologicznym. Stosowanie poza badaniami klinicznymi jest odradzane.',
+      'Brak rejestracji i ustalonego bezpieczeństwa u ludzi. Możliwe obciążenie wątroby; nieznane interakcje z leczeniem onkologicznym. W 2026 r. ASCO wydało stanowisko odradzające stosowanie fenbendazolu jako leczenia raka lub dodatku do leczenia poza badaniami klinicznymi. Stosowanie „na własną rękę”, zwłaszcza zamiast leczenia o udowodnionej skuteczności, jest odradzane.',
     talkToDoctor:
       'Jeśli rozważasz fenbendazol pod wpływem historii z internetu, koniecznie omów to z onkologiem. Opisy pojedynczych przypadków nie są dowodem, a lek nie jest przeznaczony dla ludzi.',
     references: [
@@ -1196,6 +1199,171 @@ export const methods: Method[] = [
       body:
         'Popularność fenbendazolu opiera się na nagłośnionych historiach pojedynczych osób. To zrozumiałe, że takie historie robią wrażenie — ale z naukowego punktu widzenia opis przypadku stoi nisko w hierarchii dowodów. Nie pozwala oddzielić działania leku od równoległej chemioterapii, immunoterapii czy naturalnego przebiegu choroby. Dlatego potrzebne są badania kliniczne, których dla fenbendazolu w onkologii brak.',
     },
+  },
+  {
+    slug: 'kannabinoidy',
+    name: 'Kannabinoidy (CBD i THC / medyczna marihuana)',
+    category: 'supportive-care',
+    redoxClass: 'context-dependent',
+    indications: [
+      'oporne nudności i wymioty po chemioterapii (jako dodatek do standardowych leków przeciwwymiotnych)',
+      'ból (rola uzupełniająca, dane niejednoznaczne)',
+      'brak apetytu i utrata masy ciała',
+      'zaburzenia snu i lęk (dane ograniczone)',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'na receptę', note: 'Medyczna marihuana (susz, surowiec farmaceutyczny) dostępna na receptę; produkty CBD bez THC — jako suplementy/kosmetyki' },
+      { country: 'USA', status: 'zależny', note: 'Status różny między stanami; dronabinol/nabilon (syntetyczne) zarejestrowane w wybranych wskazaniach' },
+      { country: 'UE', status: 'zależny', note: 'Status różni się między krajami; medyczna marihuana dopuszczona w części państw' },
+    ],
+    shortDescription:
+      'CBD i THC z konopi, badane głównie w opiece wspomagającej (nudności, ból, apetyt). Nie jako leczenie przeciwnowotworowe.',
+    whatIsIt:
+      'Kannabinoidy to związki z konopi. Dwa najważniejsze to THC (działa psychoaktywnie, na receptę jako medyczna marihuana) i CBD (niepsychoaktywne, w Polsce dostępne jako suplement/kosmetyk bez THC). To nie to samo: różnią się działaniem, statusem prawnym i profilem dowodów. W onkologii bada się je jako wsparcie objawowe, nie jako leczenie nowotworu.',
+    evidenceProfile: {
+      effectSignal:
+        'Wytyczne ASCO 2024 wskazują, że kannabinoidy mogą poprawiać oporne na leczenie nudności i wymioty po chemioterapii, gdy dodaje się je do standardowych leków przeciwwymiotnych. Dla bólu, apetytu i lęku dane są słabsze i niespójne.',
+      grade: 'low',
+      evidenceType: 'meta-analysis',
+      clinicalStatus: 'supportive-care',
+      evidenceGap:
+        'Pewność dowodów dla większości objawów jest niska; brak dowodów na działanie przeciwnowotworowe u ludzi. Zróżnicowane preparaty i dawki utrudniają porównania.',
+    },
+    howItWorks:
+      'Kannabinoidy działają na układ endokannabinoidowy (receptory CB1/CB2), wpływając m.in. na odczuwanie nudności, bólu i apetyt. Mechanizm przeciwobjawowy jest dobrze umocowany; opisywane w laboratorium działanie przeciwnowotworowe nie zostało wykazane klinicznie.',
+    research:
+      'Wytyczne ASCO 2024 (PMID 38478773, JCO): kannabinoidy mogą poprawiać oporne CINV jako dodatek do standardowej profilaktyki przeciwwymiotnej; dla pozostałych objawów pewność jest niska. ASCO wyraźnie odradza stosowanie kannabinoidów jako leczenia przeciwnowotworowego poza badaniami klinicznymi. Syntetyczne kannabinoidy (dronabinol, nabilon) są w części krajów zarejestrowane w nudnościach po chemioterapii.',
+    safety:
+      'Obok, nie zamiast leczenia. THC działa psychoaktywnie (senność, zawroty, wpływ na prowadzenie pojazdów); możliwe interakcje z lekami metabolizowanymi w wątrobie. Ostrożność u osób z chorobami psychicznymi i sercowo-naczyniowymi.',
+    contraindications:
+      'Ostrożność przy zaburzeniach psychicznych (THC), chorobach serca, w ciąży i laktacji. Możliwe interakcje lekowe (CYP). Medyczna marihuana wyłącznie na receptę i pod nadzorem lekarza.',
+    talkToDoctor:
+      'Zapytaj, czy w Twoich objawach (np. oporne nudności) kannabinoidy mogą być dodatkiem do leczenia, o właściwy preparat i dawkę oraz o interakcje z Twoimi lekami. Nie traktuj ich jako leczenia raka.',
+    mythBuster: {
+      title: 'Olej CBD nie jest udowodnionym lekiem na raka',
+      body:
+        'W internecie olej CBD i marihuana bywają przedstawiane jako lek na raka. To nieporozumienie: badania laboratoryjne pokazują pewien wpływ na komórki nowotworowe, ale nie ma badań u ludzi potwierdzających działanie przeciwnowotworowe. Udokumentowana, realna rola kannabinoidów dotyczy łagodzenia objawów — przede wszystkim opornych nudności i wymiotów — jako dodatek do standardowego leczenia, nie jako jego zamiennik.',
+    },
+    references: [
+      { pmid: '38478773', title: 'Cannabis and Cannabinoids in Adults With Cancer — wytyczne ASCO 2024', year: 2024, note: 'JCO; oporne CINV jako dodatek; odradza stosowanie jako leczenia przeciwnowotworowego poza badaniami' },
+    ],
+  },
+  {
+    slug: 'dieta-ketogeniczna',
+    name: 'Dieta ketogeniczna w onkologii',
+    category: 'lifestyle',
+    experimental: true,
+    indications: [
+      'obszar badań — bez potwierdzonej poprawy przeżycia',
+      'badana w wybranych nowotworach (m.in. glejak) jako uzupełnienie',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'nie dotyczy', note: 'Interwencja dietetyczna; nie podlega rejestracji jako lek' },
+    ],
+    shortDescription:
+      'Dieta bardzo niskowęglowodanowa, wysokotłuszczowa, badana w onkologii — obszar badań, nie udowodnione leczenie.',
+    whatIsIt:
+      'Dieta ketogeniczna drastycznie ogranicza węglowodany, zmuszając organizm do czerpania energii z tłuszczów (ciał ketonowych). W onkologii bada się hipotezę, że ograniczenie glukozy może utrudniać metabolizm części komórek nowotworowych (efekt Warburga).',
+    evidenceProfile: {
+      effectSignal:
+        'Małe badania I/II fazy oceniają głównie bezpieczeństwo i wykonalność; sygnał możliwej poprawy tolerancji leczenia. Brak dużych RCT z twardymi punktami końcowymi.',
+      grade: 'very-low',
+      evidenceType: 'rct',
+      clinicalStatus: 'experimental',
+      evidenceGap:
+        'Brak dużych RCT III pokazujących poprawę przeżycia lub kontroli choroby; istotne ryzyko niedożywienia u pacjentów onkologicznych.',
+    },
+    howItWorks:
+      'Ograniczenie glukozy ma teoretycznie utrudniać metabolizm komórek nowotworowych zależnych od glikolizy. To hipoteza metaboliczna — jej znaczenie kliniczne pozostaje nieudowodnione.',
+    research:
+      'Dostępne są małe badania I/II fazy (m.in. glejak, nowotwory przewodu pokarmowego) oceniające bezpieczeństwo i wykonalność oraz przeglądy sugerujące możliwą poprawę tolerancji leczenia. Do 2026 r. brak dużych badań III fazy z poprawą przeżycia.',
+    safety:
+      'Obok leczenia konwencjonalnego, wyłącznie pod nadzorem. U pacjentów niedożywionych, z kacheksją lub sarkopenią restrykcyjna dieta może bardziej zaszkodzić niż pomóc.',
+    contraindications:
+      'Przeciwwskazana lub wysokiego ryzyka przy niedożywieniu, kacheksji, cukrzycy typu 1, niewydolności wątroby/nerek, niektórych defektach metabolicznych. Wymaga nadzoru dietetyka klinicznego.',
+    talkToDoctor:
+      'Zapytaj, czy w Twojej sytuacji (stan odżywienia, typ leczenia) dieta ketogeniczna jest bezpieczna, i poproś o opiekę dietetyka klinicznego. To obszar badań, nie udowodnione leczenie.',
+    references: [
+      { title: 'Przeglądy badań nad dietą ketogeniczną w onkologii (I/II faza)', year: 2025, note: 'głównie bezpieczeństwo/wykonalność; brak RCT III' },
+    ],
+  },
+  {
+    slug: 'post-i-diety-naladujace-post',
+    name: 'Post i diety naśladujące post (FMD)',
+    category: 'lifestyle',
+    experimental: true,
+    indications: [
+      'obszar badań — możliwa poprawa tolerancji chemioterapii',
+      'bez potwierdzonej poprawy przeżycia',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'nie dotyczy', note: 'Interwencja dietetyczna; nie podlega rejestracji jako lek' },
+    ],
+    shortDescription:
+      'Krótkotrwały post lub dieta naśladująca post wokół chemioterapii — badana, obiecująca, ale niepotwierdzona w dużych badaniach.',
+    whatIsIt:
+      'Post (np. okołochemioterapeutyczny) i dieta naśladująca post (FMD) to krótkotrwałe, kontrolowane ograniczenie kalorii. Hipoteza: zdrowe komórki przechodzą w tryb ochronny, a nowotworowe pozostają wrażliwe na leczenie (tzw. zróżnicowana odporność na stres).',
+    evidenceProfile: {
+      effectSignal:
+        'Małe badania sugerują lepszą tolerancję chemioterapii i mniejsze działania niepożądane; dane dotyczące skuteczności przeciwnowotworowej są wstępne.',
+      grade: 'very-low',
+      evidenceType: 'rct',
+      clinicalStatus: 'experimental',
+      evidenceGap:
+        'Brak dużych RCT III z twardymi punktami końcowymi; ryzyko utraty masy ciała i niedożywienia.',
+    },
+    howItWorks:
+      'Krótkotrwałe ograniczenie kalorii zmienia sygnalizację metaboliczną (m.in. spadek IGF-1, glukozy), co w modelach zwiększa różnicę wrażliwości między komórkami zdrowymi a nowotworowymi. Znaczenie kliniczne wymaga potwierdzenia.',
+    research:
+      'Badania II fazy (m.in. rak piersi, jajnika) sugerują, że FMD wokół chemioterapii bywa wykonalna i może poprawiać tolerancję leczenia oraz wybrane markery. Brak dużych badań III fazy potwierdzających wpływ na przeżycie.',
+    safety:
+      'Obok leczenia konwencjonalnego, wyłącznie pod nadzorem. Niewskazane przy niedożywieniu, kacheksji, niskiej masie ciała; ryzyko hipoglikemii i osłabienia.',
+    contraindications:
+      'Przeciwwskazane przy niedożywieniu, kacheksji, cukrzycy leczonej insuliną, niskiej masie ciała. Wymaga kwalifikacji i nadzoru zespołu onkologiczno-dietetycznego.',
+    talkToDoctor:
+      'Zapytaj, czy post/FMD są dla Ciebie bezpieczne (stan odżywienia, leki), i nie podejmuj ich samodzielnie w trakcie aktywnego leczenia.',
+    references: [
+      { title: 'Badania II fazy nad postem i FMD w onkologii', year: 2025, note: 'wykonalność i tolerancja; brak RCT III dla przeżycia' },
+    ],
+  },
+  {
+    slug: 'mikrobiom-i-fmt',
+    name: 'Mikrobiom jelitowy i przeszczep mikrobioty (FMT)',
+    category: 'experimental',
+    experimental: true,
+    indications: [
+      'wpływ na odpowiedź na immunoterapię (anty-PD-1) — obszar badań',
+      'FMT badany w przełamywaniu oporności na immunoterapię',
+    ],
+    regulatory: [
+      { country: 'Polska', status: 'eksperymentalne', note: 'FMT zarejestrowany we wskazaniu zakażenia C. difficile; zastosowanie onkologiczne wyłącznie badawcze' },
+    ],
+    shortDescription:
+      'Skład mikrobiomu jelitowego wpływa na odpowiedź na immunoterapię; przeszczep mikrobioty (FMT) badany jest w onkologii.',
+    whatIsIt:
+      'Mikrobiom jelitowy to społeczność bakterii w jelitach. Badania pokazują, że jego skład wpływa na skuteczność immunoterapii (inhibitorów punktów kontrolnych). FMT to przeniesienie mikrobioty od dawcy — w onkologii badane eksperymentalnie.',
+    evidenceProfile: {
+      effectSignal:
+        'Dane obserwacyjne: określone bakterie (np. Akkermansia muciniphila) częstsze u odpowiadających na anty-PD-1; antybiotyki przed immunoterapią pogarszają wyniki. Pierwsze badania FMT I/II fazy sugerują zwiększenie odsetka odpowiedzi.',
+      grade: 'low',
+      evidenceType: 'rct',
+      clinicalStatus: 'experimental',
+      evidenceGap:
+        'Brak dużych RCT III; FMT w onkologii wyłącznie w ramach badań. Modyfikacja mikrobiomu suplementami nie ma potwierdzonej skuteczności.',
+    },
+    howItWorks:
+      'Mikrobiom moduluje układ odpornościowy i może wpływać na skuteczność immunoterapii. FMT ma „przeszczepić" korzystny profil bakterii od dawcy odpowiadającego na leczenie.',
+    research:
+      'Badania (m.in. Routy, Gopalakrishnan) wiążą skład mikrobiomu z odpowiedzią na anty-PD-1 w czerniaku, raku płuca i nerki. Wczesne badania I/II FMT + anty-PD-1 (czerniak, NSCLC) sugerują zwiększenie odsetka odpowiedzi — to obszar aktywnych badań, nie praktyka.',
+    safety:
+      'Obok leczenia konwencjonalnego. FMT niesie ryzyko przeniesienia patogenów — wykonywany wyłącznie w warunkach kontrolowanych. Agresywnej „modyfikacji mikrobiomu" suplementami nie należy podejmować samodzielnie, zwłaszcza w trakcie immunoterapii.',
+    contraindications:
+      'FMT poza wskazaniem rejestracyjnym (C. difficile) wyłącznie w badaniach klinicznych. Ostrożność z probiotykami i antybiotykami w okresie immunoterapii — omówić z onkologiem.',
+    talkToDoctor:
+      'Jeśli jesteś w trakcie immunoterapii, zapytaj o wpływ antybiotyków i diety na mikrobiom. FMT rozważaj wyłącznie w ramach badania klinicznego.',
+    references: [
+      { title: 'Badania nad mikrobiomem a odpowiedzią na immunoterapię oraz wczesne próby FMT', year: 2025, note: 'obserwacyjne + fazy I/II; brak RCT III w onkologii' },
+    ],
   },
   {
     slug: 'inhalacje-wodorowe',

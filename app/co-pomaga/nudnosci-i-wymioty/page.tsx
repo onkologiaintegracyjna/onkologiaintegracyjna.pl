@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { ChevronRight, Phone, Ban } from 'lucide-react'
 import { PageHeader } from '@/components/page-header'
 import { GradeBadge, EvidenceTypeBadge } from '@/components/badges'
-import { PMIDLink } from '@/components/pmid-link'
 import { PatientClinicianToggle } from '@/components/patient-clinician-toggle'
 
 export const metadata: Metadata = {
@@ -148,19 +147,20 @@ export default function CinvPage() {
             </p>
             <ul className="mt-3 list-disc space-y-1.5 pl-5">
               <li>
-                Akupunktura / stymulacja P6 — metaanalizy sugerują efekt w
-                wybranych populacjach; heterogeniczność protokołów{' '}
-                <PMIDLink pmid="23152229" />.
+                Akupunktura / stymulacja punktu P6 — metaanalizy sugerują efekt w
+                wybranych populacjach przy heterogeniczności protokołów.
               </li>
               <li>
                 Imbir — RCT o niskiej jakości dowodów, niespójne wyniki; ostrożność
                 przy lekach przeciwkrzepliwych.
               </li>
+              <li>
+                Kannabinoidy — wytyczne ASCO 2024 wskazują, że mogą być rozważane
+                jako dodatek do standardowych leków przeciwwymiotnych w opornych
+                nudnościach i wymiotach; nie należy ich stosować jako leczenia
+                przeciwnowotworowego poza badaniami klinicznymi.
+              </li>
             </ul>
-            <p className="mt-3 text-xs text-muted-foreground">
-              Identyfikatory PMID podane przykładowo; pełna bibliografia w sekcji
-              Źródła.
-            </p>
           </PatientClinicianToggle>
         </section>
       </div>

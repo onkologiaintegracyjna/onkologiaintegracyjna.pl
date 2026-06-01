@@ -316,6 +316,27 @@ export default function MonitorowaniePage() {
               nie samodzielnie. Sam dodatni wynik nie jest podstawą do paniki ani do zmiany leczenia.
             </p>
           </div>
+
+          <div className="mt-8 rounded-xl border border-border bg-card p-5">
+            <h3 className="font-serif text-base font-semibold text-primary">ctDNA i choroba resztkowa (MRD) — najszybciej rozwijający się kierunek</h3>
+            <p className="mt-2 text-sm leading-relaxed text-foreground/80">
+              Osobno od zliczania komórek (CTC) rozwija się wykrywanie krążącego DNA nowotworowego
+              (ctDNA) — tzw. genetyczna biopsja płynna. Pozwala ocenić tzw. chorobę resztkową (MRD):
+              ślad nowotworu pozostały po leczeniu, niewidoczny w obrazowaniu. To dziś jeden z
+              najmocniej udokumentowanych obszarów, zwłaszcza w raku jelita grubego:
+            </p>
+            <ul className="mt-3 space-y-2 text-sm leading-relaxed text-foreground/80">
+              <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-grade-high" aria-hidden="true" />Badanie DYNAMIC (rak okrężnicy II stopnia): strategia oparta na ctDNA pozwoliła ograniczyć chemioterapię uzupełniającą bez pogorszenia przeżycia wolnego od nawrotu.</li>
+              <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-grade-high" aria-hidden="true" />Program GALAXY/CIRCULATE-Japan (duża kohorta): dodatni ctDNA po operacji okazał się silnym predyktorem nawrotu, a trwała ujemność wiązała się z bardzo dobrym rokowaniem.</li>
+              <li className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-grade-moderate" aria-hidden="true" />Wytyczne (m.in. NCCN, 2025) zaczęły uznawać dodatni ctDNA za czynnik wysokiego ryzyka nawrotu, choć rutynowe stosowanie poza ośrodkami referencyjnymi i badaniami wciąż bywa ograniczane.</li>
+            </ul>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Ważne rozróżnienie: ctDNA (genetyczny ślad nowotworu) to inna metoda niż maintrac/CTC
+              (zliczanie i charakterystyka żywych komórek). Mają różny poziom walidacji i nie należy ich
+              ze sobą utożsamiać. W raku piersi i innych nowotworach ctDNA jest intensywnie badane, ale
+              dane są słabsze niż w raku jelita grubego.
+            </p>
+          </div>
         </section>
 
         {/* Kiedy zapytać o biopsję płynną */}
