@@ -51,3 +51,23 @@ export const categoryLabels: Record<MethodCategory, string> = {
   diagnostic: 'diagnostyka',
   experimental: 'eksperymentalna',
 }
+
+/**
+ * Mapowanie typu danych na literę skali opartej na NCI PDQ (A/B/C/P).
+ * A — wiele RCT / metaanaliza · B — pojedyncze RCT / duże nierandomizowane
+ * C — małe badania / rejestry / serie przypadków · P — przedkliniczne / mechanistyczne
+ */
+export const evidenceTypeLetter: Record<EvidenceType, 'A' | 'B' | 'C' | 'P'> = {
+  'meta-analysis': 'A',
+  rct: 'B',
+  observational: 'C',
+  'case-report': 'C',
+  preclinical: 'P',
+}
+
+export const evidenceLetterLabels: Record<'A' | 'B' | 'C' | 'P', string> = {
+  A: 'A — wiele RCT lub metaanaliza',
+  B: 'B — pojedyncze RCT lub duże badanie nierandomizowane',
+  C: 'C — małe badania, rejestry lub serie przypadków',
+  P: 'P — dane przedkliniczne lub mechanistyczne (brak danych klinicznych)',
+}

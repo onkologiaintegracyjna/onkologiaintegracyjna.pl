@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import type { Method } from '@/lib/types'
 import { categoryLabels } from '@/lib/labels'
-import { GradeBadge, ClinicalStatusBadge } from '@/components/badges'
+import { GradeBadge, ClinicalStatusBadge, EvidenceTypeBadge } from '@/components/badges'
 
 export function MethodCard({ method }: { method: Method }) {
   return (
@@ -19,7 +19,8 @@ export function MethodCard({ method }: { method: Method }) {
       <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
         {method.shortDescription}
       </p>
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="mt-4 flex flex-wrap items-center gap-2">
+        <EvidenceTypeBadge type={method.evidenceProfile.evidenceType} compact />
         <GradeBadge grade={method.evidenceProfile.grade} />
         <ClinicalStatusBadge status={method.evidenceProfile.clinicalStatus} />
       </div>

@@ -8,6 +8,8 @@ import type {
 import {
   gradeLabels,
   evidenceTypeLabels,
+  evidenceTypeLetter,
+  evidenceLetterLabels,
   clinicalStatusLabels,
   categoryLabels,
 } from '@/lib/labels'
@@ -49,15 +51,53 @@ export function GradeBadge({
   )
 }
 
+const letterStyles: Record<'A' | 'B' | 'C' | 'P', string> = {
+  A: 'border-etype-a/30 bg-etype-a-bg text-etype-a',
+  B: 'border-etype-b/30 bg-etype-b-bg text-etype-b',
+  C: 'border-etype-c/30 bg-etype-c-bg text-etype-c',
+  P: 'border-etype-p-border bg-etype-p-bg text-etype-p',
+}
+
+/**
+ * Odznaka typu danych. Domyślnie pokazuje literę A/B/C/P (skala oparta na NCI PDQ)
+ * wraz z opisem słownym. Wariant `compact` pokazuje samą literę (np. do sidebaru/kart).
+ */
 export function EvidenceTypeBadge({
   type,
+  compact = false,
   className,
 }: {
   type: EvidenceType
+  compact?: boolean
   className?: string
 }) {
+  const letter = evidenceTypeLetter[type]
+  const title = `Typ danych: ${evidenceLetterLabels[letter]}`
+
+  if (compact) {
+    return (
+      <span
+        className={cn(
+          'inline-flex h-5 w-5 items-center justify-center rounded-md border text-xs font-semibold',
+          letterStyles[letter],
+          className
+        )}
+        title={title}
+        aria-label={title}
+      >
+        {letter}
+      </span>
+    )
+  }
+
   return (
-    <span className={cn(base, 'border-border bg-secondary text-foreground/80', className)}>
+    <span className={cn(base, letterStyles[letter], className)} title={title}>
+      <span
+        aria-hidden="true"
+        className="flex h-4 w-4 items-center justify-center rounded text-[10px] font-bold"
+      >
+        {letter}
+      </span>
       {evidenceTypeLabels[type]}
     </span>
   )
