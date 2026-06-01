@@ -17,8 +17,8 @@ export const methods: Method[] = [
     ],
     regulatory: [
       { country: 'Polska', status: 'off-label', note: 'Brak rejestracji jako lek onkologiczny; stosowane off-label na podstawie art. 5 ust. 1 dyr. 2001/83/WE' },
-      { country: 'Niemcy', status: 'off-label', note: 'Stosowane przez Heilpraktikerów i lekarzy CAM' },
-      { country: 'USA', status: 'off-label', note: 'Stosowane w klinikach integracyjnych' },
+      { country: 'Niemcy', status: 'off-label', note: 'Brak rutynowej rejestracji onkologicznej; zastosowanie zależy od praktyki lokalnej i decyzji lekarza' },
+      { country: 'USA', status: 'off-label', note: 'Brak rejestracji onkologicznej; zastosowanie zależy od praktyki lokalnej i decyzji lekarza' },
       { country: 'Szwajcaria', status: 'off-label', note: 'BAG potwierdza refundację 5 metod CAM (akupunktura, antropozofia, farmakoterapia TCM, homeopatia, fitoterapia) wykonywanych przez kwalifikowanych lekarzy — IVC nie figuruje jako odrębnie refundowana metoda. Status per świadczenie do weryfikacji w danej kasie.' },
     ],
     redoxClass: 'pro-oxidant',
@@ -28,7 +28,7 @@ export const methods: Method[] = [
       'Wysokie dawki kwasu askorbinowego podawane dożylnie, badane jako leczenie wspomagające.',
     evidenceProfile: {
       effectSignal:
-        'Metaanaliza 8 RCT (n=2722) raportuje pooled median survival ratio 1,83 (95% CI 1,40–2,40; p<0,001); RCT II PACMAN 2.1 w raku trzustki: OS 16,0 vs 8,3 mies. (HR 0,46).',
+        'Metaanaliza 8 badań klinicznych (n=2722) raportuje pooled median survival ratio 1,83 (95% CI 1,40–2,40; p<0,001); RCT II PACMAN 2.1 w raku trzustki: OS 16,0 vs 8,3 mies. (HR 0,46).',
       grade: 'moderate',
       evidenceType: 'meta-analysis',
       clinicalStatus: 'off-label-adjunct',
@@ -62,7 +62,7 @@ export const methods: Method[] = [
     contraindications:
       'Bezwzględne: niedobór G6PD (ryzyko hemolizy — wymagane badanie przed pierwszym wlewem), zaawansowana niewydolność nerek, hemochromatoza. Interakcje: opisano osłabienie działania bortezomibu (nie łączyć). Dla większości klasycznych cytostatyków (platyny, taksany, antracykliny, fluoropirymidyny) nie wykazano istotnej klinicznie interferencji.',
     mythBuster: {
-      title: 'Częsty błąd: „witamina C nie działa w raku"',
+      title: 'Dlaczego droga podania ma znaczenie w interpretacji badań',
       body:
         'Wypowiedzi o nieskuteczności witaminy C w onkologii często powołują się na klasyczne badania Mayo Clinic (1979, 1985). Te badania dotyczyły jednak witaminy C DOUSTNEJ, która osiąga niskie stężenia we krwi. Dożylnie osiąga się stężenia rzędu 100 razy wyższe, przy których mechanizm działania jest odwrotny (prooksydacyjny). To dwie różne farmakologicznie metody mimo tej samej cząsteczki — porównywanie ich to błąd zamiany formy/dawki. Warto sprawdzać, czy dana krytyka mówi o formie doustnej, czy dożylnej.',
     },
@@ -75,7 +75,7 @@ export const methods: Method[] = [
       'wybrane nowotwory lite (RCT)',
     ],
     regulatory: [
-      { country: 'Szwajcaria', status: 'refundowane', note: 'Refundowane od 2017 jako jedna z 5 metod CAM (antropozofia)' },
+      { country: 'Szwajcaria', status: 'zależny', note: 'W ramach medycyny antropozoficznej funkcjonuje w systemie CAM — status do weryfikacji per preparat, wskazanie, lekarz i ubezpieczyciel' },
       { country: 'Niemcy', status: 'dopuszczone', note: 'Obligatoryjnie pokrywane przez GKV w paliatywnej onkologii' },
       { country: 'Austria', status: 'dopuszczone', note: 'Refundacja w ramach Begleitende Krebsbehandlungen' },
       { country: 'Polska', status: 'off-label', note: 'Brak refundacji; dostępne w aptekach na receptę' },
@@ -100,7 +100,7 @@ export const methods: Method[] = [
     howItWorks:
       'Wyciągi z jemioły zawierają lektyny i wiskotoksyny o działaniu immunomodulacyjnym; opisywano stymulację odporności wrodzonej w badaniach przedklinicznych i klinicznych.',
     research:
-      'Przegląd systematyczny Kienle & Kiene 2010 (PMID 20483874) i Cochrane (Loef & Walach 2020) sygnalizują korzyść w jakości życia bez twardych dowodów dla przeżycia całkowitego. RCT III Tröger 2013 (PMID 23890767) w zaawansowanym raku trzustki: OS 4,8 vs 2,7 mies. (p<0,001, n=220). W Niemczech preparaty obligatoryjnie pokrywane w onkologii paliatywnej.',
+      'Przegląd systematyczny Kienle & Kiene 2010 (PMID 20483874) i Cochrane (Loef & Walach 2020) sygnalizują korzyść w jakości życia bez twardych dowodów dla przeżycia całkowitego. RCT III Tröger 2013 (PMID 23890767) w zaawansowanym raku trzustki: OS 4,8 vs 2,7 mies. (p<0,001, n=220). W części systemów europejskich preparaty jemioły funkcjonują w ramach medycyny antropozoficznej lub opieki wspomagającej — status pokrycia zależy od kraju, preparatu, wskazania i płatnika.',
     safety:
       'Obok, nie zamiast leczenia standardowego. Stosowanie wymaga wykwalifikowanego lekarza; możliwe reakcje miejscowe i ogólne.',
     talkToDoctor:
@@ -458,7 +458,7 @@ export const methods: Method[] = [
       'Po zabiegu utrzymuje się nadwrażliwość skóry na światło przez kilka tygodni — wymaga ochrony przed słońcem. Przeciwwskazana przy porfirii i nadwrażliwości na fotosensybilizator.',
     category: 'physical',
     shortDescription:
-      'Aktywacja światłem fotosensybilizatora — procedura zarejestrowana przez FDA/EMA w wybranych nowotworach.',
+      'Aktywacja światłem fotosensybilizatora — w części wskazań zatwierdzona przez FDA; status w UE zależy od konkretnego produktu i procedury.',
     evidenceProfile: {
       effectSignal:
         'Zatwierdzona dla kilku wskazań onkologicznych; RCT III wykazał redukcję progresji w przełyku Barretta z dysplazją.',
@@ -640,7 +640,7 @@ export const methods: Method[] = [
     howItWorks:
       'Proponowane mechanizmy obejmują modulację układu nerwowego i wydzielania neuroprzekaźników; pełny mechanizm pozostaje badany.',
     research:
-      'Wytyczne ASCO-SIO 2022 (Mao, PMID 36122322): rekomendacja dla bólu nowotworowego i AIMSS. RCT III Hershman 2018 (PMID 29998338, SWOG S1200): redukcja bólu stawów po inhibitorach aromatazy. Refundowana w wybranych wskazaniach m.in. w Niemczech i Wielkiej Brytanii.',
+      'Wytyczne ASCO-SIO 2022 (Mao, PMID 36122322) najmocniej wskazują akupunkturę przy bólu stawów związanym z inhibitorami aromatazy (AIMSS); dla innych rodzajów bólu nowotworowego akupunktura, akupresura lub refleksologia są ujęte jako opcje do rozważenia. RCT III Hershman 2018 (PMID 29998338, SWOG S1200): redukcja bólu stawów po inhibitorach aromatazy.',
     safety:
       'Obok, nie zamiast leczenia. Ostrożność przy małopłytkowości, neutropenii i obrzęku limfatycznym kończyny; wybór certyfikowanego terapeuty.',
     talkToDoctor:
@@ -704,10 +704,10 @@ export const methods: Method[] = [
       'Polisacharydy z grzybów; PSK jest w Japonii refundowanym adiuwantem chemioterapii raka żołądka.',
     evidenceProfile: {
       effectSignal:
-        'Metaanaliza: PSK jako adiuwant chemioterapii raka żołądka — sygnał poprawy przeżycia (dane głównie z Japonii).',
+        'Metaanaliza: PSK jako adiuwant chemioterapii raka żołądka — sygnał poprawy przeżycia. Status „wytycznych” dotyczy wyłącznie Japonii; w UE i USA brak standardowej rejestracji onkologicznej.',
       grade: 'low',
       evidenceType: 'meta-analysis',
-      clinicalStatus: 'guideline-supported',
+      clinicalStatus: 'supportive-care',
       evidenceGap:
         'Dowody głównie z populacji japońskiej; ograniczone dla populacji europejskiej; brak rejestracji onkologicznej w UE/USA.',
     },
@@ -874,7 +874,7 @@ export const methods: Method[] = [
     regulatory: [
       { country: 'Polska', status: 'OTC', note: 'Suplement diety; ekstrakty standaryzowane na AKBA dostępne w aptekach' },
       { country: 'Niemcy', status: 'dopuszczone', note: 'Heilpraktiker; standaryzowane ekstrakty boswellii stosowane klinicznie; bez refundacji GKV' },
-      { country: 'Szwajcaria', status: 'refundowane', note: 'W zakresie fitoterapii (1 z 5 refundowanych metod CAM)' },
+      { country: 'Szwajcaria', status: 'zależny', note: 'Ogólnej refundacji fitoterapii nie należy utożsamiać z refundacją konkretnego ekstraktu w wskazaniu onkologicznym — do weryfikacji per preparat i ubezpieczyciel' },
       { country: 'USA', status: 'OTC', note: 'Dietary supplement; trial NCT03149081 (phase I, MUSC)' },
     ],
     name: 'Boswellia serrata (kadzidłowiec indyjski)',
@@ -917,7 +917,7 @@ export const methods: Method[] = [
     regulatory: [
       { country: 'Polska', status: 'OTC', note: 'Suplement diety; CS-4 (hodowla C. militaris) dostępna w aptekach' },
       { country: 'Niemcy', status: 'dopuszczone', note: 'Heilpraktiker; bez refundacji GKV' },
-      { country: 'Szwajcaria', status: 'refundowane', note: 'Potencjalnie w ramach fitoterapii/TCM' },
+      { country: 'Szwajcaria', status: 'zależny', note: 'Status do weryfikacji per preparat i wskazanie; nie utożsamiać z ogólną refundacją fitoterapii' },
       { country: 'Japonia', status: 'OTC', note: 'Tradycja TCM (Dongchongxiacao); brak rejestracji onko' },
       { country: 'USA', status: 'OTC', note: 'Dietary supplement; CS-4 standaryzowany komercyjnie' },
     ],
@@ -957,7 +957,7 @@ export const methods: Method[] = [
     regulatory: [
       { country: 'Polska', status: 'OTC', note: 'Suplement diety; dostępne w aptekach (Reishi Aktiv, MycoMedica, ShroomMe)' },
       { country: 'Niemcy', status: 'dopuszczone', note: 'Heilpraktiker; TCM Heilpflanzen; bez refundacji GKV' },
-      { country: 'Szwajcaria', status: 'refundowane', note: 'W ramach refundowanego TCM/fitoterapii' },
+      { country: 'Szwajcaria', status: 'zależny', note: 'Status do weryfikacji per preparat i wskazanie; nie utożsamiać z ogólną refundacją TCM/fitoterapii' },
       { country: 'Japonia', status: 'OTC', note: 'Tradycja Lingzhi/Reishi; bez rejestracji onko (vs PSK/Krestin)' },
       { country: 'USA', status: 'OTC', note: 'Dietary supplement; FDA nie zatwierdziło dla leczenia raka' },
     ],
@@ -1040,7 +1040,7 @@ export const methods: Method[] = [
     regulatory: [
       { country: 'Polska', status: 'OTC', note: 'Suplement diety; Vilcacora, Koci Pazur (Nefdespa, Primaforce, Swanson)' },
       { country: 'Niemcy', status: 'dopuszczone', note: 'Heilpraktiker; bez refundacji GKV' },
-      { country: 'Szwajcaria', status: 'refundowane', note: 'Fitoterapia — potencjalnie refundowana indywidualnie' },
+      { country: 'Szwajcaria', status: 'zależny', note: 'Ewentualne pokrycie indywidualne w ramach fitoterapii — do weryfikacji per preparat i ubezpieczyciel' },
       { country: 'Austria', status: 'dopuszczone', note: 'ÖÄK Diplom w fitoterapii' },
       { country: 'USA', status: 'OTC', note: 'Dietary supplement; brak FDA approval dla onko' },
     ],
@@ -1222,7 +1222,7 @@ export const methods: Method[] = [
         'RCT II (rak szyjki + radiochemioterapia): mniejsze nasilenie zapalenia jelit i markerów zapalnych bez interferencji z efektem przeciwnowotworowym (RECIST bez różnicy).',
       grade: 'low',
       evidenceType: 'rct',
-      clinicalStatus: 'supportive-care',
+      clinicalStatus: 'experimental',
       evidenceGap:
         'Brak RCT III; status urządzeń różni się między krajami; jakość sprzętu (wyrób medyczny vs „wellness”).',
     },

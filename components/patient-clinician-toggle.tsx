@@ -13,6 +13,8 @@ export function PatientClinicianToggle({
 }) {
   const [open, setOpen] = useState(false)
 
+  if (!children) return null
+
   return (
     <div className="rounded-xl border border-border bg-secondary/60">
       <button

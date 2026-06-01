@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useMemo, useState } from 'react'
 import { methods } from '@/lib/methods'
-import { gradeOrder, evidenceTypeLetter, categoryLabels, clinicalStatusLabels } from '@/lib/labels'
+import { gradeOrder, evidenceTypeLetter, categoryLabels, clinicalStatusLabels, gradeLabels } from '@/lib/labels'
 import type { GradeLevel } from '@/lib/types'
 
 const gradeStars: Record<GradeLevel, number> = { high: 4, moderate: 3, low: 2, 'very-low': 1 }
@@ -23,8 +23,12 @@ const letterColor: Record<'A' | 'B' | 'C' | 'P', string> = {
 function Stars({ grade }: { grade: GradeLevel }) {
   const n = gradeStars[grade]
   return (
-    <span className={gradeColor[grade]} aria-label={`Pewność dowodów: ${n} z 4`}>
-      {'★'.repeat(n)}<span className="text-muted-foreground/30">{'★'.repeat(4 - n)}</span>
+    <span className="inline-flex items-center gap-2" aria-label={`Pewność dowodów (GRADE): ${gradeLabels[grade]}`}>
+      <span className="tracking-tight" aria-hidden="true">
+        <span className={gradeColor[grade]}>{'★'.repeat(n)}</span>
+        <span className="text-muted-foreground/40">{'☆'.repeat(4 - n)}</span>
+      </span>
+      <span className="text-xs text-muted-foreground">{gradeLabels[grade]}</span>
     </span>
   )
 }

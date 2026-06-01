@@ -78,7 +78,10 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Onkologia Integracyjna — serwis edukacyjny.</p>
+          <p>
+            © {new Date().getFullYear()} Onkologia Integracyjna — serwis edukacyjny.{' '}
+            <a href="/polityka-prywatnosci" className="hover:text-accent">Polityka prywatności</a>
+          </p>
           <p>
             Kontakt:{' '}
             <a
