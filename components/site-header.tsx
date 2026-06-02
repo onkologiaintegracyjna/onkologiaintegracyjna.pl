@@ -31,6 +31,7 @@ const more = [
   { href: '/artykuly', label: 'Artykuły' },
   { href: '/wiarygodnosc', label: 'Jak rozpoznać wiarygodną informację' },
   { href: '/bezpieczenstwo', label: 'Bezpieczeństwo suplementów' },
+  { href: '/wzmacnianie-leczenia', label: 'Wzmacnianie i uwrażliwianie leczenia' },
   { href: '/faq', label: 'Najczęstsze pytania (FAQ)' },
   { href: '/slownik', label: 'Słownik pojęć' },
   { href: '/zrodla', label: 'Źródła i bibliografia' },
