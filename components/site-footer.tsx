@@ -28,6 +28,9 @@ const columns = [
     links: [
       { href: '/aktualnosci', label: 'Co nowego w dowodach' },
       { href: '/artykuly', label: 'Artykuły' },
+      { href: '/wiarygodnosc', label: 'Wiarygodna informacja' },
+      { href: '/bezpieczenstwo', label: 'Bezpieczeństwo suplementów' },
+      { href: '/faq', label: 'FAQ' },
       { href: '/slownik', label: 'Słownik pojęć' },
       { href: '/dowody', label: 'Dowody i wiedza' },
       { href: '/o-stronie', label: 'O stronie' },
