@@ -13,6 +13,8 @@ const cards = [
   { href: '/jak-czytac-dowody', icon: BookOpen, title: 'Jak czytać dowody', desc: 'Skala GRADE, typy danych i statusy kliniczne — wyjaśnione prosto.' },
   { href: '/ebm', icon: BookOpen, title: 'EBM i finansowanie badań', desc: 'Czym naprawdę jest medycyna oparta na dowodach, off-label, rejestracja warunkowa i paradoks dowodowy.' },
   { href: '/monitorowanie', icon: BookOpen, title: 'Monitorowanie po leczeniu', desc: 'Czujność po leczeniu: badania kontrolne, markery, CTC/CSC i maintrac z uczciwą oceną.' },
+  { href: '/standardy', icon: BookOpen, title: 'Organizacje i standardy', desc: 'Towarzystwa onkologii integracyjnej, standardy oceny dowodów i wiarygodne źródła.' },
+  { href: '/aktualnosci', icon: BookOpen, title: 'Co nowego w dowodach', desc: 'Kwartalny przegląd nowych badań, wytycznych i zmian na stronie.' },
   { href: '/slownik', icon: ListTree, title: 'Słownik pojęć', desc: 'Najważniejsze terminy medyczne i metodologiczne.' },
   { href: '/zrodla', icon: Library, title: 'Źródła i bibliografia', desc: 'Pełna lista publikacji z PMID/DOI i odniesieniami do wytycznych.' },
   { href: '/o-stronie', icon: Info, title: 'O stronie', desc: 'Misja, standard dowodowy i informacje kontaktowe.' },

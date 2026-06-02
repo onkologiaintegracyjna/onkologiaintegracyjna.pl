@@ -79,6 +79,12 @@ export default function SzlakiPage() {
             w badaniach (od głównego mechanizmu po pomocniczy). To przegląd kierunków
             badań, nie schemat stosowania — bez dawek i bez sugestii łączenia.
           </p>
+          <p className="mt-2 text-xs text-muted-foreground">
+            Tabela obejmuje substancje i metody o opisanym mechanizmie molekularnym. Metody działające
+            głównie objawowo lub ogólnoustrojowo (np. akupunktura, uważność, aktywność fizyczna, terapia
+            fotodynamiczna, TTFields, kannabinoidy) są opisane w sekcji „Metody i substancje”, a nie w tej
+            macierzy.
+          </p>
           <div className="mt-5">
             <PathwayMatrix />
           </div>
