@@ -23,6 +23,8 @@ const pillars = [
 ]
 
 const more = [
+  { href: '/aktualnosci', label: 'Co nowego w dowodach' },
+  { href: '/standardy', label: 'Organizacje i standardy' },
   { href: '/monitorowanie', label: 'Monitorowanie po leczeniu' },
   { href: '/ebm', label: 'EBM i finansowanie badań' },
   { href: '/jak-czytac-dowody', label: 'Jak czytać dowody' },
