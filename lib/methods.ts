@@ -1409,6 +1409,52 @@ export const methods: Method[] = [
       { pmid: '39493677', title: 'Chitapanarux 2024 — pilotaż RCT, głowa i szyja', year: 2024 },
     ],
   },
+  {
+    slug: 'sylimaryna',
+    name: 'Sylimaryna (ostropest plamisty)',
+    category: 'substance',
+    redoxClass: 'antioxidant',
+    shortDescription:
+      'Wyciąg z ostropestu plamistego badany jako ochrona wątroby przed toksycznością leczenia onkologicznego.',
+    whatIsIt:
+      'Sylimaryna to mieszanina flawonolignanów (głównie sylibiny) z nasion ostropestu plamistego (Silybum marianum). Od dekad stosowana jako środek osłaniający wątrobę w chorobach wątroby i zatruciach. W onkologii bada się ją głównie jako wsparcie wątroby w trakcie chemioterapii, nie jako leczenie przeciwnowotworowe.',
+    indications: [
+      'ochrona wątroby przed toksycznością leczenia (hepatoprotekcja)',
+      'podwyższone enzymy wątrobowe w trakcie chemioterapii',
+    ],
+    evidenceProfile: {
+      effectSignal:
+        'Dane wskazują na działanie osłaniające wątrobę i obniżanie podwyższonych enzymów wątrobowych przy leczeniu hepatotoksycznym; efekty przeciwnowotworowe pozostają na etapie przedklinicznym.',
+      grade: 'low',
+      evidenceType: 'rct',
+      clinicalStatus: 'supportive-care',
+      evidenceGap:
+        'Małe badania, niejednorodne preparaty i dawki; brak dużych RCT z twardymi punktami końcowymi. Hepatoprotekcja jest lepiej udokumentowana niż jakikolwiek efekt przeciwnowotworowy u ludzi.',
+    },
+    howItWorks:
+      'Stabilizuje błony hepatocytów, działa antyoksydacyjnie i przeciwzapalnie, wspiera regenerację komórek wątroby. W modelach laboratoryjnych opisywano też hamowanie wzrostu komórek nowotworowych — to jednak dane przedkliniczne, nie dowód kliniczny.',
+    research:
+      'Przegląd Post-White 2007 (PMID 17548789): sylimaryna chroni komórki wątroby i nerek przed toksycznym działaniem leków, w tym chemioterapii, obniża enzymy wątrobowe; dobrze tolerowana. Przegląd Koltai 2022 (PMID 35018864): potwierdza działanie hepatoprotekcyjne i opisuje przedkliniczne efekty przeciwnowotworowe, ale zwraca uwagę na działanie DWUKIERUNKOWE — w raku trzustki sylimaryna może sprzyjać komórkom macierzystym. Potrzeba mocniejszych badań klinicznych.',
+    safety:
+      'Obok leczenia, nie zamiast niego. Zwykle dobrze tolerowana (możliwe łagodne dolegliwości żołądkowe, działanie lekko przeczyszczające, rzadko alergia). Jako antyoksydant może teoretycznie wpływać na leczenie działające przez stres oksydacyjny — o doborze i czasie decyduje onkolog.',
+    contraindications:
+      'Może wpływać na metabolizm leków przez enzymy wątrobowe (CYP) — istotne przy lekach onkologicznych. Ostrożność przy alergii na rośliny astrowate (Asteraceae). Zastrzeżenie z badań: w raku trzustki opisano działanie dwukierunkowe (możliwe sprzyjanie komórkom macierzystym).',
+    talkToDoctor:
+      'Zapytaj, czy w Twoim schemacie leczenia sylimaryna jest bezpieczna, czy nie wchodzi w interakcje z Twoimi lekami i czy nie koliduje z mechanizmem terapii. Nie zaczynaj jej samodzielnie w trakcie aktywnego leczenia.',
+    regulatory: [
+      { country: 'Polska', status: 'OTC', note: 'Dostępna jako lek ziołowy i suplement diety' },
+      { country: 'Niemcy', status: 'dopuszczone', note: 'Standaryzowane preparaty lecznicze z sylimaryny' },
+      { country: 'USA', status: 'OTC', note: 'Suplement diety (nieoceniany przez FDA pod kątem skuteczności)' },
+    ],
+    mythBuster: {
+      title: 'Ostropest „leczy raka”?',
+      body: 'Nie. Udokumentowana, realna rola sylimaryny to ochrona wątroby przed toksycznością leczenia. Efekty przeciwnowotworowe pochodzą z badań laboratoryjnych i nie zostały potwierdzone u ludzi; w niektórych nowotworach (trzustka) działanie może być nawet niekorzystne. To wsparcie wątroby, nie leczenie nowotworu.',
+    },
+    references: [
+      { pmid: '17548789', title: 'Post-White 2007 — przegląd, hepatoprotekcja przy chemioterapii', year: 2007 },
+      { pmid: '35018864', title: 'Koltai 2022 — przegląd, rola sylimaryny w onkologii (działanie dwukierunkowe)', year: 2022 },
+    ],
+  },
 ]
 
 export function getMethod(slug: string): Method | undefined {
