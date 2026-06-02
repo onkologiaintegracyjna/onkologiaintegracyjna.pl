@@ -33,6 +33,14 @@ const sources = [
   { name: 'ClinicalTrials.gov', url: 'https://clinicaltrials.gov', desc: 'Rejestr badań klinicznych — pozwala sprawdzić, czy i jak dana metoda jest badana u ludzi.' },
 ]
 
+const glossary = [
+  { term: 'Medycyna standardowa (konwencjonalna)', def: 'Leczenie uznane przez ekspertów za właściwe dla danej choroby i szeroko stosowane przez profesjonalistów — tzw. standard opieki (standard of care). Obejmuje m.in. chirurgię, radioterapię i leki.' },
+  { term: 'Medycyna komplementarna', def: 'Metody stosowane RAZEM z leczeniem standardowym, ale same w sobie nie będące leczeniem — np. akupunktura łagodząca skutki uboczne terapii.' },
+  { term: 'Medycyna alternatywna', def: 'Metody stosowane ZAMIAST leczenia standardowego — np. specjalna dieta zamiast zaleconych leków. Podejście ryzykowne: rezygnacja ze skutecznego leczenia.' },
+  { term: 'Medycyna integracyjna', def: 'Podejście łączące leczenie konwencjonalne z metodami komplementarnymi, których bezpieczeństwo i skuteczność wykazano naukowo. Uwzględnia preferencje pacjenta oraz wymiar psychiczny, fizyczny i duchowy.' },
+  { term: 'CAM (medycyna komplementarna i alternatywna)', def: 'Zbiorcze określenie produktów i praktyk spoza standardowej opieki medycznej. NCI grupuje je w pięć kategorii: techniki umysł–ciało, metody biologiczne (zioła, suplementy, dieta), metody manipulacyjne i oparte na ciele, „uzdrawianie energią” oraz całościowe systemy medyczne.' },
+]
+
 export default function StandardyPage() {
   return (
     <>
@@ -100,6 +108,29 @@ export default function StandardyPage() {
               </a>
             ))}
           </div>
+        </section>
+
+        {/* Słowniczek pojęć */}
+        <section className="mt-12">
+          <h2 className="flex items-center gap-2 font-serif text-2xl font-semibold text-primary">
+            <BookMarked className="h-5 w-5 text-accent" aria-hidden="true" />
+            Słowniczek pojęć
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-foreground/80">
+            Te pojęcia bywają mylone, a różnice między nimi są kluczowe. Definicje za National Cancer
+            Institute (NCI).
+          </p>
+          <dl className="mt-5 space-y-3">
+            {glossary.map((g) => (
+              <div key={g.term} className="rounded-xl border border-border bg-card p-5">
+                <dt className="font-serif text-base font-semibold text-primary">{g.term}</dt>
+                <dd className="mt-1.5 text-sm leading-relaxed text-foreground/80">{g.def}</dd>
+              </div>
+            ))}
+          </dl>
+          <p className="mt-4 text-xs text-muted-foreground">
+            Źródło: NCI, „Complementary and Alternative Medicine” (cancer.gov).
+          </p>
         </section>
 
         {/* Źródła */}
