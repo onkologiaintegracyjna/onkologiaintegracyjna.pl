@@ -1,0 +1,61 @@
+// Indeks wyszukiwania budowany z istniejących danych — bez duplikowania treści.
+// Używany przez stronę /szukaj (filtrowanie po stronie klienta).
+import { methods } from '@/lib/methods'
+import { glossary } from '@/lib/glossary'
+import { symptoms } from '@/lib/symptoms'
+import { guides } from '@/lib/guides'
+
+export interface SearchEntry {
+  title: string
+  href: string
+  kind: string
+  text: string // tekst przeszukiwany (lowercase budujemy w locie)
+}
+
+const staticPages: SearchEntry[] = [
+  { title: 'Co pomaga przy leczeniu (opieka wspomagająca)', href: '/co-pomaga', kind: 'Strona', text: 'objawy ból nudności zmęczenie neuropatia lęk opieka wspomagająca' },
+  { title: 'Metody i substancje', href: '/metody', kind: 'Strona', text: 'metody substancje przegląd dowody' },
+  { title: 'Wzmacnianie i uwrażliwianie leczenia', href: '/wzmacnianie-leczenia', kind: 'Strona', text: 'chemiowrażliwość sensytyzacja radiouwrażliwianie komórki macierzyste CSC synergia' },
+  { title: 'Monitorowanie po leczeniu (CTC, CSC, ctDNA)', href: '/monitorowanie', kind: 'Strona', text: 'monitorowanie nawrót CTC CSC maintrac ctDNA biopsja płynna czujność' },
+  { title: 'Bezpieczeństwo suplementów', href: '/bezpieczenstwo', kind: 'Strona', text: 'naturalne bezpieczne suplementy interakcje wątroba antyoksydanty' },
+  { title: 'Jak rozpoznać wiarygodną informację', href: '/wiarygodnosc', kind: 'Strona', text: 'wiarygodność źródła oszustwa cudowny lek pytania do lekarza' },
+  { title: 'EBM — medycyna oparta na dowodach', href: '/ebm', kind: 'Strona', text: 'EBM Sackett dowody off-label finansowanie badań paradoks' },
+  { title: 'Jak czytać dowody', href: '/jak-czytac-dowody', kind: 'Strona', text: 'GRADE poziom dowodów typ danych pewność profil dowodowy' },
+  { title: 'Organizacje i standardy', href: '/standardy', kind: 'Strona', text: 'SIO ASCO NCI MASCC ESMO słowniczek NCI komplementarna alternatywna integracyjna' },
+  { title: 'Najczęstsze pytania (FAQ)', href: '/faq', kind: 'Strona', text: 'pytania pacjenci FAQ' },
+  { title: 'Styl życia w onkologii', href: '/styl-zycia', kind: 'Strona', text: 'aktywność fizyczna dieta śródziemnomorska akupunktura uważność' },
+  { title: 'Aktualności — co nowego w dowodach', href: '/aktualnosci', kind: 'Strona', text: 'aktualności nowości badania konferencje' },
+  { title: 'Szlaki i mechanizmy (macierz)', href: '/szlaki', kind: 'Strona', text: 'szlaki mechanizmy ferroptoza glikoliza CSC STAT3 NF-kB EMT macierz substancja' },
+  { title: 'Nowotwory', href: '/nowotwory', kind: 'Strona', text: 'rodzaje nowotworów rak piersi jelita płuca' },
+  { title: 'Słownik pojęć', href: '/slownik', kind: 'Strona', text: 'słownik definicje pojęcia skróty' },
+  { title: 'Źródła', href: '/zrodla', kind: 'Strona', text: 'źródła bazy PubMed Cochrane' },
+  { title: 'O stronie', href: '/o-stronie', kind: 'Strona', text: 'o stronie redakcja proces metodyka' },
+]
+
+export const searchIndex: SearchEntry[] = [
+  ...methods.map((m) => ({
+    title: m.name,
+    href: `/metody/${m.slug}`,
+    kind: 'Metoda / substancja',
+    text: [m.name, m.shortDescription, m.whatIsIt ?? '', (m.indications ?? []).join(' ')].join(' '),
+  })),
+  ...symptoms.map((s) => ({
+    title: s.name,
+    href: `/co-pomaga/${s.slug}`,
+    kind: 'Objaw / opieka wspomagająca',
+    text: s.name,
+  })),
+  ...guides.map((g) => ({
+    title: g.title,
+    href: `/w-trakcie-leczenia/${g.slug}`,
+    kind: 'Poradnik',
+    text: g.title,
+  })),
+  ...glossary.map((t) => ({
+    title: t.term,
+    href: t.link ?? '/slownik',
+    kind: 'Pojęcie',
+    text: `${t.term} ${t.definition}`,
+  })),
+  ...staticPages,
+]

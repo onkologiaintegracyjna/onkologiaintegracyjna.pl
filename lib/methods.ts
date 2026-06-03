@@ -847,7 +847,7 @@ export const methods: Method[] = [
         'Brak badań klinicznych II/III u ludzi. Przyczyny mogą obejmować bariery regulacyjne (związek o pochodzeniu weterynaryjnym, nieopatentowalny jako nowy lek), finansowe (brak sponsora kosztownych badań) oraz względy bezpieczeństwa — bez badań u ludzi nie można jednak rozstrzygać o skuteczności klinicznej. Konieczna ostrożność: nieustalona u ludzi droga podania i ryzyko toksyczności.',
     },
     howItWorks:
-      'W modelach przedklinicznych opisywano wpływ na komórki macierzyste nowotworu i indukcję ferroptozy; znaczenie kliniczne nieznane.',
+      'W modelach przedklinicznych opisywano wpływ na komórki macierzyste nowotworu, indukcję ferroptozy oraz hamowanie przejścia nabłonkowo-mezenchymalnego (EMT) związanego z przerzutowaniem; znaczenie kliniczne nieznane.',
     research:
       'Gupta 2009 (Cell, PMID 19682730): silne działanie wobec komórek macierzystych raka piersi w modelu in vitro (w tym modelu skuteczniejsze niż klasyczny cytostatyk — wyłącznie przedklinicznie). Naujokat & Steinhart 2012 (PMID 23251084): przegląd jako związek celujący w komórki macierzyste. Badania trwają i się rozwijają — zespół prof. Adama Huczyńskiego z Uniwersytetu im. Adama Mickiewicza w Poznaniu od lat projektuje pochodne salinomycyny o silniejszym i bardziej selektywnym działaniu; w pracy z 2025 r. pochodne tiomocznikowe wykazały 2–10× wyższą aktywność in vitro od macierzystej salinomycyny wobec modeli przerzutowego raka jelita grubego (PMID 39390831). To obiecujący, aktywnie rozwijany kierunek. Zastrzeżenie pozostaje jednak twarde: wszystkie dane są przedkliniczne — brak badań klinicznych u ludzi, więc skuteczności i bezpieczeństwa u pacjentów nie można jeszcze uznać za wykazane.',
     safety:

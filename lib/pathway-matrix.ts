@@ -39,7 +39,7 @@ export const matrixRows: MatrixRow[] = [
   { substance: 'Artesunat', slug: 'artesunat', redox: 'pro-oxidant',
     values: { ...z, ferroptoza: 3 } },
   { substance: 'Salinomycyna', slug: 'salinomycyna', redox: 'pro-oxidant',
-    values: { ...z, ferroptoza: 3, csc: 3 } },
+    values: { ...z, ferroptoza: 3, csc: 3, emt: 2 } },
   { substance: 'Resweratrol', slug: 'resweratrol', redox: 'context-dependent',
     values: { ...z, ferroptoza: 2, nfkb: 1, apopt: 2 } },
   { substance: 'Kurkumina', slug: 'kurkumina', redox: 'context-dependent',

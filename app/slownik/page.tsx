@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { glossary } from '@/lib/glossary'
 
@@ -22,11 +23,7 @@ export default function SlownikPage() {
           {sorted.map((t) => (
             <div key={t.term} className="border-b border-border pb-6 last:border-0">
               <dt className="font-serif text-lg font-semibold text-primary">{t.term}</dt>
-              <dd className="mt-2 text-sm leading-relaxed text-foreground/80">{t.definition}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-    </>
-  )
-}
+              <dd className="mt-2 text-sm leading-relaxed text-foreground/80">
+                {t.definition}
+                {t.link && (
+    
