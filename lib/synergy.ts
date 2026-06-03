@@ -24,7 +24,7 @@ export const directions: SynergyDirection[] = [
   {
     id: 'csc',
     title: 'Komórki macierzyste (CSC) i nawroty',
-    body: 'Komórki macierzyste nowotworu (CSC) są oporne na chemio- i radioterapię i wiąże się je z nawrotami oraz przerzutami. Standardowe leczenie (np. cisplatyna, radioterapia) bywa opisywane jako czynnik, który WZBOGACA frakcję CSC, sprzyjając oporności. Stąd zainteresowanie substancjami badanymi pod kątem celowania w CSC (np. salinomycyna) — na razie niemal wyłącznie przedklinicznie.',
+    body: 'Komórki macierzyste nowotworu (CSC) są mniej wrażliwe na chemio- i radioterapię i wiąże się je z opornością oraz nawrotami. W modelach eksperymentalnych opisywano, że presja leczenia może selekcjonować populacje bardziej oporne, w tym komórki o cechach CSC — to NIE znaczy, że leczenie standardowe „tworzy agresywniejszego raka”; to opis biologii oporności, którą się bada. Stąd zainteresowanie substancjami celującymi w CSC (np. salinomycyna) — na razie niemal wyłącznie przedklinicznie.',
   },
 ]
 

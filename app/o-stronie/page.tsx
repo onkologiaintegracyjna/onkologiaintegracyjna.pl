@@ -90,6 +90,22 @@ export default function OStroniePage() {
           </p>
         </section>
 
+        <section className="mt-12">
+          <h2 className="font-serif text-xl font-semibold text-primary">Redakcja i proces przeglądu</h2>
+          <p className="mt-3 text-sm leading-relaxed text-foreground/80">
+            Treści przygotowuje zespół redakcyjny serwisu. Każda metoda opisywana jest według stałego
+            schematu (sygnał efektu, typ danych, pewność GRADE, status kliniczny, luka dowodowa), a każde
+            twierdzenie wymaga źródła pierwotnego (PMID/DOI lub wytyczna), weryfikowanego w bazie pierwotnej.
+            Materiał ma charakter edukacyjny i jest okresowo przeglądany pod kątem nowych danych.
+          </p>
+          <h2 className="mt-8 font-serif text-xl font-semibold text-primary">Finansowanie i konflikt interesów</h2>
+          <p className="mt-3 text-sm leading-relaxed text-foreground/80">
+            Serwis nie prowadzi sprzedaży, nie oferuje produktów ani usług, nie wyświetla reklam i nie jest
+            powiązany komercyjnie z producentami opisywanych metod, suplementów czy urządzeń. Nie promujemy
+            marek handlowych. Celem jest wyłącznie rzetelna edukacja oparta na dowodach.
+          </p>
+        </section>
+
         <section className="mt-12 rounded-xl border border-accent/30 bg-accent/5 p-6">
           <h2 className="flex items-center gap-2 font-serif text-xl font-semibold text-primary">
             <Mail className="h-5 w-5 text-accent" aria-hidden="true" />

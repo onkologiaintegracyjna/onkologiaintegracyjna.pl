@@ -344,7 +344,7 @@ export default async function MethodPage({
         <p className="mt-12 border-t border-border pt-6 text-xs leading-relaxed text-muted-foreground">
           Ocena oparta na NCI PDQ Levels of Evidence for Integrative Therapies
           (cancer.gov) oraz wytycznych SIO-ASCO (ascopubs.org), z zachowaniem skali
-          GRADE.{' '}
+          GRADE. Stan przeglądu dowodów: czerwiec 2026.{' '}
           <Link href="/jak-czytac-dowody" className="text-accent hover:underline">
             Jak czytać dowody?
           </Link>

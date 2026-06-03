@@ -39,7 +39,7 @@ export const updates: Update[] = [
     category: 'badanie',
     title: 'TTFields w raku trzustki — rejestracja FDA na podstawie badania PANOVA-3',
     body:
-      'Randomizowane badanie III fazy PANOVA-3 (n=571) wykazało, że dodanie pól elektrycznych o przemiennej częstotliwości (TTFields) do chemioterapii w miejscowo zaawansowanym raku trzustki wydłużyło przeżycie całkowite (16,2 vs 14,2 mies.; HR 0,82; p=0,039) oraz przeżycie wolne od bólu. Na tej podstawie FDA dopuściła urządzenie Optune Pax (luty 2026). Zaktualizowaliśmy kartę TTFields.',
+      'Randomizowane badanie III fazy PANOVA-3 (n=571) wykazało, że dodanie pól elektrycznych o przemiennej częstotliwości (TTFields) do chemioterapii w miejscowo zaawansowanym raku trzustki wydłużyło przeżycie całkowite (16,2 vs 14,2 mies.; HR 0,82; p=0,039) oraz przeżycie wolne od bólu. Na tej podstawie FDA dopuściła urządzenie Optune Pax (luty 2026). TTFields to wyrób medyczny / technologia konwencjonalna, nie metoda CAM. Zaktualizowaliśmy kartę TTFields.',
     refs: [{ pmid: '40448572', label: 'PANOVA-3, J Clin Oncol 2025' }],
     methodSlug: 'ttfields',
   },

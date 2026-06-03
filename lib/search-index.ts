@@ -4,12 +4,32 @@ import { methods } from '@/lib/methods'
 import { glossary } from '@/lib/glossary'
 import { symptoms } from '@/lib/symptoms'
 import { guides } from '@/lib/guides'
+import { clinicalStatusLabels } from '@/lib/labels'
 
 export interface SearchEntry {
   title: string
   href: string
   kind: string
-  text: string // tekst przeszukiwany (lowercase budujemy w locie)
+  text: string
+  status?: string
+  experimental?: boolean
+}
+
+// Synonimy/aliasy — żeby hasła potoczne trafiały do właściwej karty.
+const aliases: Record<string, string> = {
+  kannabinoidy: 'marihuana THC CBD medyczna marihuana konopie olejek',
+  'inhalacje-wodorowe': 'wodór H2 woda wodorowa',
+  wilcacora: 'koci pazur vilcacora uncaria',
+  sylimaryna: 'ostropest sylibina silimaryna wątroba',
+  'wlewy-dozylne-witaminy-c': 'witamina C IVC kwas askorbinowy G6PD wlew dożylny',
+  'post-i-diety-naladujace-post': 'post FMD głodówka fasting dieta naśladująca post',
+  'dieta-ketogeniczna': 'keto ketoza',
+  'hipertermia-rht': 'hipertermia przegrzewanie ciepło RHT',
+  'tlenoterapia-hiperbaryczna': 'HBOT tlen hiperbaryczny komora',
+  salinomycyna: 'komórki macierzyste CSC',
+  'mikrobiom-i-fmt': 'mikrobiom FMT przeszczep kału bakterie jelitowe',
+  jemiola: 'jemioła Viscum iscador',
+  'lentinan-psk': 'grzyby PSK krestin shiitake lentinan',
 }
 
 const staticPages: SearchEntry[] = [
@@ -29,7 +49,7 @@ const staticPages: SearchEntry[] = [
   { title: 'Nowotwory', href: '/nowotwory', kind: 'Strona', text: 'rodzaje nowotworów rak piersi jelita płuca' },
   { title: 'Słownik pojęć', href: '/slownik', kind: 'Strona', text: 'słownik definicje pojęcia skróty' },
   { title: 'Źródła', href: '/zrodla', kind: 'Strona', text: 'źródła bazy PubMed Cochrane' },
-  { title: 'O stronie', href: '/o-stronie', kind: 'Strona', text: 'o stronie redakcja proces metodyka' },
+  { title: 'O stronie', href: '/o-stronie', kind: 'Strona', text: 'o stronie redakcja proces metodyka konflikt interesów' },
 ]
 
 export const searchIndex: SearchEntry[] = [
@@ -37,7 +57,9 @@ export const searchIndex: SearchEntry[] = [
     title: m.name,
     href: `/metody/${m.slug}`,
     kind: 'Metoda / substancja',
-    text: [m.name, m.shortDescription, m.whatIsIt ?? '', (m.indications ?? []).join(' ')].join(' '),
+    status: clinicalStatusLabels[m.evidenceProfile.clinicalStatus],
+    experimental: m.evidenceProfile.clinicalStatus === 'experimental',
+    text: [m.name, m.shortDescription, m.whatIsIt ?? '', (m.indications ?? []).join(' '), aliases[m.slug] ?? ''].join(' '),
   })),
   ...symptoms.map((s) => ({
     title: s.title,

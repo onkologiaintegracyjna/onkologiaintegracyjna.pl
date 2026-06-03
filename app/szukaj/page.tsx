@@ -52,7 +52,7 @@ export default function SzukajPage() {
             autoFocus
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="np. kurkumina, neuropatia, GRADE, komórki macierzyste…"
+            placeholder="np. kurkumina, marihuana, neuropatia, GRADE, koci pazur…"
             aria-label="Szukaj na stronie"
             className="w-full rounded-xl border border-border bg-card py-3 pl-12 pr-4 text-base text-foreground outline-none focus:border-accent"
           />
@@ -60,9 +60,7 @@ export default function SzukajPage() {
 
         {query.length >= 2 && (
           <p className="mt-4 text-sm text-muted-foreground">
-            {results.length === 0
-              ? 'Brak wyników. Spróbuj innego hasła.'
-              : `Wyniki: ${results.length}`}
+            {results.length === 0 ? 'Brak wyników. Spróbuj innego hasła.' : `Wyniki: ${results.length}`}
           </p>
         )}
 
@@ -73,18 +71,31 @@ export default function SzukajPage() {
               href={entry.href}
               className="block rounded-xl border border-border bg-card p-4 transition-colors hover:border-accent/50"
             >
-              <div className="flex items-baseline justify-between gap-3">
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <span className="font-medium text-primary">{entry.title}</span>
-                <span className="shrink-0 rounded-full border border-border px-2 py-0.5 text-xs text-muted-foreground">{entry.kind}</span>
+                <span className="flex items-center gap-2">
+                  {entry.status && (
+                    <span className="shrink-0 rounded-full border border-border px-2 py-0.5 text-xs text-foreground/70">
+                      {entry.status}
+                    </span>
+                  )}
+                  <span className="shrink-0 rounded-full border border-border px-2 py-0.5 text-xs text-muted-foreground">{entry.kind}</span>
+                </span>
               </div>
+              {entry.experimental && (
+                <p className="mt-2 rounded-md border border-destructive/30 bg-destructive/5 px-2.5 py-1 text-xs font-medium text-destructive">
+                  Obszar eksperymentalny — nie stosować jako leczenia przeciwnowotworowego.
+                </p>
+              )}
             </Link>
           ))}
         </div>
 
         {query.length < 2 && (
           <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
-            Wskazówka: szukaj po nazwie (np. „melatonina”), objawie (np. „zmęczenie”) lub skrócie
-            (np. „CINV”, „GRADE”). Możesz też przejrzeć{' '}
+            Wskazówka: szukaj po nazwie (np. „melatonina”), objawie (np. „zmęczenie”), skrócie
+            (np. „CINV”, „GRADE”) lub nazwie potocznej (np. „marihuana”, „koci pazur”, „ostropest”).
+            Możesz też przejrzeć{' '}
             <Link href="/slownik" className="font-medium text-accent hover:underline">słownik pojęć</Link>.
           </p>
         )}

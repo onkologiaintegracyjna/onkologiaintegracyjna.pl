@@ -25,9 +25,9 @@ export default function PolitykaPage() {
         <section>
           <h2 className="font-serif text-xl font-semibold text-primary">Administrator i kontakt</h2>
           <p className="mt-2">
-            Administratorem danych jest zespół redakcyjny serwisu Onkologia Integracyjna (dane
-            podmiotu zostaną uzupełnione). W sprawach dotyczących serwisu i ewentualnych danych
-            kontakt:{' '}
+            Serwis prowadzi zespół redakcyjny Onkologia Integracyjna. Serwis ma charakter wyłącznie
+            edukacyjny i nie zbiera danych osobowych użytkowników poza korespondencją e-mail. W sprawach
+            dotyczących serwisu kontakt:{' '}
             <a href="mailto:kontakt@onkologiaintegracyjna.pl" className="text-accent hover:underline">
               kontakt@onkologiaintegracyjna.pl
             </a>. Jeśli napiszesz do nas e-mail, Twój adres i treść wiadomości wykorzystamy wyłącznie

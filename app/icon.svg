@@ -1,5 +1,6 @@
 <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Onkologia Integracyjna">
-  <rect width="64" height="64" rx="14" fill="#1a2b4a"/>
-  <path d="M28 14h8v10h10v8H36v18h-8V32H18v-8h10V14z" fill="#0F6E56"/>
-  <path d="M28 14h8v10h10v4H32V14h-4z" fill="#16886a"/>
+  <rect width="64" height="64" rx="14" fill="#f5f2ec"/>
+  <rect x="0.5" y="0.5" width="63" height="63" rx="13.5" fill="none" stroke="#1a2b4a" stroke-opacity="0.10"/>
+  <path d="M32 14 C46 24 46 44 32 52 C18 44 18 24 32 14 Z" fill="#0f6e56"/>
+  <polyline points="12,33 24,33 28,23 35,45 39,33 52,33" fill="none" stroke="#1a2b4a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

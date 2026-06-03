@@ -449,7 +449,7 @@ export const methods: Method[] = [
     regulatory: [
       { country: 'USA', status: 'dopuszczone', note: 'FDA — porfimer sodu (Photofrin) w określonych wskazaniach (m.in. rak przełyku, endobronchialny NDRP, dysplazja w przełyku Barretta)' },
       { country: 'UE', status: 'zależny', note: 'Status zależny od konkretnego produktu/procedury i kraju — nie ogólne „EMA approved”' },
-      { country: 'Polska', status: 'refundowane', note: 'NFZ refunduje dla wybranych wskazań onkologicznych' },
+      { country: 'Polska', status: 'zależny od procedury', note: 'Status zależny od produktu, wskazania i procedury — wymaga weryfikacji w aktualnych katalogach NFZ / programach świadczeń' },
     ],
     name: 'Terapia fotodynamiczna (PDT)',
     whatIsIt:
@@ -471,14 +471,14 @@ export const methods: Method[] = [
     howItWorks:
       'Podany fotosensybilizator gromadzi się w tkance, a naświetlenie światłem o odpowiedniej długości generuje reaktywne formy tlenu niszczące komórki w obszarze naświetlania.',
     research:
-      'Przegląd Agostinis 2011 (PMID 21617154) omawia mechanizm i wskazania. RCT III Overholt 2007 (PMID 17643434): PDT w przełyku Barretta — redukcja progresji do raka. Porfimer sodu zatwierdzony przez FDA dla 6 wskazań onkologicznych; w Polsce refundacja NFZ dla wybranych wskazań.',
+      'Przegląd Agostinis 2011 (PMID 21617154) omawia mechanizm i wskazania. RCT III Overholt 2007 (PMID 17643436): 5-letnie badanie PDT z porfimerem sodu w przełyku Barretta z dysplazją dużego stopnia — eliminacja dysplazji 77% vs 39% i rzadsza progresja do raka. Porfimer sodu ma określone wskazania FDA; w Polsce status zależny od produktu i procedury (weryfikacja w katalogach NFZ).',
     safety:
       'Obok leczenia konwencjonalnego. Fotouczulenie skóry utrzymuje się przez kilka tygodni — wymaga ochrony przed światłem.',
     talkToDoctor:
       'Zapytaj, czy PDT jest opcją dla Twojego wskazania i jak przygotować się do fotowrażliwości.',
     references: [
       { pmid: '21617154', title: 'Agostinis 2011 — przegląd PDT', year: 2011 },
-      { pmid: '17643434', title: 'Overholt 2007 — RCT III, przełyk Barretta', year: 2007 },
+      { pmid: '17643436', title: 'Overholt 2007 — RCT III, PDT (porfimer) w przełyku Barretta, 5-letni', year: 2007, note: 'Gastrointest Endosc' },
     ],
   },
   {
@@ -560,7 +560,7 @@ export const methods: Method[] = [
     howItWorks:
       'Wysiłek poprawia wydolność, masę i siłę mięśni, reguluje metabolizm i stan zapalny oraz zmniejsza zmęczenie związane z leczeniem.',
     research:
-      'Metaanaliza 2026 (PMID 41894932, 13 RCT, n=3282): obniżenie śmiertelności całkowitej HR 0,74 (umiarkowana pewność). Wytyczne ASCO-SIO 2024 (Bower, PMID 38754041): rekomendacja nr 1 dla zmęczenia. ACSM 2019 (PMID 31626055) i metaanaliza McTiernan 2019 (PMID 31626056): redukcja ryzyka nawrotu raka piersi i jelita.',
+      'Metaanaliza 2026 (PMID 41894932, 13 RCT, n=3282): obniżenie śmiertelności całkowitej HR 0,74 (umiarkowana pewność). Wytyczne ASCO-SIO 2024 (Bower, PMID 38754041): rekomendacja nr 1 dla zmęczenia. Wytyczne ćwiczeń ACSM 2019 (Campbell, PMID 31626055) oraz raport ACSM 2019 (Patel i wsp., PMID 31626056) wiążą regularną aktywność fizyczną z lepszą kontrolą nowotworu, w tym mniejszym ryzykiem nawrotu raka piersi i jelita.',
     safety:
       'Obok leczenia konwencjonalnego. Program należy dostosować indywidualnie (przerzuty kostne, anemia, kardiotoksyczność).',
     talkToDoctor:
@@ -619,7 +619,7 @@ export const methods: Method[] = [
       { country: 'Niemcy', status: 'refundowane', note: 'GKV refunduje akupunkturę dla chronic back/knee pain' },
       { country: 'Szwajcaria', status: 'refundowane', note: 'Refundacja jako 1 z 5 metod CAM (od 2017)' },
       { country: 'USA', status: 'dopuszczone', note: 'ASCO/SIO 2022 guideline; Medicare dla wybranych wskazań' },
-      { country: 'Wielka Brytania', status: 'dopuszczone', note: 'NICE NG193, NG144' },
+      { country: 'Wielka Brytania', status: 'dopuszczone', note: 'NICE NG193 — przewlekły ból pierwotny (nie wskazanie onkologiczne)' },
       { country: 'Polska', status: 'off-label', note: 'Brak refundacji; dostępne komercyjnie' },
     ],
     name: 'Akupunktura w onkologii',
@@ -632,7 +632,7 @@ export const methods: Method[] = [
       'Metoda z najmocniejszą rekomendacją ASCO-SIO 2022 w bólu stawów po inhibitorach aromatazy (AIMSS); w innych rodzajach bólu — do rozważenia.',
     evidenceProfile: {
       effectSignal:
-        'Wytyczne ASCO-SIO 2022 rekomendują akupunkturę w bólu nowotworowym i bólu stawów po inhibitorach aromatazy (AIMSS); RCT III potwierdza redukcję bólu stawów.',
+        'Wytyczne ASCO-SIO 2022: najmocniejsza rekomendacja dotyczy bólu stawów po inhibitorach aromatazy (AIMSS), potwierdzona RCT III; w innych rodzajach bólu akupunktura, akupresura lub refleksologia są opcjami do rozważenia.',
       grade: 'moderate',
       evidenceType: 'meta-analysis',
       clinicalStatus: 'guideline-supported',
@@ -849,7 +849,7 @@ export const methods: Method[] = [
     howItWorks:
       'W modelach przedklinicznych opisywano wpływ na komórki macierzyste nowotworu, indukcję ferroptozy oraz hamowanie przejścia nabłonkowo-mezenchymalnego (EMT) związanego z przerzutowaniem; znaczenie kliniczne nieznane.',
     research:
-      'Gupta 2009 (Cell, PMID 19682730): silne działanie wobec komórek macierzystych raka piersi w modelu in vitro (w tym modelu skuteczniejsze niż klasyczny cytostatyk — wyłącznie przedklinicznie). Naujokat & Steinhart 2012 (PMID 23251084): przegląd jako związek celujący w komórki macierzyste. Badania trwają i się rozwijają — zespół prof. Adama Huczyńskiego z Uniwersytetu im. Adama Mickiewicza w Poznaniu od lat projektuje pochodne salinomycyny o silniejszym i bardziej selektywnym działaniu; w pracy z 2025 r. pochodne tiomocznikowe wykazały 2–10× wyższą aktywność in vitro od macierzystej salinomycyny wobec modeli przerzutowego raka jelita grubego (PMID 39390831). To obiecujący, aktywnie rozwijany kierunek. Zastrzeżenie pozostaje jednak twarde: wszystkie dane są przedkliniczne — brak badań klinicznych u ludzi, więc skuteczności i bezpieczeństwa u pacjentów nie można jeszcze uznać za wykazane.',
+      'Gupta 2009 (Cell, PMID 19682730): silne działanie wobec komórek macierzystych raka piersi w modelu in vitro (w tym modelu skuteczniejsze niż klasyczny cytostatyk — wyłącznie przedklinicznie). Naujokat & Steinhart 2012 (PMID 23251084): przegląd jako związek celujący w komórki macierzyste. Badania trwają i się rozwijają — zespół prof. Adama Huczyńskiego z Uniwersytetu im. Adama Mickiewicza w Poznaniu od lat projektuje pochodne salinomycyny o silniejszym i bardziej selektywnym działaniu; w pracy z 2025 r. pochodne tiomocznikowe wykazały 2–10× wyższą aktywność in vitro od macierzystej salinomycyny wobec modeli przerzutowego raka jelita grubego (PMID 39390831). To aktywnie badany kierunek przedkliniczny. Zastrzeżenie pozostaje jednak twarde: wszystkie dane są przedkliniczne — brak badań klinicznych u ludzi, więc skuteczności i bezpieczeństwa u pacjentów nie można jeszcze uznać za wykazane.',
     safety:
       'Obszar eksperymentalny. Nie stosować jako leczenie przeciwnowotworowe. Możliwa toksyczność neurologiczna i ogólnoustrojowa; brak rejestracji dla ludzi.',
     talkToDoctor:
@@ -1376,10 +1376,10 @@ export const methods: Method[] = [
     ],
     regulatory: [
       { country: 'Japonia', status: 'dopuszczone', note: 'Status Advanced Medical Care B (Klasa 2B) od XII 2016 (MHLW; jRCTs031180352) — dla określonego programu/zastosowania; szczegóły do weryfikacji w MHLW/jRCT' },
-      { country: 'Polska', status: 'OTC', note: 'Urządzenia wyrobami medycznymi klasy I/IIa (CE); brak rejestracji H₂ jako leku; brak refundacji NFZ' },
+      { country: 'Polska', status: 'wyrób (CE)', note: 'Dostępność urządzeń nie oznacza statusu terapii onkologicznej. Brak rejestracji H₂ jako leku i brak refundacji NFZ' },
       { country: 'Niemcy', status: 'dopuszczone', note: 'Heilpraktikerzy; bez refundacji GKV; status suplementu/wyrobu' },
       { country: 'USA', status: 'eksperymentalne', note: 'FDA: urządzenia bez approval jako lek; aktywne badania NCT03818347, NCT04175301, NCT05728112' },
-      { country: 'UE', status: 'OTC', note: 'Brak rejestracji EMA; wyroby medyczne z CE' },
+      { country: 'UE', status: 'wyrób (CE)', note: 'Brak rejestracji EMA jako leku; dostępność wyrobu z CE nie jest statusem terapii onkologicznej' },
     ],
     redoxClass: 'antioxidant',
     name: 'Inhalacje wodorowe (H₂)',
