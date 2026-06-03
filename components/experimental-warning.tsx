@@ -20,7 +20,7 @@ export function ExperimentalWarning({
       <p>
         <strong className="font-semibold">Obszar eksperymentalny.</strong>{' '}
         {text ??
-          'Bardzo ograniczone dane, w większości przedkliniczne. Nie stosować jako leczenie przeciwnowotworowe.'}
+          'Dane są ograniczone i w większości przedkliniczne, więc skuteczności u ludzi nie można jeszcze uznać za potwierdzoną. Ewentualne zastosowanie wyłącznie pod opieką lekarza i obok leczenia standardowego, nie zamiast niego.'}
       </p>
     </div>
   )
