@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import { Menu, X, ChevronDown, Activity } from 'lucide-react'
+import { Menu, X, ChevronDown, Activity, Search } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import {
   DropdownMenu,
@@ -86,8 +86,19 @@ export function SiteHeader() {
           </DropdownMenu>
         </nav>
 
-        {/* Mobile toggle */}
-        <button
+        {/* Search + mobile toggle */}
+        <div className="flex items-center gap-1">
+          <Link
+            href="/szukaj"
+            aria-label="Szukaj na stronie"
+            className={cn(
+              'inline-flex items-center justify-center rounded-md p-2 text-foreground/70 transition-colors hover:bg-secondary hover:text-foreground',
+              isActive('/szukaj') && 'bg-secondary text-primary'
+            )}
+          >
+            <Search className="h-5 w-5" aria-hidden="true" />
+          </Link>
+          <button
           type="button"
           className="inline-flex items-center justify-center rounded-md p-2 text-foreground xl:hidden"
           aria-expanded={open}
@@ -96,7 +107,8 @@ export function SiteHeader() {
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+          </button>
+        </div>
       </div>
 
       {/* Mobile nav */}
@@ -107,22 +119,4 @@ export function SiteHeader() {
           aria-label="Nawigacja mobilna"
         >
           <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6">
-            {[...pillars, ...more].map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className={cn(
-                  'block rounded-md px-3 py-2.5 text-sm font-medium text-foreground/80 hover:bg-secondary',
-                  isActive(item.href) && 'bg-secondary text-primary'
-                )}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        </nav>
-      )}
-    </header>
-  )
-}
+            {[...pillars, ...more
