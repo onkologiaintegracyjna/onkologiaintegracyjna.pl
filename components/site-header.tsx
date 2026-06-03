@@ -57,7 +57,6 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden items-center gap-1 xl:flex" aria-label="Nawigacja główna">
           {pillars.map((item) => (
             <Link
@@ -86,7 +85,6 @@ export function SiteHeader() {
           </DropdownMenu>
         </nav>
 
-        {/* Search + mobile toggle */}
         <div className="flex items-center gap-1">
           <Link
             href="/szukaj"
@@ -99,19 +97,18 @@ export function SiteHeader() {
             <Search className="h-5 w-5" aria-hidden="true" />
           </Link>
           <button
-          type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-foreground xl:hidden"
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          aria-label={open ? 'Zamknij menu' : 'Otwórz menu'}
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            type="button"
+            className="inline-flex items-center justify-center rounded-md p-2 text-foreground xl:hidden"
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            aria-label={open ? 'Zamknij menu' : 'Otwórz menu'}
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile nav */}
       {open && (
         <nav
           id="mobile-nav"
@@ -119,4 +116,22 @@ export function SiteHeader() {
           aria-label="Nawigacja mobilna"
         >
           <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6">
-            {[...pillars, ...more
+            {[...pillars, ...more].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className={cn(
+                  'block rounded-md px-3 py-2.5 text-sm font-medium text-foreground/80 hover:bg-secondary',
+                  isActive(item.href) && 'bg-secondary text-primary'
+                )}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </nav>
+      )}
+    </header>
+  )
+}
