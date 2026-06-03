@@ -10,6 +10,7 @@ export const methods: Method[] = [
   // ===== Substancje farmakologiczne uzupełniające =====
   {
     slug: 'wlewy-dozylne-witaminy-c',
+    kind: 'witaminy',
     indications: [
       'leczenie wspomagające w wybranych nowotworach (badania kliniczne)',
       'redukcja zmęczenia onkologicznego',
@@ -69,6 +70,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'jemiola',
+    kind: 'rosliny',
     indications: [
       'poprawa jakości życia podczas chemioterapii',
       'redukcja zmęczenia onkologicznego',
@@ -113,6 +115,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'kurkumina',
+    kind: 'rosliny',
     indications: [
       'leczenie wspomagające w chemioterapii (badania)',
       'redukcja stanu zapalnego',
@@ -159,6 +162,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'melatonina',
+    kind: 'witaminy',
     indications: [
       'redukcja toksyczności chemioterapii',
       'poprawa snu u pacjentów onkologicznych',
@@ -201,6 +205,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'witamina-d',
+    kind: 'witaminy',
     indications: [
       'leczenie deficytu witD u pacjentów onkologicznych',
       'wspomaganie zdrowia kości',
@@ -242,6 +247,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'omega-3',
+    kind: 'witaminy',
     indications: [
       'kacheksja onkologiczna',
       'wspomaganie tolerancji chemioterapii',
@@ -281,6 +287,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'glutamina',
+    kind: 'witaminy',
     indications: [
       'zapobieganie mucositis (selektywne wskazania)',
     ],
@@ -315,6 +322,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'n-acetylocysteina',
+    kind: 'witaminy',
     indications: [
       'leczenie zatrucia paracetamolem',
       'eksperymentalnie: ochrona toksyczności chemio',
@@ -352,6 +360,7 @@ export const methods: Method[] = [
   // ===== Konwencjonalne technologie / procedury (nie CAM) =====
   {
     slug: 'hipertermia-rht',
+    kind: 'fizykalne',
     indications: [
       'mięsaki tkanek miękkich',
       'rak szyjki macicy (z radioterapią)',
@@ -396,6 +405,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'tlenoterapia-hiperbaryczna',
+    kind: 'fizykalne',
     indications: [
       'popromienna nekroza tkanek miękkich i kości',
       'martwica popromienna pęcherza',
@@ -438,6 +448,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'terapia-fotodynamiczna',
+    kind: 'fizykalne',
     indications: [
       'rak przełyku',
       'NDRP (wczesny endobronchialny)',
@@ -483,6 +494,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'ttfields',
+    kind: 'fizykalne',
     indications: [
       'glejak wielopostaciowy (GBM)',
       'złośliwy międzybłoniak opłucnej',
@@ -529,6 +541,7 @@ export const methods: Method[] = [
   // ===== Medycyna stylu życia (guideline-supported) =====
   {
     slug: 'aktywnosc-fizyczna',
+    kind: 'styl-zycia',
     indications: [
       'zmęczenie onkologiczne (rekomendacja 1)',
       'poprawa jakości życia',
@@ -573,6 +586,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'dieta-srodziemnomorska',
+    kind: 'styl-zycia',
     indications: [
       'prewencja pierwotna raka piersi (PREDIMED)',
       'redukcja śmiertelności sercowo-naczyniowej',
@@ -609,6 +623,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'akupunktura',
+    kind: 'styl-zycia',
     indications: [
       'ból onkologiczny (rekomendacja ASCO/SIO 2022)',
       'AIMSS',
@@ -654,6 +669,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'mbsr-mbcr',
+    kind: 'styl-zycia',
     indications: [
       'lęk i depresja u pacjentów onkologicznych (rekomendacja ASCO/SIO 2023)',
       'redukcja zmęczenia',
@@ -692,6 +708,7 @@ export const methods: Method[] = [
   // ===== Modulacja immunologiczna i obszar eksperymentalny =====
   {
     slug: 'lentinan-psk',
+    kind: 'grzyby',
     indications: [
       'adjuwant chemio raka żołądka (Japonia)',
       'paliatywne wsparcie immunologiczne',
@@ -700,10 +717,10 @@ export const methods: Method[] = [
       { country: 'Japonia', status: 'refundowane', note: 'PSK/Krestin — refundowany dla raka żołądka (od 1985)' },
       { country: 'Polska', status: 'OTC', note: 'Suplement diety; brak rejestracji onko' },
     ],
-    name: 'Lentinan / PSK — grzyby lecznicze',
+    name: 'Lentinan / PSK / AHCC — grzyby lecznicze (m.in. shiitake)',
     category: 'substance',
     shortDescription:
-      'Polisacharydy z grzybów; PSK jest w Japonii refundowanym adiuwantem chemioterapii raka żołądka.',
+      'Polisacharydy z grzybów: lentinan z shiitake (Lentinula edodes), PSK z Coriolus/Trametes, AHCC ze grzybni shiitake. PSK jest w Japonii refundowanym adiuwantem chemioterapii raka żołądka.',
     evidenceProfile: {
       effectSignal:
         'Metaanaliza: PSK jako adiuwant chemioterapii raka żołądka — sygnał poprawy przeżycia. Status dotyczy wyłącznie Japonii i konkretnych preparatów farmaceutycznych PSK/Krestin; w UE i USA brak standardowej rejestracji onkologicznej. Nie należy utożsamiać farmaceutycznego PSK z suplementami grzybowymi dostępnymi komercyjnie w UE.',
@@ -716,17 +733,23 @@ export const methods: Method[] = [
     howItWorks:
       'Beta-glukany i białkowo-polisacharydowe kompleksy modulują odporność wrodzoną (makrofagi, komórki NK).',
     research:
-      'Metaanaliza Oba 2007 (PMID 17106715): PSK jako adiuwant chemioterapii raka żołądka — sygnał poprawy przeżycia. PSK/Krestin refundowany w Japonii od 1985 r. Suplementy dostępne w Polsce nie są tożsame z farmaceutycznym PSK.',
+      'Metaanaliza Oba 2007 (PMID 17106715): PSK jako adiuwant chemioterapii raka żołądka — sygnał poprawy przeżycia. Metaanaliza Sakamoto 2005 (PMID 16133112, 3 randomizowane badania, 1094 chorych po resekcji raka jelita grubego): PSK dodany do chemioterapii poprawił przeżycie całkowite (RR 0,71; 95% CI 0,55–0,90) i wolne od choroby (RR 0,72). PSK/Krestin refundowany w Japonii od 1985 r. Suplementy dostępne w Polsce nie są tożsame z farmaceutycznym PSK. Lentinan to β-glukan z shiitake (Lentinula edodes). AHCC to standaryzowany ekstrakt z grzybni shiitake, badany głównie jako wsparcie w trakcie chemioterapii: w małych badaniach klinicznych wiązał się z lepszą jakością życia i mniejszą toksycznością leczenia (Cowawintaweewat 2006, PMID 16913187; Ito 2014, PMID 24611562). Randomizowane badanie fazy II w raku trzustki jest na etapie protokołu (Satoi 2022, PMID 35151367). To wsparcie wspomagające, a nie leczenie przeciwnowotworowe; dane są wczesne i ograniczone. Inne badane β-glukany grzybowe: wrośniak różnobarwny (Coriolus/Trametes) to źródło PSK; schizofiran (SPG, z rozszczepki) był japońskim immunomodulatorem z dawnym 5-letnim RCT w raku szyjki — wydłużenie czasu do nawrotu i przeżycia w stadium II, bez efektu w stadium III (Okamura 1989, PMID 2534912). Grzyby takie jak chaga (Inonotus) czy soplówka jeżowata (Hericium) pozostają głównie na etapie przedklinicznym.',
     safety:
       'Obok leczenia konwencjonalnego. Ostrożność przy chorobach autoimmunologicznych i po przeszczepieniu narządów.',
     talkToDoctor:
       'Zapytaj o różnicę między farmaceutycznym PSK a suplementami i o bezpieczeństwo immunomodulacji.',
     references: [
-      { pmid: '17106715', title: 'Oba 2007 — metaanaliza, rak żołądka', year: 2007 },
+      { pmid: '17106715', title: 'Oba 2007 — metaanaliza PSK, rak żołądka', year: 2007 },
+      { pmid: '16133112', title: 'Sakamoto 2005 — metaanaliza PSK, rak jelita grubego (OS RR 0,71)', year: 2005 },
+      { pmid: '16913187', title: 'Cowawintaweewat 2006 — AHCC, zaawansowany rak wątroby (mała kohorta)', year: 2006 },
+      { pmid: '24611562', title: 'Ito 2014 — AHCC, jakość życia i tolerancja chemioterapii (n=24)', year: 2014 },
+      { pmid: '35151367', title: 'Satoi 2022 — protokół RCT II, AHCC w raku trzustki', year: 2022, note: 'protokół, brak wyników' },
+      { pmid: '2534912', title: 'Okamura 1989 — RCT, schizofiran (SPG) + radioterapia, rak szyjki', year: 1989 },
     ],
   },
   {
     slug: 'artesunat',
+    kind: 'leki',
     indications: [
       'eksperymentalne off-label w onkologii (badania I/II)',
     ],
@@ -777,6 +800,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'niskie-dawki-naltreksonu',
+    kind: 'leki',
     indications: [
       'badania eksperymentalne (brak rekomendacji klinicznej)',
     ],
@@ -812,6 +836,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'salinomycyna',
+    kind: 'leki',
     indications: [
       'NIE leczenie standardowe ani off-label rutynowy',
       'wyłącznie ścieżka badania klinicznego (URPL + Komisja Bioetyczna)',
@@ -871,6 +896,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'boswellia-serrata',
+    kind: 'rosliny',
     indications: [
       'obrzęk mózgu po radioterapii (najsilniejsze dowody)',
       'stany zapalne w onkologii',
@@ -914,6 +940,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'cordyceps',
+    kind: 'grzyby',
     indications: [
       'adjuwant chemio/RT w raku płuca (najlepiej udokumentowane)',
       'zmęczenie onkologiczne (CRF)',
@@ -954,6 +981,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'reishi',
+    kind: 'grzyby',
     indications: [
       'adjuwant immunostymulacyjny w skojarzeniu z chemio/RT',
       'poprawa QoL podczas leczenia onkologicznego',
@@ -998,6 +1026,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'maitake',
+    kind: 'grzyby',
     indications: [
       'immunostymulacja podczas mielotoksycznej chemio',
       'wsparcie aktywności NK',
@@ -1037,6 +1066,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'wilcacora',
+    kind: 'rosliny',
     indications: [
       'redukcja neutropenii po chemio (jedyne RCT)',
       'immunostymulacja podczas leczenia',
@@ -1077,6 +1107,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'resweratrol',
+    kind: 'rosliny',
     name: 'Resweratrol',
     category: 'substance',
     experimental: true,
@@ -1114,6 +1145,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'iwermektyna',
+    kind: 'leki',
     name: 'Iwermektyna (off-label, eksperymentalnie)',
     category: 'experimental',
     experimental: true,
@@ -1160,6 +1192,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'fenbendazol',
+    kind: 'leki',
     name: 'Fenbendazol (off-label, eksperymentalnie)',
     category: 'experimental',
     experimental: true,
@@ -1206,6 +1239,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'kannabinoidy',
+    kind: 'rosliny',
     name: 'Kannabinoidy (CBD i THC / medyczna marihuana)',
     category: 'supportive-care',
     redoxClass: 'context-dependent',
@@ -1254,6 +1288,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'dieta-ketogeniczna',
+    kind: 'styl-zycia',
     name: 'Dieta ketogeniczna w onkologii',
     category: 'lifestyle',
     experimental: true,
@@ -1297,6 +1332,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'post-i-diety-naladujace-post',
+    kind: 'styl-zycia',
     name: 'Post i diety naśladujące post (FMD)',
     category: 'lifestyle',
     experimental: true,
@@ -1336,6 +1372,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'mikrobiom-i-fmt',
+    kind: 'styl-zycia',
     name: 'Mikrobiom jelitowy i przeszczep mikrobioty (FMT)',
     category: 'experimental',
     experimental: true,
@@ -1375,6 +1412,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'inhalacje-wodorowe',
+    kind: 'fizykalne',
     indications: [
       'redukcja toksyczności radioterapii (zapalenie jelit, mucositis, ototoksyczność)',
       'zmęczenie onkologiczne podczas chemio/immunoterapii',
@@ -1417,6 +1455,7 @@ export const methods: Method[] = [
   },
   {
     slug: 'sylimaryna',
+    kind: 'rosliny',
     name: 'Sylimaryna (ostropest plamisty)',
     category: 'substance',
     redoxClass: 'antioxidant',

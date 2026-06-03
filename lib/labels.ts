@@ -86,3 +86,12 @@ export const redoxDescriptions: Record<'pro-oxidant' | 'antioxidant' | 'context-
   'context-dependent':
     'Działa różnie zależnie od stężenia i kontekstu — w jednych warunkach antyoksydacyjnie, w innych prooksydacyjnie.',
 }
+
+export const kindLabels: Record<string, string> = {
+  grzyby: 'Grzyby lecznicze',
+  rosliny: 'Rośliny i zioła',
+  witaminy: 'Witaminy i suplementy',
+  leki: 'Leki repurposed',
+  fizykalne: 'Metody fizykalne',
+  'styl-zycia': 'Styl życia i dieta',
+}

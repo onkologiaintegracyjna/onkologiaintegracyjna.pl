@@ -29,7 +29,7 @@ const aliases: Record<string, string> = {
   salinomycyna: 'komórki macierzyste CSC',
   'mikrobiom-i-fmt': 'mikrobiom FMT przeszczep kału bakterie jelitowe',
   jemiola: 'jemioła Viscum iscador',
-  'lentinan-psk': 'grzyby PSK krestin shiitake lentinan',
+  'lentinan-psk': 'grzyby PSK krestin shiitake lentinan AHCC Coriolus Trametes turkey tail wrośniak schizofiran SPG rozszczepka chaga soplówka Hericium beta-glukan',
 }
 
 const staticPages: SearchEntry[] = [

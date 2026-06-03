@@ -14,6 +14,14 @@ export type ClinicalStatus =
   | 'experimental'
   | 'not-recommended'
 
+export type MethodKind =
+  | 'grzyby'
+  | 'rosliny'
+  | 'witaminy'
+  | 'leki'
+  | 'fizykalne'
+  | 'styl-zycia'
+
 export type MethodCategory =
   | 'supportive-care'
   | 'substance'
@@ -65,6 +73,8 @@ export interface Method {
   talkToDoctor: string
   references: Reference[]
   experimental?: boolean
+  /** Rodzaj (do filtra w wykazie): grzyby, rośliny/zioła, witaminy/suplementy, leki repurposed, metody fizykalne, styl życia. */
+  kind?: MethodKind
   /** Indywidualna, zniuansowana notka dla obszaru eksperymentalnego (zastępuje domyślną). */
   experimentalNote?: string
   /** Różnica mechanistyczna zależna od drogi podania (np. doustnie vs dożylnie). Opcjonalne. */
