@@ -835,6 +835,8 @@ export const methods: Method[] = [
     },
     category: 'experimental',
     experimental: true,
+    experimentalNote:
+      'Związek na etapie przedklinicznym, z powtarzalnym sygnałem wobec komórek macierzystych nowotworu — to obszar aktywnie badany, budzący duże zainteresowanie. Bywa stosowany u ludzi przez niektórych klinicystów (wieloletnia obserwacja bezpieczeństwa, efekt monitorowany m.in. przez ocenę komórek krążących), zawsze pod opieką lekarza i obok leczenia standardowego. Nie ma jeszcze kontrolowanych badań klinicznych, dlatego skuteczności u pacjentów nie można formalnie potwierdzić — brak takich badań nie jest jednak dowodem braku działania.',
     shortDescription:
       'Związek badany przedklinicznie pod kątem komórek macierzystych nowotworu — bez rejestracji dla ludzi.',
     evidenceProfile: {

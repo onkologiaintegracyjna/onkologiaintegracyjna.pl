@@ -84,7 +84,7 @@ export default function SzukajPage() {
               </div>
               {entry.experimental && (
                 <p className="mt-2 rounded-md border border-destructive/30 bg-destructive/5 px-2.5 py-1 text-xs font-medium text-destructive">
-                  Obszar eksperymentalny — nie stosować jako leczenia przeciwnowotworowego.
+                  Obszar eksperymentalny — dane głównie przedkliniczne; stosować wyłącznie pod opieką lekarza, obok leczenia standardowego.
                 </p>
               )}
             </Link>

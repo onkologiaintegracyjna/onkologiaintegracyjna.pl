@@ -65,6 +65,8 @@ export interface Method {
   talkToDoctor: string
   references: Reference[]
   experimental?: boolean
+  /** Indywidualna, zniuansowana notka dla obszaru eksperymentalnego (zastępuje domyślną). */
+  experimentalNote?: string
   /** Różnica mechanistyczna zależna od drogi podania (np. doustnie vs dożylnie). Opcjonalne. */
   administrationRoute?: {
     summary: string
