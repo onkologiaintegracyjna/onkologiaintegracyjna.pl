@@ -34,6 +34,20 @@ export const categoryLabels: Record<UpdateCategory, string> = {
  */
 export const updates: Update[] = [
   {
+    date: '2026-06-03',
+    period: 'II kwartał 2026',
+    category: 'konferencja',
+    title: 'ASCO 2026 — styl życia i joga w opiece wspomagającej',
+    body:
+      'Na zjeździe ASCO 2026 przedstawiono doniesienia istotne dla onkologii integracyjnej (głównie w raku piersi; na razie abstrakty zjazdowe, wymagają pełnych publikacji): (1) łagodna joga Hatha (badanie YOCAS, n=410) jednocześnie zmniejszała lęk, wahania nastroju i zmęczenie oraz poprawiała sen; (2) skojarzenie diety śródziemnomorskiej o niskim indeksie glikemicznym, 30 minut szybkiego marszu dziennie i suplementacji witaminy D wiązało się z 76% niższym ryzykiem nawrotu wczesnego HR-dodatniego raka piersi (interwencja łączona, pojedyncze badanie); (3) ustrukturyzowany program redukcji masy ciała (BWEL) poprawiał jakość życia. Przekaz ekspertów (m.in. dr Ligibel, Dana-Farber): interwencje stylu życia warto włączać do leczenia, a nie traktować jako dodatek.',
+    refs: [
+      { url: 'https://www.asco.org/abstracts-presentations/258197', label: 'YOCAS — joga, ASCO 2026 (abstrakt 258197)' },
+      { url: 'https://www.asco.org/abstracts-presentations/263791', label: 'Styl życia a nawrót, ASCO 2026 (abstrakt 263791)' },
+      { url: 'https://www.breastcancer.org/news/asco-research-takeaways', label: 'Omówienie — breastcancer.org' },
+    ],
+    methodSlug: 'aktywnosc-fizyczna',
+  },
+  {
     date: '2026-06-01',
     period: 'II kwartał 2026',
     category: 'badanie',

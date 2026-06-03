@@ -235,7 +235,7 @@ export const methods: Method[] = [
     howItWorks:
       'Witamina D reguluje gospodarkę wapniowo-fosforanową i wpływa na różnicowanie komórek oraz odpowiedź immunologiczną; znaczenie onkologiczne jest przedmiotem badań.',
     research:
-      'Metaanaliza Keum 2019 (PMID 30796437): suplementacja obniża śmiertelność z powodu raka (RR 0,87). RCT III VITAL Manson 2019 (PMID 30415629): brak redukcji zachorowalności, sygnał w późnej obserwacji. Korzyść dotyczy raczej śmiertelności niż zapobiegania.',
+      'Metaanaliza Keum 2019 (PMID 30796437): suplementacja obniża śmiertelność z powodu raka (RR 0,87). RCT III VITAL Manson 2019 (PMID 30415629): brak redukcji zachorowalności, sygnał w późnej obserwacji. Korzyść dotyczy raczej śmiertelności niż zapobiegania. Witamina D była też elementem skojarzonej interwencji stylu życia w doniesieniu zjazdowym ASCO 2026 (abstrakt 263791) — efektu nie można jednak przypisać samej witaminie.',
     safety:
       'Obok leczenia konwencjonalnego. Ryzyko hiperkalcemii przy nadmiarze — wymaga monitorowania stężenia 25(OH)D.',
     talkToDoctor:
@@ -573,7 +573,7 @@ export const methods: Method[] = [
     howItWorks:
       'Wysiłek poprawia wydolność, masę i siłę mięśni, reguluje metabolizm i stan zapalny oraz zmniejsza zmęczenie związane z leczeniem.',
     research:
-      'Metaanaliza 2026 (PMID 41894932, 13 RCT, n=3282): obniżenie śmiertelności całkowitej HR 0,74 (umiarkowana pewność). Wytyczne ASCO-SIO 2024 (Bower, PMID 38754041): rekomendacja nr 1 dla zmęczenia. Wytyczne ćwiczeń ACSM 2019 (Campbell, PMID 31626055) oraz raport ACSM 2019 (Patel i wsp., PMID 31626056) wiążą regularną aktywność fizyczną z lepszą kontrolą nowotworu, w tym mniejszym ryzykiem nawrotu raka piersi i jelita.',
+      'Metaanaliza 2026 (PMID 41894932, 13 RCT, n=3282): obniżenie śmiertelności całkowitej HR 0,74 (umiarkowana pewność). Wytyczne ASCO-SIO 2024 (Bower, PMID 38754041): rekomendacja nr 1 dla zmęczenia. Wytyczne ćwiczeń ACSM 2019 (Campbell, PMID 31626055) oraz raport ACSM 2019 (Patel i wsp., PMID 31626056) wiążą regularną aktywność fizyczną z lepszą kontrolą nowotworu, w tym mniejszym ryzykiem nawrotu raka piersi i jelita. Doniesienie zjazdowe ASCO 2026 (abstrakt 263791): skojarzenie diety śródziemnomorskiej o niskim indeksie glikemicznym, 30 minut marszu dziennie i witaminy D wiązało się z 76% niższym ryzykiem nawrotu wczesnego HR-dodatniego raka piersi — to jednak interwencja łączona i pojedyncze badanie, wymaga potwierdzenia w pełnej publikacji.',
     safety:
       'Obok leczenia konwencjonalnego. Program należy dostosować indywidualnie (przerzuty kostne, anemia, kardiotoksyczność).',
     talkToDoctor:
@@ -611,7 +611,7 @@ export const methods: Method[] = [
     howItWorks:
       'Bogata w warzywa, oliwę, ryby i pełne ziarna; korzystnie wpływa na profil zapalny, metaboliczny i sercowo-naczyniowy.',
     research:
-      'RCT III PREDIMED/Toledo 2015 (PMID 26365989, n=4282): prewencja pierwotna raka piersi — HR 0,32 dla diety z oliwą extra virgin. Reanaliza Estruch 2018 (PMID 29897866): redukcja zdarzeń sercowo-naczyniowych. To nie jest „dieta lecznicza” w aktywnej onkologii.',
+      'RCT III PREDIMED/Toledo 2015 (PMID 26365989, n=4282): prewencja pierwotna raka piersi — HR 0,32 dla diety z oliwą extra virgin. Reanaliza Estruch 2018 (PMID 29897866): redukcja zdarzeń sercowo-naczyniowych. Doniesienie zjazdowe ASCO 2026 (abstrakt 263791): dieta śródziemnomorska o niskim indeksie glikemicznym łącznie z marszem i witaminą D wiązała się z istotnie niższym ryzykiem nawrotu wczesnego raka piersi (interwencja łączona, wymaga potwierdzenia). To nie jest „dieta lecznicza” w aktywnej onkologii.',
     safety:
       'Obok leczenia konwencjonalnego. Bezpieczny, ogólnie zdrowy wzorzec żywieniowy; w trakcie leczenia warto skonsultować z dietetykiem.',
     talkToDoctor:
@@ -695,7 +695,7 @@ export const methods: Method[] = [
     howItWorks:
       'Trening uważności (medytacja, praca z oddechem, świadomość ciała) zmniejsza reaktywność na stres i poprawia regulację emocji.',
     research:
-      'Wytyczne ASCO-SIO 2023 (Carlson, PMID 37582238): rekomendacja dla lęku i depresji. RCT II Carlson 2013 (PMID 23918953, MBCR): redukcja stresu i poprawa jakości życia u kobiet z rakiem piersi. Dostępne w Polsce w ramach psychoonkologii.',
+      'Wytyczne ASCO-SIO 2023 (Carlson, PMID 37582238): rekomendacja dla lęku i depresji. RCT II Carlson 2013 (PMID 23918953, MBCR): redukcja stresu i poprawa jakości życia u kobiet z rakiem piersi. Doniesienie zjazdowe ASCO 2026 (YOCAS, abstrakt 258197, n=410): łagodna joga Hatha jednocześnie zmniejszała lęk, wahania nastroju i zmęczenie oraz poprawiała sen (wymaga pełnej publikacji). Dostępne w Polsce w ramach psychoonkologii.',
     safety:
       'Obok leczenia konwencjonalnego. Bezpieczna interwencja psychospołeczna; nie zastępuje leczenia psychiatrycznego, gdy jest wskazane.',
     talkToDoctor:
