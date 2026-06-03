@@ -2,10 +2,11 @@
 
 import { useMemo, useState } from 'react'
 import { methods } from '@/lib/methods'
-import type { MethodCategory, ClinicalStatus } from '@/lib/types'
+import type { MethodCategory, ClinicalStatus, MethodKind } from '@/lib/types'
 import {
   categoryLabels,
   clinicalStatusLabels,
+  kindLabels,
   gradeOrder,
 } from '@/lib/labels'
 import { MethodCard } from '@/components/method-card'
@@ -13,20 +14,23 @@ import { cn } from '@/lib/utils'
 
 const categories = Object.keys(categoryLabels) as MethodCategory[]
 const statuses = Object.keys(clinicalStatusLabels) as ClinicalStatus[]
+const kinds = Object.keys(kindLabels) as MethodKind[]
 
 type SortKey = 'grade-desc' | 'grade-asc' | 'name'
 
 export function MethodsExplorer() {
   const [category, setCategory] = useState<MethodCategory | 'all'>('all')
+  const [kind, setKind] = useState<MethodKind | 'all'>('all')
   const [status, setStatus] = useState<ClinicalStatus | 'all'>('all')
   const [sort, setSort] = useState<SortKey>('grade-desc')
 
   const filtered = useMemo(() => {
     const list = methods.filter((m) => {
       const okCat = category === 'all' || m.category === category
+      const okKind = kind === 'all' || m.kind === kind
       const okStatus =
         status === 'all' || m.evidenceProfile.clinicalStatus === status
-      return okCat && okStatus
+      return okCat && okKind && okStatus
     })
     return [...list].sort((a, b) => {
       if (sort === 'name') return a.name.localeCompare(b.name, 'pl')
@@ -34,11 +38,28 @@ export function MethodsExplorer() {
       const gb = gradeOrder[b.evidenceProfile.grade]
       return sort === 'grade-desc' ? gb - ga : ga - gb
     })
-  }, [category, status, sort])
+  }, [category, kind, status, sort])
 
   return (
     <div>
       <div className="space-y-5 rounded-xl border border-border bg-secondary/50 p-5">
+        {/* Rodzaj filter */}
+        <div>
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+            Rodzaj
+          </p>
+          <div className="flex flex-wrap gap-2">
+            <FilterChip active={kind === 'all'} onClick={() => setKind('all')}>
+              Wszystkie
+            </FilterChip>
+            {kinds.map((k) => (
+              <FilterChip key={k} active={kind === k} onClick={() => setKind(k)}>
+                {kindLabels[k]}
+              </FilterChip>
+            ))}
+          </div>
+        </div>
+
         {/* Category filter */}
         <div>
           <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
