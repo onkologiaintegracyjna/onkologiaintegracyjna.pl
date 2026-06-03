@@ -1257,6 +1257,8 @@ export const methods: Method[] = [
     name: 'Dieta ketogeniczna w onkologii',
     category: 'lifestyle',
     experimental: true,
+    experimentalNote:
+      'Dieta ketogeniczna ma już wczesne badania kliniczne (feasibility/pilotaż, m.in. podczas radioterapii i w glejaku), które wskazują, że bywa wykonalna i raczej dobrze tolerowana u wybranych pacjentów. Brakuje jednak dużych badań pokazujących wpływ na przeżycie, a u chorych onkologicznych istnieje realne ryzyko niedożywienia. Stosować wyłącznie pod opieką lekarza i dietetyka, obok leczenia standardowego.',
     indications: [
       'obszar badań — bez potwierdzonej poprawy przeżycia',
       'badana w wybranych nowotworach (m.in. glejak) jako uzupełnienie',
@@ -1280,7 +1282,7 @@ export const methods: Method[] = [
     howItWorks:
       'Ograniczenie glukozy ma teoretycznie utrudniać metabolizm komórek nowotworowych zależnych od glikolizy. To hipoteza metaboliczna — jej znaczenie kliniczne pozostaje nieudowodnione.',
     research:
-      'Dostępne są małe badania I/II fazy (m.in. glejak, nowotwory przewodu pokarmowego) oceniające bezpieczeństwo i wykonalność oraz przeglądy sugerujące możliwą poprawę tolerancji leczenia. Do 2026 r. brak dużych badań III fazy z poprawą przeżycia.',
+      'Istnieją wczesne badania KLINICZNE (feasibility/pilotaż), nie tylko przedkliniczne. Randomizowane badanie fazy I KETOCOMP (Klement 2016, PMID 28531663): dieta ketogeniczna w trakcie radioterapii raka piersi, jelita grubego oraz głowy i szyi była wykonalna i sprzyjała zachowaniu korzystnego składu ciała. Randomizowany pilotaż KEATING (Martin-McGill 2017, PMID 29209515): ocena wykonalności keto jako terapii uzupełniającej w glejaku. Przegląd systematyczny u dzieci z guzami mózgu (AlMutairi 2025, PMID 40134818): dieta dobrze tolerowana i wykonalna, ale wpływ na sam nowotwór pozostaje niejasny. Do 2026 r. brak dużych badań III fazy pokazujących poprawę przeżycia.',
     safety:
       'Obok leczenia konwencjonalnego, wyłącznie pod nadzorem. U pacjentów niedożywionych, z kacheksją lub sarkopenią restrykcyjna dieta może bardziej zaszkodzić niż pomóc.',
     contraindications:
@@ -1288,7 +1290,9 @@ export const methods: Method[] = [
     talkToDoctor:
       'Zapytaj, czy w Twojej sytuacji (stan odżywienia, typ leczenia) dieta ketogeniczna jest bezpieczna, i poproś o opiekę dietetyka klinicznego. To obszar badań, nie udowodnione leczenie.',
     references: [
-      { title: 'Przeglądy badań nad dietą ketogeniczną w onkologii (I/II faza)', year: 2025, note: 'głównie bezpieczeństwo/wykonalność; brak RCT III' },
+      { pmid: '28531663', title: 'KETOCOMP (Klement 2016) — randomizowane fazy I, keto podczas radioterapii (pierś/jelito/głowa-szyja)', year: 2016 },
+      { pmid: '29209515', title: 'KEATING (Martin-McGill 2017) — randomizowany pilotaż, keto w glejaku', year: 2017 },
+      { pmid: '40134818', title: 'AlMutairi 2025 — przegląd systematyczny, keto w guzach mózgu u dzieci', year: 2025, note: 'bezpieczna/wykonalna; wpływ na nowotwór niejasny' },
     ],
   },
   {
