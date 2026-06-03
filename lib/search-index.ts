@@ -40,10 +40,10 @@ export const searchIndex: SearchEntry[] = [
     text: [m.name, m.shortDescription, m.whatIsIt ?? '', (m.indications ?? []).join(' ')].join(' '),
   })),
   ...symptoms.map((s) => ({
-    title: s.name,
+    title: s.title,
     href: `/co-pomaga/${s.slug}`,
     kind: 'Objaw / opieka wspomagająca',
-    text: s.name,
+    text: `${s.title} ${s.intro}`,
   })),
   ...guides.map((g) => ({
     title: g.title,

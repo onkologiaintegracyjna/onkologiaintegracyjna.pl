@@ -26,4 +26,18 @@ export default function SlownikPage() {
               <dd className="mt-2 text-sm leading-relaxed text-foreground/80">
                 {t.definition}
                 {t.link && (
-    
+                  <>
+                    {' '}
+                    <Link href={t.link} className="font-medium text-accent hover:underline whitespace-nowrap">
+                      Czytaj więcej →
+                    </Link>
+                  </>
+                )}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </>
+  )
+}
