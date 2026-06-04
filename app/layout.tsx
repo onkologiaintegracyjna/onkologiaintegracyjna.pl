@@ -3,6 +3,7 @@ import { Lora, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
+import { BackToTop } from '@/components/back-to-top'
 import './globals.css'
 
 const inter = Inter({
@@ -66,6 +67,7 @@ export default function RootLayout({
           </main>
           <SiteFooter />
         </div>
+        <BackToTop />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
