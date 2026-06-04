@@ -1500,6 +1500,50 @@ export const methods: Method[] = [
       { pmid: '35018864', title: 'Koltai 2022 — przegląd, rola sylimaryny w onkologii (działanie dwukierunkowe)', year: 2022 },
     ],
   },
+  {
+    slug: 'huaier',
+    name: 'Huaier (Trametes robiniophila)',
+    category: 'substance',
+    kind: 'grzyby',
+    redoxClass: 'context-dependent',
+    shortDescription:
+      'Wyciąg z grzyba Trametes robiniophila (chiński „huaier”); w Chinach stosowany jako adiuwant po resekcji raka wątroby, z dużym RCT.',
+    whatIsIt:
+      'Huaier to wodny wyciąg z grzyba Trametes robiniophila Murr, od dawna stosowany w medycynie chińskiej, zarejestrowany w Chinach jako preparat (granulat) wspomagający leczenie onkologiczne. Wyróżnia się tym, że — inaczej niż większość grzybów leczniczych — ma za sobą duże, wieloośrodkowe badanie kliniczne.',
+    indications: [
+      'leczenie uzupełniające po radykalnej resekcji raka wątrobowokomórkowego (HCC)',
+    ],
+    evidenceProfile: {
+      effectSignal:
+        'W dużym RCT po operacji raka wątroby Huaier wydłużał przeżycie wolne od nawrotu i nieco poprawiał przeżycie całkowite oraz zmniejszał nawroty pozawątrobowe. To najmocniejszy klinicznie sygnał spośród grzybów leczniczych opisanych na tej stronie.',
+      grade: 'low',
+      evidenceType: 'rct',
+      clinicalStatus: 'supportive-care',
+      evidenceGap:
+        'Kluczowe badanie było OTWARTE (kontrola = brak leczenia, nie placebo) i prowadzone wyłącznie w Chinach na jednym, komercyjnym preparacie; dotyczy konkretnie HCC po resekcji. Poza HCC dane są znacznie słabsze. Potrzeba niezależnych, zaślepionych badań poza Chinami.',
+    },
+    howItWorks:
+      'Mieszanina polisacharydowo-białkowa o opisywanym działaniu immunomodulacyjnym i antyangiogennym; w modelach hamowała proliferację i przerzutowanie. Mechanizm u ludzi nie jest w pełni poznany.',
+    research:
+      'RCT IV fazy Chen 2018 (Gut, PMID 29802174): wieloośrodkowe badanie (39 ośrodków, 1044 chorych) po radykalnej resekcji HCC — Huaier vs brak leczenia uzupełniającego przez maks. 96 tygodni. Przeżycie wolne od nawrotu: HR 0,67 (95% CI 0,55–0,81); odsetek bez nawrotu 62,4% vs 49,1%; przeżycie całkowite 95,2% vs 91,5% (p=0,02); mniej nawrotów pozawątrobowych. Przegląd Zhang 2021 (Front Med, PMID 33754281) wymienia Huaier jako uznany adiuwant w HCC. Ograniczenie: badanie otwarte (bez placebo), populacja chińska.',
+    safety:
+      'Obok leczenia konwencjonalnego, nie zamiast niego. W badaniach dobrze tolerowany; możliwe łagodne dolegliwości żołądkowo-jelitowe. Jak każdy immunomodulator — ostrożność przy chorobach autoimmunologicznych i po przeszczepieniu narządu. Preparat komercyjny: jakość zależy od producenta.',
+    talkToDoctor:
+      'Zapytaj, czy w Twojej sytuacji (zwłaszcza po operacji raka wątroby) takie leczenie uzupełniające ma sens, o interakcje i o to, że dowody pochodzą z jednego, otwartego badania w Chinach.',
+    regulatory: [
+      { country: 'Chiny', status: 'dopuszczone', note: 'Zarejestrowany preparat (granulat) wspomagający w onkologii' },
+      { country: 'Polska', status: 'brak rejestracji', note: 'Brak rejestracji onkologicznej i refundacji; ewentualnie jako suplement' },
+      { country: 'UE', status: 'brak rejestracji', note: 'Brak rejestracji EMA jako leku onkologicznego' },
+    ],
+    mythBuster: {
+      title: 'Skoro ma RCT, to „działa na raka”?',
+      body: 'Huaier ma realne, duże badanie — i to wyróżnia go na tle innych grzybów. Ale dowód dotyczy jednej sytuacji (rak wątroby po operacji), pochodzi z otwartego badania bez placebo i wyłącznie z Chin. To obiecujący adiuwant w wąskim wskazaniu, a nie uniwersalny „grzyb na raka”.',
+    },
+    references: [
+      { pmid: '29802174', doi: '10.1136/gutjnl-2018-315983', title: 'Chen 2018 (Gut) — RCT IV fazy, Huaier po resekcji HCC (n=1044)', year: 2018 },
+      { pmid: '33754281', doi: '10.1007/s11684-021-0848-3', title: 'Zhang 2021 (Front Med) — przegląd adiuwantów w HCC', year: 2021 },
+    ],
+  },
 ]
 
 export function getMethod(slug: string): Method | undefined {
