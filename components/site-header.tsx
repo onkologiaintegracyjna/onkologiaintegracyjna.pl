@@ -60,10 +60,10 @@ const groups: NavGroup[] = [
 
 function LogoMark() {
   return (
-    <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-secondary ring-1 ring-primary/10">
+    <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 ring-1 ring-white/20">
       <svg viewBox="0 0 64 64" className="h-6 w-6" aria-hidden="true">
-        <path d="M32 14 C46 24 46 44 32 52 C18 44 18 24 32 14 Z" fill="#0f6e56" />
-        <polyline points="12,33 24,33 28,23 35,45 39,33 52,33" fill="none" stroke="#1a2b4a" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M32 14 C46 24 46 44 32 52 C18 44 18 24 32 14 Z" fill="#1d9e75" />
+        <polyline points="12,33 24,33 28,23 35,45 39,33 52,33" fill="none" stroke="#f5f2ec" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </span>
   )
@@ -78,12 +78,12 @@ export function SiteHeader() {
   const groupActive = (g: NavGroup) => g.items.some((it) => isActive(it.href))
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-40 bg-primary text-primary-foreground shadow-sm">
+      <div className="mx-auto flex h-16 max-w-5xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="Onkologia Integracyjna — strona główna">
           <LogoMark />
-          <span className="font-serif text-base font-semibold leading-tight text-primary">
-            Onkologia<span className="text-accent"> Integracyjna</span>
+          <span className="font-serif text-base font-semibold leading-tight text-white">
+            Onkologia<span style={{ color: '#7fd9bb' }}> Integracyjna</span>
           </span>
         </Link>
 
@@ -92,8 +92,8 @@ export function SiteHeader() {
             <DropdownMenu key={g.label}>
               <DropdownMenuTrigger
                 className={cn(
-                  'flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-secondary hover:text-foreground focus-visible:outline-none',
-                  groupActive(g) ? 'bg-secondary text-primary' : 'text-foreground/70'
+                  'flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40',
+                  groupActive(g) ? 'bg-white/15 text-white' : 'text-primary-foreground/80'
                 )}
               >
                 {g.label}
@@ -117,16 +117,13 @@ export function SiteHeader() {
             href="/szukaj"
             aria-label="Szukaj na stronie"
             aria-current={isActive('/szukaj') ? 'page' : undefined}
-            className={cn(
-              'inline-flex items-center justify-center rounded-md p-2 text-foreground/70 transition-colors hover:bg-secondary hover:text-foreground',
-              isActive('/szukaj') && 'bg-secondary text-primary'
-            )}
+            className="inline-flex items-center justify-center rounded-md p-2 text-primary-foreground/80 transition-colors hover:bg-white/10 hover:text-white"
           >
             <Search className="h-5 w-5" aria-hidden="true" />
           </Link>
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-md p-2 text-foreground lg:hidden"
+            className="inline-flex items-center justify-center rounded-md p-2 text-primary-foreground transition-colors hover:bg-white/10 lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? 'Zamknij menu' : 'Otwórz menu'}
@@ -140,29 +137,31 @@ export function SiteHeader() {
       {open && (
         <nav
           id="mobile-nav"
-          className="border-t border-border bg-background lg:hidden"
+          className="border-t border-white/10 bg-primary lg:hidden"
           aria-label="Nawigacja mobilna"
         >
-          <div className="mx-auto max-w-7xl space-y-4 px-4 py-4 sm:px-6">
+          <div className="mx-auto max-w-5xl space-y-4 px-4 py-4 sm:px-6">
             {groups.map((g) => (
               <div key={g.label}>
-                <p className="mb-1 px-3 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                <p className="rounded-md bg-white/10 px-3 py-2 text-sm font-semibold uppercase tracking-wide text-white">
                   {g.label}
                 </p>
-                {g.items.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    aria-current={isActive(item.href) ? 'page' : undefined}
-                    className={cn(
-                      'block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 hover:bg-secondary',
-                      isActive(item.href) && 'bg-secondary text-primary'
-                    )}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                <div className="mt-1 space-y-0.5 pl-2">
+                  {g.items.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                      aria-current={isActive(item.href) ? 'page' : undefined}
+                      className={cn(
+                        'block rounded-md px-3 py-2 text-sm text-primary-foreground/75 hover:bg-white/10 hover:text-white',
+                        isActive(item.href) && 'bg-white/15 text-white'
+                      )}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
