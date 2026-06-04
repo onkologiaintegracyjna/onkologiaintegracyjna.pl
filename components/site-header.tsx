@@ -12,30 +12,50 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 
-const pillars = [
-  { href: '/co-pomaga', label: 'Co pomaga' },
-  { href: '/w-trakcie-leczenia', label: 'W trakcie leczenia' },
-  { href: '/metody', label: 'Metody i substancje' },
-  { href: '/nowotwory', label: 'Według nowotworu' },
-  { href: '/szlaki', label: 'Mechanizmy i szlaki' },
-  { href: '/styl-zycia', label: 'Styl życia' },
-  { href: '/dowody', label: 'Dowody i wiedza' },
-]
+type NavItem = { href: string; label: string }
+type NavGroup = { label: string; items: NavItem[] }
 
-const more = [
-  { href: '/aktualnosci', label: 'Co nowego w dowodach' },
-  { href: '/standardy', label: 'Organizacje i standardy' },
-  { href: '/monitorowanie', label: 'Monitorowanie po leczeniu' },
-  { href: '/ebm', label: 'EBM i finansowanie badań' },
-  { href: '/jak-czytac-dowody', label: 'Jak czytać dowody' },
-  { href: '/artykuly', label: 'Artykuły' },
-  { href: '/wiarygodnosc', label: 'Jak rozpoznać wiarygodną informację' },
-  { href: '/bezpieczenstwo', label: 'Bezpieczeństwo suplementów' },
-  { href: '/wzmacnianie-leczenia', label: 'Wzmacnianie i uwrażliwianie leczenia' },
-  { href: '/faq', label: 'Najczęstsze pytania (FAQ)' },
-  { href: '/slownik', label: 'Słownik pojęć' },
-  { href: '/zrodla', label: 'Źródła i bibliografia' },
-  { href: '/o-stronie', label: 'O stronie' },
+const groups: NavGroup[] = [
+  {
+    label: 'Dla pacjenta',
+    items: [
+      { href: '/co-pomaga', label: 'Co pomaga (objawy)' },
+      { href: '/w-trakcie-leczenia', label: 'W trakcie leczenia' },
+      { href: '/nowotwory', label: 'Według nowotworu' },
+      { href: '/monitorowanie', label: 'Monitorowanie po leczeniu' },
+      { href: '/styl-zycia', label: 'Styl życia' },
+      { href: '/faq', label: 'Najczęstsze pytania (FAQ)' },
+    ],
+  },
+  {
+    label: 'Metody i dowody',
+    items: [
+      { href: '/metody', label: 'Metody i substancje' },
+      { href: '/wzmacnianie-leczenia', label: 'Wzmacnianie i uwrażliwianie leczenia' },
+      { href: '/szlaki', label: 'Mechanizmy i szlaki' },
+      { href: '/jak-czytac-dowody', label: 'Jak czytać dowody' },
+      { href: '/ebm', label: 'EBM i finansowanie badań' },
+      { href: '/dowody', label: 'Dowody i wiedza' },
+    ],
+  },
+  {
+    label: 'Wiarygodność',
+    items: [
+      { href: '/wiarygodnosc', label: 'Jak rozpoznać wiarygodną informację' },
+      { href: '/bezpieczenstwo', label: 'Bezpieczeństwo suplementów' },
+      { href: '/standardy', label: 'Organizacje i standardy' },
+      { href: '/zrodla', label: 'Źródła i bibliografia' },
+    ],
+  },
+  {
+    label: 'Aktualności',
+    items: [
+      { href: '/aktualnosci', label: 'Co nowego w dowodach' },
+      { href: '/artykuly', label: 'Artykuły' },
+      { href: '/slownik', label: 'Słownik pojęć' },
+      { href: '/o-stronie', label: 'O stronie' },
+    ],
+  },
 ]
 
 function LogoMark() {
@@ -55,6 +75,7 @@ export function SiteHeader() {
 
   const isActive = (href: string) =>
     pathname === href || pathname.startsWith(href + '/')
+  const groupActive = (g: NavGroup) => g.items.some((it) => isActive(it.href))
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
@@ -66,33 +87,29 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 xl:flex" aria-label="Nawigacja główna">
-          {pillars.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              aria-current={isActive(item.href) ? 'page' : undefined}
-              className={cn(
-                'rounded-md px-3 py-2 text-sm font-medium text-foreground/70 transition-colors hover:bg-secondary hover:text-foreground',
-                isActive(item.href) && 'bg-secondary text-primary'
-              )}
-            >
-              {item.label}
-            </Link>
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Nawigacja główna">
+          {groups.map((g) => (
+            <DropdownMenu key={g.label}>
+              <DropdownMenuTrigger
+                className={cn(
+                  'flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-secondary hover:text-foreground focus-visible:outline-none',
+                  groupActive(g) ? 'bg-secondary text-primary' : 'text-foreground/70'
+                )}
+              >
+                {g.label}
+                <ChevronDown className="h-4 w-4" aria-hidden="true" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                {g.items.map((item) => (
+                  <DropdownMenuItem key={item.href} asChild>
+                    <Link href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>
+                      {item.label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           ))}
-          <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground/70 transition-colors hover:bg-secondary hover:text-foreground focus-visible:outline-none">
-              Więcej
-              <ChevronDown className="h-4 w-4" aria-hidden="true" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              {more.map((item) => (
-                <DropdownMenuItem key={item.href} asChild>
-                  <Link href={item.href}>{item.label}</Link>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
         </nav>
 
         <div className="flex items-center gap-1">
@@ -109,7 +126,7 @@ export function SiteHeader() {
           </Link>
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-md p-2 text-foreground xl:hidden"
+            className="inline-flex items-center justify-center rounded-md p-2 text-foreground lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? 'Zamknij menu' : 'Otwórz menu'}
@@ -123,22 +140,30 @@ export function SiteHeader() {
       {open && (
         <nav
           id="mobile-nav"
-          className="border-t border-border bg-background xl:hidden"
+          className="border-t border-border bg-background lg:hidden"
           aria-label="Nawigacja mobilna"
         >
-          <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6">
-            {[...pillars, ...more].map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className={cn(
-                  'block rounded-md px-3 py-2.5 text-sm font-medium text-foreground/80 hover:bg-secondary',
-                  isActive(item.href) && 'bg-secondary text-primary'
-                )}
-              >
-                {item.label}
-              </Link>
+          <div className="mx-auto max-w-7xl space-y-4 px-4 py-4 sm:px-6">
+            {groups.map((g) => (
+              <div key={g.label}>
+                <p className="mb-1 px-3 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                  {g.label}
+                </p>
+                {g.items.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    aria-current={isActive(item.href) ? 'page' : undefined}
+                    className={cn(
+                      'block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 hover:bg-secondary',
+                      isActive(item.href) && 'bg-secondary text-primary'
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
             ))}
           </div>
         </nav>
