@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 
 const orgs = [
   { name: 'Society for Integrative Oncology (SIO)', url: 'https://integrativeonc.org', desc: 'Główne międzynarodowe towarzystwo naukowe onkologii integracyjnej; współautor wytycznych z ASCO.' },
+  { name: 'Fundacja Onkologiczna Rakiety (Polska)', url: 'https://fundacjarakiety.pl', desc: 'Polska organizacja zajmująca się onkologią integracyjną; jej przedstawiciele są członkami Society for Integrative Oncology (SIO) i European Society for Integrative Oncology (ESIO). Edukacja, wykaz ośrodków i specjalistów, podejście „obok leczenia, nie zamiast”.' },
   { name: 'American Society of Clinical Oncology (ASCO)', url: 'https://www.asco.org', desc: 'Największe towarzystwo onkologii klinicznej; wspólnie z SIO publikuje wytyczne dot. metod integracyjnych.' },
   { name: 'National Cancer Institute — PDQ Integrative, Alternative & Complementary Therapies', url: 'https://www.cancer.gov/about-cancer/treatment/cam', desc: 'Rządowa (USA) baza wiedzy z osobną skalą poziomów dowodów dla terapii integracyjnych.' },
   { name: 'Memorial Sloan Kettering — About Herbs', url: 'https://www.mskcc.org/cancer-care/diagnosis-treatment/symptom-management/integrative-medicine/herbs', desc: 'Renomowana, regularnie aktualizowana baza o ziołach i suplementach w onkologii.' },
